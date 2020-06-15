@@ -7,7 +7,7 @@ import { Wrapper } from './styles'
 
 import { Navigation, Content } from './components'
 
-import { ThemeContext } from 'theme'
+import { ThemeContext } from 'src/theme'
 
 const Layout: React.FC<LayoutProps> = ({
   title = 'Hiukky',

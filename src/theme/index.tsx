@@ -12,7 +12,7 @@ const theme: DefaultTheme = {
   },
 }
 
-const ThemeContext = createContext(theme)
+const ThemeContext = createContext<DefaultTheme>(theme)
 
 const ThemeProvider: React.FC = ({ children }) => (
   <Theme theme={theme}>{children}</Theme>

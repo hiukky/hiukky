@@ -3,7 +3,7 @@ import NextApp from 'next/app'
 
 import 'remixicon/fonts/remixicon.css'
 
-import { Normalize, GlobalStyle, ThemeProvider } from 'theme'
+import { Normalize, GlobalStyle, ThemeProvider } from 'src/theme'
 
 export default class App extends NextApp {
   render() {
