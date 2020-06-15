@@ -3,7 +3,7 @@ import { Col } from '@minily/components'
 
 import { Box, Wrapper } from './styles'
 
-import Layout from 'src/layout'
+import Layout from 'layout'
 
 const Home: React.FC = () => (
   <Layout title="Hiukky">

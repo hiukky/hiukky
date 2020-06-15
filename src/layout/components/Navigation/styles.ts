@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   position: fixed;
   grid-area: 'navgation';
   height: 70px;
-  width: 70%;
+  max-width: 330px;
   background: ${p => Utils.lightenColor(p.theme.colors.dark, 4)};
   z-index: 5;
   border-radius: 30px;
