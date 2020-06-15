@@ -1,5 +1,11 @@
 import React from 'react'
 
-const Skills: React.FC = () => <h1>Skills</h1>
+import Layout from 'layout'
+
+const Skills: React.FC = () => (
+  <Layout title="Skills">
+    <h1>Skills</h1>
+  </Layout>
+)
 
 export default Skills

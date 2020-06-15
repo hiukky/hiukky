@@ -1,5 +1,11 @@
 import React from 'react'
 
-const OpenSource: React.FC = () => <h1>Open Source</h1>
+import Layout from 'layout'
+
+const OpenSource: React.FC = () => (
+  <Layout title="Open Source">
+    <h1>Open Source</h1>
+  </Layout>
+)
 
 export default OpenSource

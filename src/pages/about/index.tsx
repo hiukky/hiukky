@@ -1,5 +1,11 @@
 import React from 'react'
 
-const About: React.FC = () => <h1>About me</h1>
+import Layout from 'layout'
+
+const About: React.FC = () => (
+  <Layout title="About me">
+    <h1>About me</h1>
+  </Layout>
+)
 
 export default About
