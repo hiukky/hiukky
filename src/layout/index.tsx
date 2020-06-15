@@ -57,7 +57,7 @@ const Layout: React.FC<LayoutProps> = ({
             {
               route: '/open-source',
               icon: {
-                name: 'code-s-slash',
+                name: 'open-source',
                 color: colors.green,
               },
             },

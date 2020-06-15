@@ -17,14 +17,14 @@ const Wrapper = styled.div`
   transition: .2s;
 
   @media only screen and (min-width: 568px) {
-    height: 50%;
+    height: 40%;
     width: 70px;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     margin: auto;
-    padding: 30px 0;
+    padding: 20px 0;
     margin-left: 20px;
     transform: none;
     flex-direction: column;
@@ -39,7 +39,7 @@ const Button = styled.div`
   transition: .3s;
 
   :hover {
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
 `
 
