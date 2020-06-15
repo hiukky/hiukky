@@ -1,0 +1,30 @@
+{
+  "name": "hiukky",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@minily/components": "file:.yalc/@minily/components",
+    "@minily/hooks": "file:.yalc/@minily/hooks",
+    "@minily/tools": "file:.yalc/@minily/tools",
+    "next": "9.4.4",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/node": "^14.0.13",
+    "@types/react": "^16.9.36",
+    "@types/styled-components": "^5.1.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.5"
+  }
+}
