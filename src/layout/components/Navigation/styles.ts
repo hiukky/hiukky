@@ -14,17 +14,20 @@ const Wrapper = styled.div`
   transform: translate(-50%, -50%);
   padding: 0 30px;
   ${Flex.container('space-between', 'center')}
+  transition: .2s;
 
   @media only screen and (min-width: 568px) {
-    height: 80%;
+    height: 50%;
     width: 70px;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     margin: auto;
+    padding: 30px 0;
     margin-left: 20px;
     transform: none;
+    flex-direction: column;
   }
 `
 
