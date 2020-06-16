@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
   }
 `
 
