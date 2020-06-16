@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   z-index: 5;
   border-radius: 30px;
   left: 50%;
-  bottom: 10px;
+  bottom: -10px;
   transform: translate(-50%, -50%);
   padding: 0 30px;
   ${Flex.container('space-between', 'center')}

@@ -10,5 +10,10 @@ declare module 'styled-components' {
       pink: string
       green: string
     }
+
+    fonts: {
+      mark: string
+      hammer: string
+    }
   }
 }

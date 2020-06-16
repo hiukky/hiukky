@@ -10,6 +10,10 @@ const theme: DefaultTheme = {
     green: '#5BF841',
     pink: '#EB48BD',
   },
+  fonts: {
+    mark: "'Marck Script', cursive",
+    hammer: "'Hammersmith One', sans-serif",
+  },
 }
 
 const ThemeContext = createContext<DefaultTheme>(theme)

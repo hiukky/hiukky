@@ -7,8 +7,14 @@ export default class Document extends NextDocument {
 
   render() {
     return (
-      <html>
-        <Head />
+      <html lang="en">
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Marck+Script&display=swap"
+            rel="stylesheet"
+            key="Marck-Hammersmith"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
