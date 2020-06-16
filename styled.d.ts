@@ -14,6 +14,7 @@ declare module 'styled-components' {
     fonts: {
       mark: string
       hammer: string
+      numans: string
     }
   }
 }

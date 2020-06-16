@@ -10,9 +10,9 @@ export default class Document extends NextDocument {
       <html lang="en">
         <Head>
           <link
-            href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Marck+Script&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Marck+Script&family=Numans&display=swap"
             rel="stylesheet"
-            key="Marck-Hammersmith"
+            key="Marck-Hammersmith-Numans"
           />
         </Head>
         <body>

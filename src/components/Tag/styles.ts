@@ -13,7 +13,7 @@ const Wrapper = {
 
   Tag: styled.span`
     font-family: ${p => p.theme.fonts.mark};
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: ${p => Utils.lightenColor(p.theme.colors.light, -50)};
     margin: 2px;
 

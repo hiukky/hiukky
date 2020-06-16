@@ -13,6 +13,7 @@ const Wrapper = styled(Container)`
 
   @media only screen and (min-width: 568px) {
     width: calc(100% - 80px);
+    padding: 20px;
     margin-left: 80px;
   }
 `

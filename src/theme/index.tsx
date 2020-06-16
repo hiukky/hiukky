@@ -13,6 +13,7 @@ const theme: DefaultTheme = {
   fonts: {
     mark: "'Marck Script', cursive",
     hammer: "'Hammersmith One', sans-serif",
+    numans: "'Numans', sans-serif",
   },
 }
 
