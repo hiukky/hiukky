@@ -11,10 +11,11 @@ const Wrapper = styled.div<SpinnerProps>`
   background: ${p => p.theme.colors.dark};
   ${Flex.container('center', 'center')}
 
-  animation: ${p => !p.loading && Animations.fadeOut} 1s
+  animation: ${p => (p.loading ? Animations.fadeIn : Animations.fadeOut)} 800ms
     steps(90) forwards;
   * {
-    animation: ${p => !p.loading && Animations.fadeOut} 1s
+    animation: ${p =>
+      p.loading ? Animations.fadeIn : Animations.fadeOut} 800ms
       steps(90) forwards;
   }
 `
