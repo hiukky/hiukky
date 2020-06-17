@@ -9,7 +9,7 @@ const Spinner: React.FC<SpinnerProps> = ({ loading, ...rest }) => {
 
   useEffect(() => {
     if (!loading && spinnerRef.current) {
-      var time = setTimeout(() => spinnerRef.current?.remove(), 1000)
+      var time = setTimeout(() => spinnerRef.current?.remove(), 500)
     }
 
     return () => {

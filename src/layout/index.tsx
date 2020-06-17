@@ -63,7 +63,7 @@ const Layout: React.FC<LayoutProps> = ({
             },
           ]}
         />
-        <Content>{children}</Content>
+        <Content>{!isLoading && children}</Content>
       </Wrapper>
     </>
   )

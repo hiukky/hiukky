@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   transform: translate(-50%, -50%);
   padding: 0 30px;
   ${Flex.container('space-between', 'center')}
-  transition: .2s;
+  transition: .1s;
 
   @media only screen and (min-width: 568px) {
     height: 40%;
@@ -36,10 +36,13 @@ const Button = styled.div`
   width: 60px;
   cursor: pointer;
   ${Flex.container('center', 'center')}
-  transition: .3s;
 
-  :hover {
-    transform: scale(1.3);
+  > div {
+    transition: 0.3s;
+
+    :hover {
+      transform: scale(1.3);
+    }
   }
 `
 
