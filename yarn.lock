@@ -1162,10 +1162,10 @@
     rimraf "^2.5.2"
 
 "@minily/components@file:.yalc/@minily/components":
-  version "0.0.0-523b8ccc"
+  version "0.0.0-45872266"
   dependencies:
-    "@minily/hooks" "file:../../../../.cache/yarn/v6/npm-@minily-components-0.0.0-523b8ccc-0de33daf-6e61-4d4b-a676-8a34d19fd9a6-1592240289835/node_modules/@minily/hooks"
-    "@minily/tools" "file:../../../../.cache/yarn/v6/npm-@minily-components-0.0.0-523b8ccc-0de33daf-6e61-4d4b-a676-8a34d19fd9a6-1592240289835/node_modules/@minily/tools"
+    "@minily/hooks" "file:../../../../.cache/yarn/v6/npm-@minily-components-0.0.0-45872266-5b9acb23-7aff-4232-9be8-83d3abc1db2a-1592434855755/node_modules/@minily/hooks"
+    "@minily/tools" "file:../../../../.cache/yarn/v6/npm-@minily-components-0.0.0-45872266-5b9acb23-7aff-4232-9be8-83d3abc1db2a-1592434855755/node_modules/@minily/tools"
     "@unform/core" "^2.1.0"
     "@unform/web" "^2.1.0"
     input-core "^2.0.1"
@@ -1177,7 +1177,7 @@
     "@unform/core" "^2.1.0"
 
 "@minily/tools@file:.yalc/@minily/tools":
-  version "0.0.0-3a136e5f"
+  version "0.0.0-9c7ded69"
 
 "@next/react-dev-overlay@9.4.4":
   version "9.4.4"
@@ -1255,10 +1255,18 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.9.36":
+"@types/react@*":
   version "16.9.36"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.36.tgz#ade589ff51e2a903e34ee4669e05dbfa0c1ce849"
   integrity sha512-mGgUb/Rk/vGx4NCvquRuSH0GHBQKb1OqpGS9cT9lFxlTLHZgkksgI60TuIxubmn7JuCb+sENHhQciqa0npm0AQ==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
+"@types/react@^16.9.38":
+  version "16.9.38"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.38.tgz#868405dace93a4095d3e054f4c4a1de7a1ac0680"
+  integrity sha512-pHAeZbjjNRa/hxyNuLrvbxhhnKyKNiLC6I5fRF2Zr/t/S6zS41MiyzH4+c+1I9vVfvuRt1VS2Lodjr4ZWnxrdA==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
