@@ -7,16 +7,17 @@ const Wrapper = styled.div`
   height: 70px;
   max-width: 330px;
   background: ${p => Utils.lightenColor(p.theme.colors.dark, 4)};
+  opacity: 0.8;
   z-index: 5;
   border-radius: 30px;
   left: 50%;
   bottom: -10px;
   transform: translate(-50%, -50%);
-  padding: 0 30px;
+  padding: 0 10px;
   ${Flex.container('space-between', 'center')}
   transition: .1s;
 
-  @media only screen and (min-width: 568px) {
+  @media only screen and (min-width: 576px) {
     height: 40%;
     width: 70px;
     top: 0;

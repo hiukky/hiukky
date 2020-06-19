@@ -4,16 +4,48 @@ import { Flex } from '@minily/tools'
 
 const Wrapper = styled(Row)`
   height: 100%;
-  ${Flex.container('center', 'center', { wrap: 'wrap' })}
+  transition: 0.3s;
+
+  ${Flex.container('center', 'center', {
+    wrap: 'wrap',
+    direction: 'column-reverse',
+  })};
+
+  @media only screen and (min-width: 769px) {
+    ${Flex.container('center', 'center', {
+      wrap: 'wrap',
+      direction: 'row',
+    })};
+  }
 `
 
 const Child = styled(Col)`
-  ${Flex.container('flex-start', 'center', { direction: 'column' })}
+  ${Flex.container('center', 'center', { direction: 'column' })};
+
+  :nth-child(1) {
+    justify-content: flex-start;
+  }
+
+  :nth-child(2) {
+    justify-content: flex-end;
+    margin-bottom: 30px;
+  }
+
+  @media only screen and (min-width: 769px) {
+    justify-content: flex-start;
+  }
 `
 
 const Brand = styled.img`
-  max-width: 25rem;
-  max-height: 25rem;
+  max-width: 9rem;
+
+  @media only screen and (min-width: 576px) {
+    max-width: 13rem;
+  }
+
+  @media only screen and (min-width: 769px) {
+    max-width: 25rem;
+  }
 `
 
 export { Wrapper, Child, Brand }

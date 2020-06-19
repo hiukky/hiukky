@@ -10,12 +10,12 @@ import { Wrapper, Brand, Child } from './styles'
 const Home: React.FC = () => (
   <Layout title="Home">
     <Wrapper>
-      <Child size={{ xs: 12, lg: 6 }}>
+      <Child>
         <Title tag="h1" label="Romullo Sousa" />
         <Title tag="p" label="Fullstack Developer" />
       </Child>
 
-      <Child size={{ xs: 12, lg: 6 }}>
+      <Child>
         <Brand src={'assets/brand.png'} alt="Hiukky brand" />
       </Child>
     </Wrapper>
