@@ -6,6 +6,8 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    line-height: 1.3;
     -webkit-tap-highlight-color: transparent;
   }
 `

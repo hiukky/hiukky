@@ -1,23 +1,31 @@
 import React from 'react'
-import { Col } from '@minily/components'
+
+import { Brand, Body } from './styles'
+
+import { Wrapper, Item, Tag } from 'components'
 
 import Layout from 'layout'
-
-import { Title } from 'components'
-
-import { Wrapper, Brand, Child } from './styles'
 
 const Home: React.FC = () => (
   <Layout title="Home">
     <Wrapper>
-      <Child>
-        <Title tag="h1" label="Romullo Sousa" />
-        <Title tag="p" label="Fullstack Developer" />
-      </Child>
-
-      <Child>
-        <Brand src={'assets/brand.png'} alt="Hiukky brand" />
-      </Child>
+      <Item>
+        <Brand src="/assets/brand.png" alt="Brand" />
+      </Item>
+      <Item>
+        <Body.Container>
+          <Body.Title>
+            <Tag tag="h1" />
+            <h1>Romullo Sousa</h1>
+            <Tag tag="h1" />
+          </Body.Title>
+          <Body.Subtitle>
+            <Tag tag="p" />
+            <p>Fullstack Develop</p>
+            <Tag tag="p" />
+          </Body.Subtitle>
+        </Body.Container>
+      </Item>
     </Wrapper>
   </Layout>
 )

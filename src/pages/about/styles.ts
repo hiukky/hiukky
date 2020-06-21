@@ -1,15 +1,10 @@
 import styled from 'styled-components'
-import { Utils, Flex } from '@minily/tools'
+import { Flex } from '@minily/tools'
 
 const Body = {
   Container: styled.div`
-    ${Flex.container('center', 'center', { direction: 'column' })};
-    margin-bottom: 50px;
-
-    h1,
-    p {
-      color: ${p => Utils.lightenColor(p.theme.colors.light, -20)};
-    }
+    font-family: ${p => p.theme.fonts.numans};
+    color: #ffffff;
 
     @media only screen and (min-width: 576px) {
       h1 {
@@ -17,28 +12,36 @@ const Body = {
       }
 
       p {
-        font-size: 1.3rem;
+        font-size: 1rem;
       }
     }
   `,
 
-  Title: styled.div`
+  Title: styled.h1`
     font-family: ${p => p.theme.fonts.hammer};
     font-size: 2rem;
+    color: #ffc92f;
     ${Flex.container('center', 'center')};
   `,
 
-  Subtitle: styled.div`
-    font-family: ${p => p.theme.fonts.numans};
-    ${Flex.container('center', 'center')};
+  Content: styled.div`
+    text-align: left;
+    padding: 0 20px;
+    ${Flex.container('center', 'center', { direction: 'column' })};
+
+    p {
+      margin: 10px 0;
+      font-size: 0.9rem;
+    }
   `,
 }
 
 const Brand = styled.img`
   width: 8rem;
+  margin: 20px;
 
   @media only screen and (min-width: 576px) {
-    width: auto;
+    width: 18rem;
   }
 `
 

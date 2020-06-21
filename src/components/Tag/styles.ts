@@ -18,7 +18,6 @@ const Wrapper = {
     font-family: ${p => p.theme.fonts.mark};
     font-size: 1.1rem;
     color: ${p => Utils.lightenColor(p.theme.colors.light, -50)};
-    margin: 2px;
 
     :nth-child(2n) {
       margin-left: 20px;

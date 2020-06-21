@@ -8,17 +8,17 @@
     "start": "next start"
   },
   "dependencies": {
-    "@minily/components": "file:.yalc/@minily/components",
-    "@minily/hooks": "file:.yalc/@minily/hooks",
-    "@minily/tools": "file:.yalc/@minily/tools",
+    "@minily/components": "^0.1.0-alpha.1",
+    "@minily/hooks": "^0.0.0",
+    "@minily/tools": "^0.0.0",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/cli": "^9.0.1",
+    "@commitlint/config-conventional": "^9.0.1",
     "@types/node": "^14.0.13",
     "@types/react": "^16.9.38",
     "@types/styled-components": "^5.1.0",
