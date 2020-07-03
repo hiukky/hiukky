@@ -8,7 +8,10 @@ import Layout from 'layout'
 
 const About: React.FC = () => (
   <Layout title="Sobre mim">
-    <Wrapper sm={{ item: 1, order: 2 }} lg={{ item: 1, order: 2 }}>
+    <Wrapper sm={{ item: 2, order: 1 }} lg={{ item: 1, order: 2 }}>
+      <Item>
+        <Brand src="/assets/personal/hiukky.png" />
+      </Item>
       <Item>
         <Body.Container>
           <Body.Title color="yellow">
@@ -37,9 +40,6 @@ const About: React.FC = () => (
           </Body.Content>
           <Tag tag="p" />
         </Body.Container>
-      </Item>
-      <Item>
-        <Brand src="/assets/hiukky.png" />
       </Item>
     </Wrapper>
   </Layout>

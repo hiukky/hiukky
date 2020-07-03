@@ -7,7 +7,7 @@ export default class Document extends NextDocument {
 
   render() {
     return (
-      <html lang="en">
+      <html lang="pt-BR">
         <Head>
           <link
             href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Marck+Script&family=Numans&display=swap"

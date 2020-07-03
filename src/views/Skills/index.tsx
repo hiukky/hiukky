@@ -30,7 +30,10 @@ const Skills: React.FC = () => {
 
   return (
     <Layout title="Skills">
-      <Wrapper sm={{ item: 2, order: 1 }} lg={{ item: 2, order: 2 }}>
+      <Wrapper sm={{ item: 1, order: 2 }} lg={{ item: 2, order: 2 }}>
+        <Item>
+          <Orb data={SKILLS} />
+        </Item>
         <Item>
           <Body.Container>
             <Body.Title color="pink">
@@ -52,9 +55,6 @@ const Skills: React.FC = () => {
               </P>
             </Body.Content>
           </Body.Container>
-        </Item>
-        <Item>
-          <Orb data={SKILLS} />
         </Item>
       </Wrapper>
     </Layout>

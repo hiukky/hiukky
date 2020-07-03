@@ -8,10 +8,7 @@ import Layout from 'layout'
 
 const Home: React.FC = () => (
   <Layout title="Home">
-    <Wrapper sm={{ item: 2, order: 1 }} lg={{ item: 1, order: 2 }}>
-      <Item>
-        <Brand src="/assets/brand.png" alt="Brand" />
-      </Item>
+    <Wrapper sm={{ item: 1, order: 2 }} lg={{ item: 1, order: 2 }}>
       <Item>
         <Body.Container>
           <Body.Title color="blue">
@@ -25,6 +22,9 @@ const Home: React.FC = () => (
             <Tag tag="p" />
           </Body.Subtitle>
         </Body.Container>
+      </Item>
+      <Item>
+        <Brand src="/assets/personal/brand.png" alt="Brand" />
       </Item>
     </Wrapper>
   </Layout>

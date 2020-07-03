@@ -27,7 +27,7 @@ const OpenSource: React.FC = () => {
             </Body.Title>
             <Body.Subtitle>
               <Tag tag="p" />
-              <p>Alguns dos meus projetos open-source.</p>
+              <p>Alguns de meus projetos open-source.</p>
               <Tag tag="p" />
             </Body.Subtitle>
           </Body.Container>
