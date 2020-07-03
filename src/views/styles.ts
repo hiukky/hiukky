@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import { Container } from '@minily/components'
 import { Flex } from '@minily/tools'
 
-import { TWrapper } from './types'
+import { TWrapper, TBodyTitle } from './types'
 
-const Wrapper = styled(Container)<TWrapper>`
-  ${Flex.container('center', 'center', { direction: 'column' })};
+const Wrapper = styled.div<TWrapper>`
+  display: grid;
+  grid-template-columns: 1fr;
 
   > {
     ${p => `
@@ -16,7 +16,8 @@ const Wrapper = styled(Container)<TWrapper>`
   }
 
   @media only screen and (min-width: 576px) {
-    ${Flex.container('space-between', 'center', { direction: 'row' })};
+    grid-template-columns: 1fr 1fr;
+    padding: 0 5%;
 
     > {
       ${p => `
@@ -42,5 +43,49 @@ const P = styled.p`
   text-align-last: left;
   text-indent: 30px;
 `
+const Body = {
+  Container: styled.div`
+    font-family: ${p => p.theme.fonts.numans};
+    color: #ffffff;
+    max-width: 600px;
 
-export { Wrapper, Item, P }
+    @media only screen and (min-width: 576px) {
+      h1 {
+        font-size: 4rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  `,
+
+  Title: styled.div<TBodyTitle>`
+    font-family: ${p => p.theme.fonts.hammer};
+    font-size: 2rem;
+    color: ${p => p.theme.colors[p.color]};
+    white-space: nowrap;
+    ${Flex.container('center', 'center')};
+  `,
+
+  Subtitle: styled.div`
+    font-family: ${p => p.theme.fonts.numans};
+    ${Flex.container('center', 'center')};
+  `,
+
+  Content: styled.div`
+    text-align: left;
+    padding: 0 20px;
+    ${Flex.container('center', 'center', { direction: 'column' })};
+  `,
+}
+
+const Brand = styled.img`
+  width: 8rem;
+
+  @media only screen and (min-width: 576px) {
+    width: 22rem;
+  }
+`
+
+export { Wrapper, Item, P, Body, Brand }

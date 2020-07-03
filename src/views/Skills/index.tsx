@@ -1,8 +1,7 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 
-import { Wrapper, Item, P } from '../styles'
-import { Body } from './styles'
+import { Wrapper, Item, P, Body } from '../styles'
 
 import { Tag } from 'components'
 
@@ -15,15 +14,15 @@ const Skills: React.FC = () => {
     'SQL',
     'Javascript',
     'CSS3',
+    'Postgres',
     'HTML5',
     'NodeJs',
-    'ReactJs',
-    'Postgres',
-    'SASS',
     'Typescript',
-    'AdonisJs',
+    'ReactJs',
+    'SASS',
     'Java',
     'Python',
+    'AdonisJs',
     'NestJs',
     'NextJs',
     'MySQL',
@@ -34,7 +33,7 @@ const Skills: React.FC = () => {
       <Wrapper sm={{ item: 2, order: 1 }} lg={{ item: 2, order: 2 }}>
         <Item>
           <Body.Container>
-            <Body.Title>
+            <Body.Title color="pink">
               <Tag tag="h1" />
               <h1>Skills</h1>
               <Tag tag="h1" />

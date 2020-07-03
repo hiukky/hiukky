@@ -6,6 +6,10 @@ import 'remixicon/fonts/remixicon.css'
 import { Normalize, GlobalStyle, ThemeProvider } from 'theme'
 
 export default class App extends NextApp {
+  componentDitMount() {
+    document.documentElement.requestFullscreen({ navigationUI: 'hide' })
+  }
+
   render() {
     const { Component, pageProps } = this.props
 

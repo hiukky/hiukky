@@ -1,14 +1,10 @@
 import 'styled-components'
 
 declare module 'styled-components' {
+  export type TColors = dark | light | blue | yellow | pink | green
   export interface DefaultTheme {
     colors: {
-      dark: string
-      light: string
-      blue: string
-      yellow: string
-      pink: string
-      green: string
+      [C in TColors]: string
     }
 
     fonts: {

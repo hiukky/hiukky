@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { Wrapper, Item, P } from '../styles'
-import { Body, Brand } from './styles'
+import { Wrapper, Item, P, Body, Brand } from '../styles'
 
 import { Tag } from 'components'
 
@@ -9,13 +8,10 @@ import Layout from 'layout'
 
 const About: React.FC = () => (
   <Layout title="About me">
-    <Wrapper sm={{ item: 2, order: 1 }} lg={{ item: 1, order: 2 }}>
-      <Item>
-        <Brand src="/assets/hiukky.png" />
-      </Item>
+    <Wrapper sm={{ item: 1, order: 2 }} lg={{ item: 1, order: 2 }}>
       <Item>
         <Body.Container>
-          <Body.Title>
+          <Body.Title color="yellow">
             <Tag tag="h1" />
             <h1>About Me</h1>
             <Tag tag="h1" />
@@ -44,6 +40,9 @@ const About: React.FC = () => (
           </Body.Content>
           <Tag tag="p" />
         </Body.Container>
+      </Item>
+      <Item>
+        <Brand src="/assets/hiukky.png" />
       </Item>
     </Wrapper>
   </Layout>
