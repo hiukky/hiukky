@@ -5,26 +5,25 @@ import { Flex } from '@minily/tools'
 import { TWrapper } from './types'
 
 const Wrapper = styled(Container)<TWrapper>`
-  ${p => Flex.container('center', 'center', { direction: 'column' })};
+  ${Flex.container('center', 'center', { direction: 'column' })};
 
   > {
     ${p => `
-    :nth-of-type(${p.sm?.item}) {
-      order: ${p.sm?.order};
-
-    }
-  `}
+      :nth-of-type(${p.sm?.item}) {
+        order: ${p.sm?.order};
+      }
+    `}
   }
 
   @media only screen and (min-width: 576px) {
-    ${p => Flex.container('space-between', 'center', { direction: 'row' })};
+    ${Flex.container('space-between', 'center', { direction: 'row' })};
 
     > {
       ${p => `
-    :nth-of-type(${p.lg?.item}) {
-      order: ${p.lg?.order};
-    }
-  `}
+        :nth-of-type(${p.lg?.item}) {
+          order: ${p.lg?.order};
+        }
+      `}
     }
   }
 `

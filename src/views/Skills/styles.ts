@@ -41,8 +41,4 @@ const Brand = styled.img`
   }
 `
 
-const Orb = styled.div`
-  padding: 10%;
-`
-
-export { Body, Brand, Orb }
+export { Body, Brand }
