@@ -4,7 +4,6 @@ import { Utils, Flex } from '@minily/tools'
 const Body = {
   Container: styled.div`
     ${Flex.container('center', 'center', { direction: 'column' })};
-    margin-bottom: 50px;
 
     h1,
     p {

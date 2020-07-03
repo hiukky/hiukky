@@ -1,14 +1,15 @@
 import React from 'react'
 
+import { Wrapper, Item } from '../styles'
 import { Brand, Body } from './styles'
 
-import { Wrapper, Item, Tag } from 'components'
+import { Tag } from 'components'
 
 import Layout from 'layout'
 
 const Home: React.FC = () => (
   <Layout title="Home">
-    <Wrapper>
+    <Wrapper sm={{ item: 2, order: 1 }} lg={{ item: 1, order: 2 }}>
       <Item>
         <Brand src="/assets/brand.png" alt="Brand" />
       </Item>

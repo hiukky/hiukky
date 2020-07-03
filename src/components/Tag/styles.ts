@@ -7,16 +7,21 @@ const Wrapper = {
   Container: styled.div<TagProps>`
     user-select: none;
     padding: 5px;
+    font-size: 0;
 
     ${p =>
       Flex.container('flex-start', 'flex-start', {
         direction: p.reverse ? 'column-reverse' : 'column',
       })};
+
+    @media only screen and (min-width: 576px) {
+      font-size: 0;
+      font-size: 1.1rem;
+    }
   `,
 
   Tag: styled.span`
     font-family: ${p => p.theme.fonts.mark};
-    font-size: 1.1rem;
     color: ${p => Utils.lightenColor(p.theme.colors.light, -50)};
 
     :nth-child(2n) {
