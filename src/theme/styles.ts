@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
-    line-height: 1.3;
+    line-height: 1.5;
     -webkit-tap-highlight-color: transparent;
   }
 `

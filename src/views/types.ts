@@ -7,6 +7,6 @@ export type TWrapper = {
   }
 }
 
-export type TBodyTitle = {
+export type TColor = {
   color: TColors
 }

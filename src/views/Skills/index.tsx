@@ -35,7 +35,7 @@ const Skills: React.FC = () => {
           <Orb data={SKILLS} />
         </Item>
         <Item>
-          <Body.Container>
+          <Body.Container color="pink">
             <Body.Title color="pink">
               <Tag tag="h1" />
               <h1>Skills</h1>
@@ -45,13 +45,14 @@ const Skills: React.FC = () => {
               <P>
                 Nesses 3 anos de caminhada como desenvolvedor e com minha
                 curiosidade pra desvendar as coisas eu pude adiquir bstante
-                experiencia em diversas tecnologias seja no mundo Android, Linux
-                e na Web.
+                experiencia em diversas tecnologias seja no mundo <s>Android</s>
+                , <s>Linux</s> ou <s>Web</s>.
               </P>
 
               <P>
-                Atualmente a maior parte do tempo estou trablhando com Nodejs e
-                Typescript com alguns frameworks como ReactJs e AdonisJs.
+                Atualmente a maior parte do tempo estou trablhando com
+                <s> Nodejs</s> e <s>Typescript</s>, com alguns frameworks como
+                <s> ReactJs</s> e <s>AdonisJs</s>.
               </P>
             </Body.Content>
           </Body.Container>

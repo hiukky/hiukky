@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Flex } from '@minily/tools'
 
-import { TWrapper, TBodyTitle } from './types'
+import { TWrapper, TColor } from './types'
 
 const Wrapper = styled.div<TWrapper>`
   display: grid;
@@ -44,10 +44,14 @@ const P = styled.p`
   text-indent: 30px;
 `
 const Body = {
-  Container: styled.div`
+  Container: styled.div<TColor>`
     font-family: ${p => p.theme.fonts.numans};
     color: #ffffff;
     max-width: 600px;
+
+    s {
+      color: ${p => p.theme.colors[p.color]};
+    }
 
     @media only screen and (min-width: 576px) {
       h1 {
@@ -60,7 +64,7 @@ const Body = {
     }
   `,
 
-  Title: styled.div<TBodyTitle>`
+  Title: styled.div<TColor>`
     font-family: ${p => p.theme.fonts.hammer};
     font-size: 2rem;
     color: ${p => p.theme.colors[p.color]};

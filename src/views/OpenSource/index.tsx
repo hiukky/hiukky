@@ -19,7 +19,7 @@ const OpenSource: React.FC = () => {
     <Layout title="Open Source">
       <Wrapper>
         <Item>
-          <Body.Container>
+          <Body.Container color="green">
             <Body.Title color="green">
               <Tag tag="h1" />
               <h1>Open Source</h1>

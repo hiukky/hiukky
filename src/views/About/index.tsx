@@ -13,7 +13,7 @@ const About: React.FC = () => (
         <Brand src="/assets/personal/hiukky.png" />
       </Item>
       <Item>
-        <Body.Container>
+        <Body.Container color="yellow">
           <Body.Title color="yellow">
             <Tag tag="h1" />
             <h1>About Me</h1>
@@ -22,20 +22,22 @@ const About: React.FC = () => (
           <Tag tag="p" />
           <Body.Content>
             <P>
-              Meu nome é Romullo tenho 23 anos sou cristão apaixonado por Jesus
-              e um amante da Tecnologia e do mundo open-source.
+              Meu nome é <s>Romullo</s> tenho 23 anos sou cristão apaixonado por{' '}
+              <s>Jesus</s> e um amante da tecnologia e do mundo open-source.
             </P>
 
             <P>
-              Atualmente trabalho como desenvolvedor Fullstack em uma empresa
-              aqui na minha cidade e nas horas vagas estou trabalhando em algum
-              dos meus projetos que você pode conferir no Github.
+              Atualmente trabalho como desenvolvedor <s>Fullstack</s> em uma
+              empresa aqui na minha cidade e nas horas vagas estou trabalhando
+              em algum dos meus projetos open-source que você pode conferir no
+              <s> Github</s>.
             </P>
 
             <P>
-              Também sou um otaku e fã da cultura geek. Quando não estou
-              mergulhado no mundo dos códigos, estou curtindo a cultura japonesa
-              assistindo Animes ou curtindo aquele velho e bom Lo-fi.
+              Também sou um <s>otaku</s> e fã da cultura <s>geek</s> e
+              apaixonado por <s>Lo-fi</s>. Quando não estou mergulhado no mundo
+              dos códigos, estou curtindo algo da cultura japonesa, sejá aquele
+              velho e bom <s>Anime</s> ou a trilha sonora dele rs.
             </P>
           </Body.Content>
           <Tag tag="p" />

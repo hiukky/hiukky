@@ -10,7 +10,7 @@ const Home: React.FC = () => (
   <Layout title="Home">
     <Wrapper sm={{ item: 1, order: 2 }} lg={{ item: 1, order: 2 }}>
       <Item>
-        <Body.Container>
+        <Body.Container color="blue">
           <Body.Title color="blue">
             <Tag tag="h1" />
             <h1>Romullo Sousa</h1>
