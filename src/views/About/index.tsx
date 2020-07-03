@@ -7,7 +7,7 @@ import { Tag } from 'components'
 import Layout from 'layout'
 
 const About: React.FC = () => (
-  <Layout title="About me">
+  <Layout title="Sobre mim">
     <Wrapper sm={{ item: 1, order: 2 }} lg={{ item: 1, order: 2 }}>
       <Item>
         <Body.Container>
@@ -19,23 +19,20 @@ const About: React.FC = () => (
           <Tag tag="p" />
           <Body.Content>
             <P>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
+              Meu nome é Romullo tenho 23 anos sou cristão apaixonado por Jesus
+              e um amante da Tecnologia e do mundo open-source.
             </P>
 
             <P>
-              when an unknown printer took a galley of type and scrambled it to
-              make a type specimen book. It has survived not only five
-              centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged.
+              Atualmente trabalho como desenvolvedor Fullstack em uma empresa
+              aqui na minha cidade e nas horas vagas estou trabalhando em algum
+              dos meus projetos que você pode conferir no Github.
             </P>
 
             <P>
-              It was popularised in the 1960s with the release of Letraset
-              sheets containing Lorem Ipsum passages, and more recently with
-              desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum.
+              Também sou um otaku e fã da cultura geek. Quando não estou
+              mergulhado no mundo dos códigos, estou curtindo a cultura japonesa
+              assistindo Animes ou curtindo aquele velho e bom Lo-fi.
             </P>
           </Body.Content>
           <Tag tag="p" />

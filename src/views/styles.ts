@@ -55,7 +55,7 @@ const Body = {
       }
 
       p {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
     }
   `,
@@ -70,6 +70,9 @@ const Body = {
 
   Subtitle: styled.div`
     font-family: ${p => p.theme.fonts.numans};
+    text-align: center;
+
+    text-align-last: center;
     ${Flex.container('center', 'center')};
   `,
 

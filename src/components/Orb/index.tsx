@@ -6,8 +6,8 @@ const Orb: React.FC<OrbProps> = ({ data = [] }) => {
   const orbRef = useRef<HTMLDivElement | null>(null)
 
   const size = {
-    width: window.innerWidth >= 500 ? 500 : window.innerWidth - 35,
-    height: window.innerHeight >= 500 ? 500 : window.innerHeight - 35,
+    width: window.innerWidth >= 500 ? 650 : window.innerWidth - 35,
+    height: window.innerHeight >= 500 ? 650 : window.innerHeight - 35,
   }
 
   useEffect(() => {

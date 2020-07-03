@@ -6,7 +6,7 @@ import { TagProps } from './types'
 const Wrapper = {
   Container: styled.div<TagProps>`
     user-select: none;
-    padding: 5px;
+    padding: 0 10px;
     font-size: 0;
 
     ${p =>

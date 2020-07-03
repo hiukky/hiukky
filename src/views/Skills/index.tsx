@@ -40,15 +40,15 @@ const Skills: React.FC = () => {
             </Body.Title>
             <Body.Content>
               <P>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s.
+                Nesses 3 anos de caminhada como desenvolvedor e com minha
+                curiosidade pra desvendar as coisas eu pude adiquir bstante
+                experiencia em diversas tecnologias seja no mundo Android, Linux
+                e na Web.
               </P>
 
               <P>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s.
+                Atualmente a maior parte do tempo estou trablhando com Nodejs e
+                Typescript com alguns frameworks como ReactJs e AdonisJs.
               </P>
             </Body.Content>
           </Body.Container>
