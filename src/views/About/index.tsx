@@ -7,7 +7,7 @@ import { Tag } from 'components'
 import Layout from 'layout'
 
 const About: React.FC = () => (
-  <Layout title="Sobre mim">
+  <Layout title="About me">
     <Wrapper sm={{ item: 2, order: 1 }} lg={{ item: 1, order: 2 }}>
       <Item>
         <Brand src="/assets/personal/hiukky.png" />
@@ -22,15 +22,18 @@ const About: React.FC = () => (
           <Tag tag="p" />
           <Body.Content>
             <P>
-              Meu nome é <s>Romullo</s> tenho 23 anos sou cristão apaixonado por{' '}
+              Meu nome é <s>Romullo</s> tenho 23 anos sou cristão apaixonado por
               <s>Jesus</s> e um amante da tecnologia e do mundo open-source.
             </P>
 
             <P>
               Atualmente trabalho como desenvolvedor <s>Fullstack</s> em uma
               empresa aqui na minha cidade e nas horas vagas estou trabalhando
-              em algum dos meus projetos open-source que você pode conferir no
-              <s> Github</s>.
+              em algum dos meus projetos que você pode conferir no meu
+              <a href="https://github.com/hiukky" target="_blank">
+                <s> Github </s>
+              </a>
+              .
             </P>
 
             <P>

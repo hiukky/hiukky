@@ -14,6 +14,12 @@ export default class Document extends NextDocument {
             rel="stylesheet"
             key="Marck-Hammersmith-Numans"
           />
+          <meta
+            name="description"
+            content=" Desenvolvedor Fullstack, entusiasta da tecnologia e amante do mundo
+            open-source."
+          />
+          <meta name="robots" content="index, follow" />
         </Head>
         <body>
           <Main />
