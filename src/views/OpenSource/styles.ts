@@ -8,7 +8,7 @@ const Card = {
     margin: 20px 0 100px 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     overflow: auto;
     font-family: ${p => p.theme.fonts.numans};
@@ -47,7 +47,7 @@ const Card = {
 
     @media only screen and (min-width: 576px) {
       h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
 
       span {
