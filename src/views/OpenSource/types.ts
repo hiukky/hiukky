@@ -9,6 +9,10 @@ export type TRepository = {
   stargazers_count: number
 }
 
+export type TProps = {
+  repositories: TRepository[]
+}
+
 export interface IGithubResponse extends AxiosResponse {
   data: TRepository[]
 }

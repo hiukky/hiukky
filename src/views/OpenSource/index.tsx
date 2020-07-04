@@ -1,7 +1,8 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React from 'react'
+import { NextPage } from 'next'
 import { Icon } from '@minily/components'
 
-import { IGithubResponse, TRepository } from './types'
+import { TProps, IGithubResponse } from './types'
 
 import { Wrapper, Item, Body } from '../styles'
 import { Card } from './styles'
@@ -11,39 +12,7 @@ import { api } from 'services'
 
 import Layout from 'layout'
 
-const OpenSource: React.FC = () => {
-  const [repos, setRepos] = useState<TRepository[]>([])
-
-  /**
-   * @function getRepos
-   *
-   * Get GitHub repositories for hiukky user
-   */
-  const getRepos = useCallback(async () => {
-    try {
-      const { data, status }: IGithubResponse = await api.get(
-        `${process.env.NEXT_PUBLIC_GITHUB_BASE_URL}/users/hiukky/repos`,
-      )
-
-      if (status === 200 && data) {
-        setRepos(
-          data
-            .filter(({ name }) =>
-              ['flate', 'http-handler-response'].includes(name),
-            )
-            .map(repo => ({
-              ...repo,
-              picture: `assets/open-source/${repo.name}_${repo.node_id}.png`,
-            })),
-        )
-      }
-    } catch {}
-  }, [])
-
-  useEffect(() => {
-    getRepos()
-  }, [])
-
+const OpenSource: NextPage<TProps> = ({ repositories }) => {
   return (
     <Layout title="Open Source">
       <Wrapper>
@@ -63,7 +32,7 @@ const OpenSource: React.FC = () => {
         </Item>
         <Item>
           <Card.Container>
-            {repos.map((repo, key) => (
+            {repositories.map((repo, key) => (
               <Card.Item key={key}>
                 <Card.Header>
                   <Card.Title>{repo.name}</Card.Title>
@@ -91,6 +60,23 @@ const OpenSource: React.FC = () => {
       </Wrapper>
     </Layout>
   )
+}
+
+OpenSource.getInitialProps = async (): Promise<TProps> => {
+  const { data, status }: IGithubResponse = await api.get(
+    `${process.env.GITHUB_BASE_URL}/users/hiukky/repos`,
+  )
+
+  if (status === 200 && data) {
+    return {
+      repositories: data
+        .filter(({ name }) => ['flate', 'http-handler-response'].includes(name))
+        .map(repo => ({
+          ...repo,
+          picture: `assets/open-source/${repo.name}_${repo.node_id}.png`,
+        })),
+    }
+  }
 }
 
 export default OpenSource
