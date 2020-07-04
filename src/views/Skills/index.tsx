@@ -14,7 +14,8 @@ const Skills: React.FC = () => {
     'SQL',
     'Javascript',
     'CSS3',
-    'Postgres',
+    'PostgreSQL',
+    'MongoDB',
     'HTML5',
     'NodeJs',
     'Typescript',
@@ -22,6 +23,7 @@ const Skills: React.FC = () => {
     'SASS',
     'Java',
     'Python',
+    'JSON',
     'AdonisJs',
     'NestJs',
     'NextJs',
@@ -44,13 +46,13 @@ const Skills: React.FC = () => {
             <Body.Content>
               <P>
                 Nesses 3 anos de caminhada como desenvolvedor e com minha
-                curiosidade pra desvendar as coisas eu pude adiquir bstante
-                experiencia em diversas tecnologias seja no mundo <s>Android</s>
+                curiosidade para desvendar as coisas, eu pude adiquir bastante
+                experiência em diversas tecnologias seja no mundo <s>Android</s>
                 , <s>Linux</s> ou <s>Web</s>.
               </P>
 
               <P>
-                Atualmente a maior parte do tempo estou trablhando com
+                Atualmente a maior parte do tempo estou trabalhando com
                 <s> Nodejs</s> e <s>Typescript</s>, com alguns frameworks como
                 <s> ReactJs</s> e <s>AdonisJs</s>.
               </P>

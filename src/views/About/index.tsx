@@ -22,8 +22,9 @@ const About: React.FC = () => (
           <Tag tag="p" />
           <Body.Content>
             <P>
-              Meu nome é <s>Romullo</s> tenho 23 anos sou cristão apaixonado por
-              <s>Jesus</s> e um amante da tecnologia e do mundo open-source.
+              Olá! Meu nome é <s>Romullo</s>, tenho 23 anos, sou cristão
+              "apaixonado por
+              <s> Jesus</s>", um amante da tecnologia e do mundo open-source.
             </P>
 
             <P>
@@ -37,10 +38,10 @@ const About: React.FC = () => (
             </P>
 
             <P>
-              Também sou um <s>otaku</s> e fã da cultura <s>geek</s> e
-              apaixonado por <s>Lo-fi</s>. Quando não estou mergulhado no mundo
-              dos códigos, estou curtindo algo da cultura japonesa, sejá aquele
-              velho e bom <s>Anime</s> ou a trilha sonora dele rs.
+              Também sou um <s>otaku</s>, fã da cultura <s>geek</s> e apaixonado
+              por <s>Lo-fi</s>. Quando não estou no mundo dos códigos, estou
+              curtindo algo da cultura japonesa, sejá aquele velho e bom{' '}
+              <s>Anime</s> ou a trilha sonora dele rs.
             </P>
           </Body.Content>
           <Tag tag="p" />

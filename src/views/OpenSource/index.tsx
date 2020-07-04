@@ -4,7 +4,7 @@ import { Icon } from '@minily/components'
 
 import { TProps, IGithubResponse } from './types'
 
-import { Wrapper, Item, Body } from '../styles'
+import { Wrapper, Item, Body, P } from '../styles'
 import { Card } from './styles'
 
 import { Tag } from 'components'
@@ -23,11 +23,17 @@ const OpenSource: NextPage<TProps> = ({ repositories }) => {
               <h1>Open Source</h1>
               <Tag tag="h1" />
             </Body.Title>
-            <Body.Subtitle>
-              <Tag tag="p" />
-              <p>Alguns de meus projetos open-source.</p>
-              <Tag tag="p" />
-            </Body.Subtitle>
+            <Tag tag="p" />
+            <Body.Content>
+              <P>
+                O mundo open-source é algo maravilhoso! é um lugar onde nos
+                possibilita desenvolver nossas <s>habilidades</s>, compartilhar
+                <s> conhecimento</s> e aprender com a <s>comunidade</s>!
+              </P>
+
+              <P>Nessa sessão você pode conferir alguns dos meus projetos .</P>
+            </Body.Content>
+            <Tag tag="p" />
           </Body.Container>
         </Item>
         <Item>
@@ -73,6 +79,7 @@ OpenSource.getInitialProps = async (): Promise<TProps> => {
         .filter(({ name }) => ['flate', 'http-handler-response'].includes(name))
         .map(repo => ({
           ...repo,
+          description: repo.description.replace(/[^a-zA-Z]+/g, ' '),
           picture: `assets/open-source/${repo.name}_${repo.node_id}.png`,
         })),
     }
