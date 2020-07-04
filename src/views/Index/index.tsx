@@ -1,7 +1,8 @@
 import React from 'react'
+import { Icon } from '@minily/components'
 
 import { Wrapper, Item, Body, Brand } from '../styles'
-import { Copyright } from './styles'
+import { Copyright, Social } from './styles'
 
 import { Tag } from 'components'
 
@@ -22,6 +23,34 @@ const Home: React.FC = () => (
             <p>Fullstack Developer</p>
             <Tag tag="p" />
           </Body.Subtitle>
+          <Social.Container>
+            {[
+              {
+                icon: 'instagram',
+                url: 'https://www.instagram.com/hiukky/',
+                color: '#D34350',
+              },
+              {
+                icon: 'github',
+                url: 'https://github.com/hiukky',
+                color: '#ffffff',
+              },
+              {
+                icon: 'twitter',
+                url: 'https://twitter.com/hiukky',
+                color: '#1C93DD',
+              },
+            ].map((btn, key) => (
+              <Social.Button
+                key={key}
+                color={btn.color}
+                href={btn.url}
+                target="_blank"
+              >
+                <Icon name={btn.icon as any} />
+              </Social.Button>
+            ))}
+          </Social.Container>
         </Body.Container>
       </Item>
       <Item>

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Flex } from '@minily/tools'
 
 const Copyright = styled.div`
   position: fixed;
@@ -14,4 +15,24 @@ const Copyright = styled.div`
   }
 `
 
-export { Copyright }
+const Social = {
+  Container: styled.div`
+    height: 30px;
+    padding: 10px;
+    ${Flex.container('center', 'center')};
+  `,
+
+  Button: styled.a`
+    margin: 5px;
+
+    i {
+      transition: 0.3s;
+
+      :hover {
+        color: ${p => p.color};
+      }
+    }
+  `,
+}
+
+export { Copyright, Social }

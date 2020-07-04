@@ -78,8 +78,10 @@ const Body = {
     text-align-last: center;
     ${Flex.container('center', 'center')};
 
-    p {
-      font-size: 1.3rem;
+    @media only screen and (min-width: 576px) {
+      p {
+        font-size: 1.3rem;
+      }
     }
   `,
 
