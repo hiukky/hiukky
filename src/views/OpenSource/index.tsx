@@ -54,6 +54,7 @@ const OpenSource: NextPage<TProps> = ({ repositories }) => {
                   <img
                     src={repo.picture}
                     alt={repo.name}
+                    loading="lazy"
                     onError={(e: React.ChangeEvent<HTMLImageElement>) => {
                       e.target.src = 'assets/others/no-image.png'
                     }}
