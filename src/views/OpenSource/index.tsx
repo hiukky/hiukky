@@ -28,8 +28,7 @@ const OpenSource: NextPage<TProps> = ({ repositories }) => {
               <P>
                 O mundo open-source é algo maravilhoso! é um lugar onde nos
                 possibilita desenvolver nossas <s>habilidades</s>, compartilhar
-                <s> conhecimento</s> e subir de nível aprendendo junto com a
-                <s> comunidade</s>.
+                <s> conhecimento</s> e evoluir junto com a<s> comunidade</s>.
               </P>
             </Body.Content>
             <Tag tag="p" />
@@ -53,7 +52,6 @@ const OpenSource: NextPage<TProps> = ({ repositories }) => {
                   <img
                     src={repo.picture}
                     alt={repo.name}
-                    loading="lazy"
                     onError={(e: React.ChangeEvent<HTMLImageElement>) => {
                       e.target.src = 'assets/others/no-image.png'
                     }}

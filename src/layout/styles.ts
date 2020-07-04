@@ -4,8 +4,8 @@ const Wrapper = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  background: #22252f;
   display: grid;
+  background: #22252f;
 `
 
 export { Wrapper }

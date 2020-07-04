@@ -10,7 +10,7 @@ const About: React.FC = () => (
   <Layout title="About me">
     <Wrapper sm={{ item: 2, order: 1 }} lg={{ item: 1, order: 2 }}>
       <Item>
-        <Brand src="/assets/personal/hiukky.png" alt="Hiukky" loading="lazy" />
+        <Brand src="/assets/personal/hiukky.png" alt="Hiukky" />
       </Item>
       <Item>
         <Body.Container color="yellow">
