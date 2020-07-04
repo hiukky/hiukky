@@ -9,6 +9,12 @@ export default class Document extends NextDocument {
     return (
       <html lang="pt-BR">
         <Head>
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-171626134-1"
+          ></script>
+          <script async src="js/gtag.js"></script>
+          <script async src="js/analitic.js"></script>
           <link
             href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Marck+Script&family=Numans&display=swap"
             rel="stylesheet"
@@ -21,6 +27,14 @@ export default class Document extends NextDocument {
           <meta name="robots" content="index, follow" />
         </Head>
         <body>
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-PXZ9TTQ"
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+            ></iframe>
+          </noscript>
           <Main />
           <NextScript />
           <script src="js/orb.js"></script>
