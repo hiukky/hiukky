@@ -76,12 +76,20 @@ OpenSource.getInitialProps = async (): Promise<TProps> => {
   if (status === 200 && data) {
     return {
       repositories: data
-        .filter(({ name }) => ['flate', 'http-handler-response'].includes(name))
+        .filter(({ name }) =>
+          [
+            'flate',
+            'http-handler-response',
+            'dashmin-react',
+            'dotfiles',
+          ].includes(name),
+        )
         .map(repo => ({
           ...repo,
           description: repo.description.replace(/[^a-zA-Z]+/g, ' '),
           picture: `assets/open-source/${repo.name}_${repo.node_id}.png`,
-        })),
+        }))
+        .sort((a, b) => b.stargazers_count - a.stargazers_count),
     }
   }
 }

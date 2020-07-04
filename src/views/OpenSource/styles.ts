@@ -6,10 +6,7 @@ const Card = {
     overflow: auto;
     width: 100%;
     margin: 20px 0 100px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    ${Flex.container('flex-start', 'center', { direction: 'column' })};
     overflow: auto;
     font-family: ${p => p.theme.fonts.numans};
     color: ${p => p.theme.colors.light};
@@ -93,6 +90,7 @@ const Card = {
   Image: styled.div`
     height: 200px;
     ${Flex.container('center', 'center')};
+    cursor: pointer;
 
     img {
       max-width: 100%;
