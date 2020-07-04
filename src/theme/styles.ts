@@ -9,6 +9,10 @@ const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     line-height: 1.5;
     -webkit-tap-highlight-color: transparent;
+
+    img {
+      user-select: none;
+    }
   }
 `
 

@@ -87,8 +87,12 @@ const Body = {
 
   Content: styled.div`
     text-align: left;
-    padding: 0 20px;
+    padding: 0 3px;
     ${Flex.container('center', 'center', { direction: 'column' })};
+
+    @media only screen and (min-width: 576px) {
+      padding: 0 20px;
+    }
   `,
 }
 

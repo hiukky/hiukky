@@ -20,7 +20,9 @@ const Layout: React.FC<LayoutProps> = ({
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 2000)
+    let time = setTimeout(() => setIsLoading(false), 2200)
+
+    return () => clearTimeout(time)
   }, [])
 
   return (
