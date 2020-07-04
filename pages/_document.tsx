@@ -16,8 +16,7 @@ export default class Document extends NextDocument {
           />
           <meta
             name="description"
-            content=" Desenvolvedor Fullstack, entusiasta da tecnologia e amante do mundo
-            open-source."
+            content="Desenvolvedor Fullstack, entusiasta da tecnologia e amante do mundo open-source."
           />
           <meta name="robots" content="index, follow" />
         </Head>

@@ -28,10 +28,9 @@ const OpenSource: NextPage<TProps> = ({ repositories }) => {
               <P>
                 O mundo open-source é algo maravilhoso! é um lugar onde nos
                 possibilita desenvolver nossas <s>habilidades</s>, compartilhar
-                <s> conhecimento</s> e aprender com a <s>comunidade</s>!
+                <s> conhecimento</s> e subir de nível aprendendo junto com a
+                <s> comunidade</s>.
               </P>
-
-              <P>Nessa sessão você pode conferir alguns dos meus projetos .</P>
             </Body.Content>
             <Tag tag="p" />
           </Body.Container>
@@ -50,7 +49,7 @@ const OpenSource: NextPage<TProps> = ({ repositories }) => {
                     <Icon name="star" type="line" size="xs" />
                   </Card.ButtonStar>
                 </Card.Header>
-                <Card.Image>
+                <Card.Image href={repo.html_url} target="_blank">
                   <img
                     src={repo.picture}
                     alt={repo.name}

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Flex } from '@minily/tools'
+import { Flex, Utils } from '@minily/tools'
 
 const Copyright = styled.div`
   position: fixed;
@@ -7,7 +7,7 @@ const Copyright = styled.div`
   left: 50%;
   transform: translateX(-50%);
   font-family: ${p => p.theme.fonts.numans};
-  color: ${p => p.theme.colors.light};
+  color: ${p => Utils.lightenColor(p.theme.colors.light, -50)};
   font-size: 0.6rem;
 
   @media only screen and (min-width: 576px) {

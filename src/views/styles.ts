@@ -6,6 +6,7 @@ import { TWrapper, TColor } from './types'
 const Wrapper = styled.div<TWrapper>`
   display: grid;
   grid-template-columns: 1fr;
+  padding-bottom: 100px;
 
   > {
     ${p => `

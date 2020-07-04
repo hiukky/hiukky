@@ -5,7 +5,7 @@ const Card = {
   Container: styled.div`
     overflow: auto;
     width: 100%;
-    margin: 20px 0 100px 0;
+    margin-top: 20px;
     ${Flex.container('flex-start', 'center', { direction: 'column' })};
     overflow: auto;
     font-family: ${p => p.theme.fonts.numans};
@@ -44,7 +44,7 @@ const Card = {
 
     @media only screen and (min-width: 576px) {
       h2 {
-        font-size: 2rem;
+        font-size: 1.9rem;
       }
 
       span {
@@ -54,7 +54,7 @@ const Card = {
   `,
 
   Title: styled.h2`
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: ${p => p.theme.colors.green};
   `,
 
@@ -87,7 +87,7 @@ const Card = {
     }
   `,
 
-  Image: styled.div`
+  Image: styled.a`
     height: 200px;
     ${Flex.container('center', 'center')};
     cursor: pointer;
