@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Wrapper, Item, Body, Brand } from '../styles'
+import { Copyright } from './styles'
 
 import { Tag } from 'components'
 
@@ -18,7 +19,7 @@ const Home: React.FC = () => (
           </Body.Title>
           <Body.Subtitle>
             <Tag tag="p" />
-            <p>Fullstack Develop</p>
+            <p>Fullstack Developer</p>
             <Tag tag="p" />
           </Body.Subtitle>
         </Body.Container>
@@ -27,6 +28,7 @@ const Home: React.FC = () => (
         <Brand src="/assets/personal/brand.png" alt="Brand" />
       </Item>
     </Wrapper>
+    <Copyright>2020 © Hiukky</Copyright>
   </Layout>
 )
 
