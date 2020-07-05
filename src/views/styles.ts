@@ -16,7 +16,7 @@ const Wrapper = styled.div<TWrapper>`
     `}
   }
 
-  @media only screen and (min-width: 576px) {
+  @media only screen and (min-width: 1140px) {
     grid-template-columns: 1fr 1fr;
     padding: 0 5%;
 
@@ -54,7 +54,7 @@ const Body = {
       color: ${p => p.theme.colors[p.color]};
     }
 
-    @media only screen and (min-width: 576px) {
+    @media only screen and (min-width: 1140px) {
       h1 {
         font-size: 4rem;
       }
@@ -79,7 +79,7 @@ const Body = {
     text-align-last: center;
     ${Flex.container('center', 'center')};
 
-    @media only screen and (min-width: 576px) {
+    @media only screen and (min-width: 1140px) {
       p {
         font-size: 1.3rem;
       }
@@ -91,7 +91,7 @@ const Body = {
     padding: 0 3px;
     ${Flex.container('center', 'center', { direction: 'column' })};
 
-    @media only screen and (min-width: 576px) {
+    @media only screen and (min-width: 1140px) {
       padding: 0 20px;
     }
   `,
@@ -100,7 +100,7 @@ const Body = {
 const Brand = styled.img`
   width: 8rem;
 
-  @media only screen and (min-width: 576px) {
+  @media only screen and (min-width: 1140px) {
     width: 22rem;
   }
 `

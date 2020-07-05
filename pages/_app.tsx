@@ -12,7 +12,7 @@ export default class App extends NextApp {
   }
 
   componentDidUpdate() {
-    if (window.innerWidth <= 576 && !this.state.fullScreen) {
+    if (window.innerWidth <= 1140 && !this.state.fullScreen) {
       this.setState({ fullScreen: true })
     }
   }

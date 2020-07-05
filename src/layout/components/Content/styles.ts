@@ -10,7 +10,7 @@ const Wrapper = styled(Container)`
   overflow-y: auto;
   ${Flex.container('space-between', 'initial', { direction: 'column' })};
 
-  @media only screen and (min-width: 576px) {
+  @media only screen and (min-width: 1140px) {
     width: calc(100% - 80px);
     padding: 20px;
     margin-left: 80px;

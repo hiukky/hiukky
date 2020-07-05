@@ -45,16 +45,17 @@ const Skills: React.FC = () => {
             </Body.Title>
             <Body.Content>
               <P>
-                Nesses 3 anos de caminhada como desenvolvedor e com minha
-                curiosidade para desvendar as coisas, eu pude adiquir bastante
-                experiência em diversas tecnologias seja no mundo <s>Android</s>
-                , <s>Linux</s> ou <s>Web</s>.
+                In these 3 years of walking as a developer and with my curiosity
+                to unravel things, I was able to get a lot experience in various
+                technologies whether in the <s> Android </s> world ,{' '}
+                <s> Linux </s> or <s> Web </s>.
               </P>
 
               <P>
-                Atualmente a maior parte do tempo estou trabalhando com
-                <s> Nodejs</s> e <s>Typescript</s>, com alguns frameworks como
-                <s> ReactJs</s> e <s>AdonisJs</s>.
+                Currently most of the time I’m working with
+                <s> Nodejs </s> and <s> Typescript </s>, with some frameworks
+                like
+                <s> ReactJs </s> and <s> AdonisJs </s>.
               </P>
             </Body.Content>
           </Body.Container>

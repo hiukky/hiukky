@@ -10,7 +10,7 @@ const Copyright = styled.div`
   color: ${p => Utils.lightenColor(p.theme.colors.light, -50)};
   font-size: 0.6rem;
 
-  @media only screen and (min-width: 576px) {
+  @media only screen and (min-width: 1140px) {
     font-size: 0.8rem;
   }
 `

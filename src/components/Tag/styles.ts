@@ -14,7 +14,7 @@ const Wrapper = {
         direction: p.reverse ? 'column-reverse' : 'column',
       })};
 
-    @media only screen and (min-width: 576px) {
+    @media only screen and (min-width: 1140px) {
       font-size: 0;
       font-size: 1.1rem;
     }

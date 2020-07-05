@@ -7,7 +7,7 @@ export default class Document extends NextDocument {
 
   render() {
     return (
-      <html lang="pt-BR">
+      <html lang="en">
         <Head>
           <script
             async

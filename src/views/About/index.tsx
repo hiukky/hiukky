@@ -22,21 +22,19 @@ const About: React.FC = () => (
           <Tag tag="p" />
           <Body.Content>
             <P>
-              Olá! Meu nome <s>Romullo</s>, tenho 23 anos, sou brasileiro,
-              cristão, um amante da tecnologia e do mundo open-source.
+              Hello! My name is <s>Romullo</s>, I'm 23 years old, I'm Brazilian,
+              Christian, a lover of technology and the open-source world.
             </P>
             <P>
-              Sou formado em <s> Análise e Desenvolvimento de Sistemas</s> pela
-              Unopar e atualmente trabalho como desenvolvedor <s>fullstack </s>
-              na <s>Rhaimes</s>, uma empresa de soluções em tecnologia aqui na
-              minha cidade.
+              I have a degree in <s> Systems Analysis and Development </s> from
+              Unopar and currently work as a <s> fullstack </s> developer at{' '}
+              <s> Rhaimes </s>, a technology solutions company here at my city.
             </P>
             <P>
-              Hoje meu <s>hobby</s> é a progamação! na maior parte do tempo
-              quando não estou envolvido com o trabalho, estou na frente do meu
-              computador
-              <s> estudando</s> alguma nova tecnologia ou trabalhando em alguns
-              dos meus projetos que você pode conferir no meu{' '}
+              Today my <s> hobby </s> is programming! most of the time when I'm
+              not involved with work, I'm in front of my computer
+              <s> studying </s> some new technology or working on some of my
+              projects that you can check out on my {''}
               <a href="https://github.com/hiukky" target="_blank">
                 <s> Github </s>
               </a>
@@ -44,12 +42,12 @@ const About: React.FC = () => (
             </P>
 
             <P>
-              Assistir
+              To watch
               <a href="https://myanimelist.net/profile/hiukky" target="_blank">
                 <s> animes </s>
               </a>
-              e <s>series</s> ou curtir um <s>lo-fi</s> também são algumas das
-              minhas diversões.
+              and <s> series </s> or enjoying a <s> lo-fi </s> are also some of
+              the my diversions.
             </P>
           </Body.Content>
           <Tag tag="p" />

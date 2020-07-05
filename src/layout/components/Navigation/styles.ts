@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   ${Flex.container('space-between', 'center')}
   transition: .1s;
 
-  @media only screen and (min-width: 576px) {
+  @media only screen and (min-width: 1140px) {
     height: 40%;
     width: 70px;
     top: 0;

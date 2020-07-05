@@ -15,7 +15,7 @@ const Card = {
       width: 0;
     }
 
-    @media only screen and (min-width: 576px) {
+    @media only screen and (min-width: 1140px) {
       position: absolute;
       height: 95vh;
       width: 50%;
@@ -42,7 +42,7 @@ const Card = {
     grid-template-rows: 40px 40px;
     padding: 0 10px;
 
-    @media only screen and (min-width: 576px) {
+    @media only screen and (min-width: 1140px) {
       h2 {
         font-size: 1.9rem;
       }
