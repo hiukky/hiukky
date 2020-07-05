@@ -26,14 +26,26 @@ const Home: React.FC = () => (
           <Social.Container>
             {[
               {
-                icon: 'instagram',
-                url: 'https://www.instagram.com/hiukky/',
-                color: '#D34350',
+                icon: 'telegram',
+                url: 'https://t.me/hiukky',
+                color: '#36AEE2',
               },
               {
                 icon: 'github',
                 url: 'https://github.com/hiukky',
                 color: '#ffffff',
+              },
+
+              {
+                icon: 'linkedin',
+                url: 'https://www.linkedin.com/in/hiukky',
+                color: '#0077B5',
+              },
+
+              {
+                icon: 'instagram',
+                url: 'https://www.instagram.com/hiukky',
+                color: '#D34350',
               },
               {
                 icon: 'twitter',
