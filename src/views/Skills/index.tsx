@@ -47,15 +47,14 @@ const Skills: React.FC = () => {
               <P>
                 In these 3 years of walking as a developer and with my curiosity
                 to unravel things, I was able to get a lot experience in various
-                technologies whether in the <s> Android </s> world ,{' '}
-                <s> Linux </s> or <s> Web </s>.
+                technologies whether in the <s>Android</s> world,
+                <s> Linux</s> or <s>Web</s>.
               </P>
 
               <P>
                 Currently most of the time I’m working with
-                <s> Nodejs </s> and <s> Typescript </s>, with some frameworks
-                like
-                <s> ReactJs </s> and <s> AdonisJs </s>.
+                <s> Nodejs</s> and <s>Typescript</s>, with some frameworks like
+                <s> ReactJs</s> and <s> AdonisJs </s>.
               </P>
             </Body.Content>
           </Body.Container>

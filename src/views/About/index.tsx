@@ -27,14 +27,14 @@ const About: React.FC = () => (
             </P>
             <P>
               I have a degree in <s> Systems Analysis and Development </s> from
-              Unopar and currently work as a <s> fullstack </s> developer at{' '}
-              <s> Rhaimes </s>, a technology solutions company here at my city.
+              Unopar and currently work as a <s> fullstack </s> developer at
+              <s> Rhaimes</s>, a technology solutions company here at my city.
             </P>
             <P>
               Today my <s> hobby </s> is programming! most of the time when I'm
               not involved with work, I'm in front of my computer
               <s> studying </s> some new technology or working on some of my
-              projects that you can check out on my {''}
+              projects that you can check out on my
               <a href="https://github.com/hiukky" target="_blank">
                 <s> Github </s>
               </a>

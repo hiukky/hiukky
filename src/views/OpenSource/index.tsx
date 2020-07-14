@@ -27,9 +27,9 @@ const OpenSource: NextPage<TProps> = ({ repositories }) => {
             <Body.Content>
               <P>
                 The open-source world is a wonderful thing! it's a place where
-                we makes it possible to develop our <s> skills </s>, share
-                <s> knowledge </s> and evolve together with the
-                <s> community </s>.
+                we makes it possible to develop our <s>skills</s>, share
+                <s> knowledge</s> and evolve together with the
+                <s> community</s>.
               </P>
             </Body.Content>
             <Tag tag="p" />
