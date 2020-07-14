@@ -12,9 +12,9 @@ export default class Document extends NextDocument {
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-171626134-1"
-          ></script>
-          <script async src="js/gtag.js"></script>
-          <script async src="js/analitic.js"></script>
+          />
+          <script async src="js/gtag.js" />
+          <script async src="js/analitic.js" />
           <link
             href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Marck+Script&family=Numans&display=swap"
             rel="stylesheet"
@@ -33,11 +33,11 @@ export default class Document extends NextDocument {
               height="0"
               width="0"
               style={{ display: 'none', visibility: 'hidden' }}
-            ></iframe>
+            />
           </noscript>
           <Main />
           <NextScript />
-          <script src="js/orb.js"></script>
+          <script src="js/orb.js" />
         </body>
       </html>
     )
