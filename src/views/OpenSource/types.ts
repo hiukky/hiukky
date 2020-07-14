@@ -1,5 +1,3 @@
-import { AxiosResponse } from 'axios'
-
 export type TRepository = {
   name: string
   description: string
@@ -11,8 +9,4 @@ export type TRepository = {
 
 export type TProps = {
   repositories: TRepository[]
-}
-
-export interface IGithubResponse extends AxiosResponse {
-  data: TRepository[]
 }
