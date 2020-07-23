@@ -17,6 +17,7 @@ const Skills: React.FC = () => {
     'PostgreSQL',
     'MongoDB',
     'HTML5',
+    'Shell script',
     'NodeJs',
     'Typescript',
     'ReactJs',
