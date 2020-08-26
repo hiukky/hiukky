@@ -17,15 +17,16 @@ const Skills: React.FC = () => {
     'PostgreSQL',
     'MongoDB',
     'HTML5',
-    'Shell script',
+    'Git',
     'NodeJs',
     'Typescript',
     'ReactJs',
     'SASS',
+    'Shell script',
     'Java',
     'Python',
-    'JSON',
     'AdonisJs',
+    'JSON',
     'NestJs',
     'NextJs',
     'MySQL',
@@ -48,8 +49,8 @@ const Skills: React.FC = () => {
               <P>
                 In these 3 years of walking as a developer and with my curiosity
                 to unravel things, I was able to get a lot experience in various
-                technologies whether in the <s>Android</s> world,
-                <s> Linux</s> or <s>Web</s>.
+                technologies in the <s>Android</s> world,
+                <s> Linux</s>, <s>Desktop</s> and <s>Web</s>.
               </P>
 
               <P>
