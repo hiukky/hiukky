@@ -47,6 +47,9 @@ const OpenSource: NextPage<TProps> = () => {
                   'http-handler-response',
                   'dashmin-react',
                   'dotfiles',
+                  'hiukky',
+                  'adonis-boilerplate-ts',
+                  'eslint-plugin-hooks-sort',
                 ].includes(name),
               )
               .map(repo => ({
