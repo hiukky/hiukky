@@ -45,6 +45,7 @@ const Skills: React.FC = () => {
               <h1>Skills</h1>
               <Tag tag="h1" />
             </Body.Title>
+            <Tag tag="p" />
             <Body.Content>
               <P>
                 In these 3 years of walking as a developer and with my curiosity
@@ -59,6 +60,7 @@ const Skills: React.FC = () => {
                 <s> ReactJs</s> and <s> AdonisJs </s>.
               </P>
             </Body.Content>
+            <Tag tag="p" />
           </Body.Container>
         </Item>
       </Wrapper>
