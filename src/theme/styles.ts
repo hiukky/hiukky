@@ -7,7 +7,6 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
-    line-height: 1.5;
     -webkit-tap-highlight-color: transparent;
 
     img {
@@ -119,7 +118,7 @@ const Normalize = createGlobalStyle`
     display: block;
   }
   body {
-    line-height: 1;
+    line-height: 1.5;
   }
   ol,
   ul {

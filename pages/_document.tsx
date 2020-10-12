@@ -1,4 +1,5 @@
 import NextDocument, {
+  Html,
   Head,
   Main,
   NextScript,
@@ -35,7 +36,7 @@ export default class Document extends NextDocument {
 
   render() {
     return (
-      <html lang="en">
+      <Html lang="en">
         <Head>
           <script
             async
@@ -67,7 +68,7 @@ export default class Document extends NextDocument {
           <NextScript />
           <script src="js/orb.js" />
         </body>
-      </html>
+      </Html>
     )
   }
 }
