@@ -7,7 +7,7 @@ const theme: DefaultTheme = {
     light: '#FFFFFF',
     blue: '#5DEAEA',
     yellow: '#FFC92F',
-    green: '#5BF841',
+    green: '#23d18c',
     pink: '#EB48BD',
   },
   fonts: {

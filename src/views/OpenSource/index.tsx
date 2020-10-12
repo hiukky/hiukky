@@ -75,7 +75,7 @@ const OpenSource: NextPage<TProps> = () => {
                       src={repo.picture}
                       alt={repo.name}
                       onError={(e: React.ChangeEvent<HTMLImageElement>) => {
-                        e.target.src = 'assets/others/no-image.png'
+                        e.target.src = 'assets/others/no-image.svg'
                       }}
                     />
                   </Card.Image>
