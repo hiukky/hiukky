@@ -57,7 +57,7 @@ const Skills: React.FC = () => {
               <P>
                 Currently most of the time I’m working with
                 <s> Nodejs</s> and <s>Typescript</s>, with some frameworks like
-                <s> ReactJs</s> and <s> AdonisJs </s>.
+                <s> ReactJs</s> and <s> NestJs </s>.
               </P>
             </Body.Content>
             <Tag tag="p" />
