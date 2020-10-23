@@ -2,6 +2,20 @@
   "name": "hiukky",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiukky/hiukky.git"
+  },
+  "author": {
+    "name": "Romullo @hiukky",
+    "email": "developermarsh@gmail.com",
+    "url": "https://hiukky.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiukky/hiukky/issues"
+  },
+  "homepage": "https://github.com/hiukky/hiukky#readme",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
