@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  background: #22252f;
+  background: ${p => p.theme.colors.dark};
 `
 
 export { Wrapper }

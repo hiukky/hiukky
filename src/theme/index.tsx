@@ -3,10 +3,10 @@ import { ThemeProvider as Theme, DefaultTheme } from 'styled-components'
 
 const theme: DefaultTheme = {
   colors: {
-    dark: '#22252F',
+    dark: '#0d1117',
     light: '#FFFFFF',
     blue: '#5DEAEA',
-    yellow: '#FFC92F',
+    yellow: '#FCEC0C',
     green: '#23d18c',
     pink: '#EB48BD',
   },
