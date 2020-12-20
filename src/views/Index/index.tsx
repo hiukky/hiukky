@@ -66,7 +66,7 @@ const Home: React.FC = () => (
         </Body.Container>
       </Item>
       <Item>
-        <Brand src="/assets/personal/brand-light.svg" alt="Brand" />
+        <Brand src="/assets/personal/lol.svg" alt="Hiukky" />
       </Item>
     </Wrapper>
     <Copyright>2020 © Hiukky</Copyright>
