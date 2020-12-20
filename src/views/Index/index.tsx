@@ -9,7 +9,7 @@ import { Tag } from 'components'
 import Layout from 'layout'
 
 const Home: React.FC = () => (
-  <Layout title="Home">
+  <Layout title="Romullo">
     <Wrapper sm={{ item: 1, order: 2 }} lg={{ item: 1, order: 2 }}>
       <Item>
         <Body.Container color="blue">
@@ -69,7 +69,7 @@ const Home: React.FC = () => (
         <Brand src="/assets/personal/lol.svg" alt="Hiukky" />
       </Item>
     </Wrapper>
-    <Copyright>2020 © Hiukky</Copyright>
+    <Copyright>© 2020 hiukky</Copyright>
   </Layout>
 )
 

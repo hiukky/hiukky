@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   grid-area: 'navgation';
   height: 70px;
   max-width: 330px;
-  background: ${p => Utils.lightenColor(p.theme.colors.dark, 4)};
+  background: ${p => Utils.lightenColor(p.theme.colors.dark, 2)};
   opacity: 0.8;
   z-index: 5;
   border-radius: 30px;
