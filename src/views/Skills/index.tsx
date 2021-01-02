@@ -51,7 +51,7 @@ const Skills: React.FC = () => {
             <Tag tag="p" />
             <Body.Content>
               <P>
-                In these 3 years of walking as a developer and with my curiosity
+                In these 5 years of walking as a developer and with my curiosity
                 to unravel things, I was able to get a lot experience in various
                 technologies in the <s>Android</s> world,
                 <s> Linux</s>, <s>Desktop</s> and <s>Web</s>.

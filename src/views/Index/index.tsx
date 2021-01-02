@@ -9,7 +9,7 @@ import { Tag } from 'components'
 import Layout from 'layout'
 
 const Home: React.FC = () => (
-  <Layout title="Romullo">
+  <Layout title="Romullo (@hiukky)">
     <Wrapper sm={{ item: 1, order: 2 }} lg={{ item: 1, order: 2 }}>
       <Item>
         <Body.Container color="blue">
