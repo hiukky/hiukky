@@ -69,7 +69,7 @@ const Home: React.FC = () => (
         <Brand src="/assets/personal/lol.svg" alt="Hiukky" />
       </Item>
     </Wrapper>
-    <Copyright>© 2020 hiukky</Copyright>
+    <Copyright>© 2021 hiukky</Copyright>
   </Layout>
 )
 
