@@ -6,10 +6,12 @@ const Card = {
     overflow: auto;
     width: 100%;
     margin-top: 20px;
-    ${Flex.container('flex-start', 'center', { direction: 'column' })};
     overflow: auto;
     font-family: ${p => p.theme.fonts.numans};
     color: ${p => p.theme.colors.light};
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    ${Flex.container('flex-start', 'center', { direction: 'column' })};
 
     ::-webkit-scrollbar {
       width: 0;
