@@ -98,6 +98,7 @@ const Body = {
 }
 
 const Brand = styled.img`
+  border-radius: 10px;
   width: 8rem;
 
   @media only screen and (min-width: 1140px) {
