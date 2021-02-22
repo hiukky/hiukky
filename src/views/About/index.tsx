@@ -22,7 +22,7 @@ const About: React.FC = () => (
           <Tag tag="p" />
           <Body.Content>
             <P>
-              Hello! My name is <s>Romullo</s>, I'm 23 years old, I'm Brazilian,
+              Hello! My name is <s>Romullo</s>, I'm 24 years old, I'm Brazilian,
               Christian, a lover of technology and the open-source world.
             </P>
             <P>
