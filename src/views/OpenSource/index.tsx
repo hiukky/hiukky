@@ -41,17 +41,7 @@ const OpenSource: NextPage<TProps> = () => {
         <Item>
           <Card.Container>
             {data
-              ?.filter(({ name }) =>
-                [
-                  'flate',
-                  'http-handler-response',
-                  'dashmin-react',
-                  'dotfiles',
-                  'hiukky',
-                  'adonis-boilerplate-ts',
-                  'eslint-plugin-hooks-sort',
-                ].includes(name),
-              )
+              ?.filter(({ stargazers_count }) => !!stargazers_count)
               .map(repo => ({
                 ...repo,
                 description: repo.description.replace(/[^a-zA-Z]+/g, ' '),
