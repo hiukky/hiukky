@@ -27,22 +27,22 @@
     "@minily/hooks": "^0.0.0",
     "@minily/tools": "^0.0.0",
     "dotenv-flow": "^3.2.0",
-    "next": "10.0.7",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "styled-components": "^5.2.1",
-    "swr": "^0.4.2"
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "styled-components": "^5.3.0",
+    "swr": "^0.5.6"
   },
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@types/dotenv-flow": "^3.1.0",
-    "@types/node": "^14.14.31",
-    "@types/react": "^17.0.2",
-    "@types/styled-components": "^5.1.7",
+    "@types/node": "^15.12.4",
+    "@types/react": "^17.0.11",
+    "@types/styled-components": "^5.1.10",
     "babel-plugin-styled-components": "^1.12.0",
-    "husky": "^5.1.1",
-    "prettier": "^2.2.1",
-    "typescript": "^4.1.5"
+    "husky": "^6.0.0",
+    "prettier": "^2.3.1",
+    "typescript": "^4.3.4"
   }
 }
