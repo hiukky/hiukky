@@ -43,6 +43,10 @@ const P = styled.p`
   text-align: justify;
   text-align-last: left;
   text-indent: 30px;
+
+  @media only screen and (min-width: 1140px) {
+    line-height: 1.8;
+  }
 `
 const Body = {
   Container: styled.div<TColor>`
@@ -52,6 +56,7 @@ const Body = {
 
     s {
       color: ${p => p.theme.colors[p.color]};
+      font-weight: 600;
     }
 
     @media only screen and (min-width: 1140px) {
@@ -77,11 +82,13 @@ const Body = {
     font-family: ${p => p.theme.fonts.numans};
     text-align: center;
     text-align-last: center;
+    font-size: 1.1rem;
+    font-weight: 600;
     ${Flex.container('center', 'center')};
 
     @media only screen and (min-width: 1140px) {
       p {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
       }
     }
   `,

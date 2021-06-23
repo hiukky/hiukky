@@ -9,32 +9,39 @@ import Layout from 'layout'
 
 const Orb = dynamic(() => import('components/Orb'))
 
-const Skills: React.FC = () => {
-  const SKILLS = [
-    'SQL',
-    'Javascript',
-    'CSS 3',
-    'HTML 5',
-    'Git',
-    'MongoDB',
-    'ReactJs',
-    'PostgreSQL',
-    'NodeJs',
-    'Typescript',
-    'Shell script',
-    'SASS',
-    'Java',
-    'AdonisJs',
-    'JSON',
-    'Linux',
-    'Electron',
-    'Python',
-    'NextJs',
-    'NestJs',
-    'MySQL',
-    'AWS',
-  ]
+const SKILLS: string[] = [
+  'SQL',
+  'JavaScript',
+  'CSS 3',
+  'HTML 5',
+  'Git',
+  'Ansible',
+  'Docker',
+  'MongoDB',
+  'ReactJs',
+  'PostgreSQL',
+  'NodeJs',
+  'TypeScript',
+  'Figma',
+  'Shell',
+  'SASS',
+  'Vagrant',
+  'Java',
+  'AdonisJs',
+  'JSON',
+  'RxJS',
+  'Linux',
+  'Electron',
+  'Python',
+  'NextJs',
+  'Jest',
+  'Ava',
+  'NestJs',
+  'MySQL',
+  'AWS',
+]
 
+const Skills: React.FC = () => {
   return (
     <Layout title="Skills">
       <Wrapper sm={{ item: 1, order: 2 }} lg={{ item: 2, order: 2 }}>
@@ -58,9 +65,10 @@ const Skills: React.FC = () => {
               </P>
 
               <P>
-                Currently most of the time I’m working with
-                <s> Nodejs</s> and <s>Typescript</s>, with some frameworks like
-                <s> ReactJs</s> and <s> NestJs </s>.
+                Currently, most of the time, I'm working on <s>Web</s>{' '}
+                development with Typescript, Nodejs , ReactJs, NestJs and
+                studying <s>DevOps</s> and some tools like Docker, Ansible,
+                Vagrant and Terraform.
               </P>
             </Body.Content>
             <Tag tag="p" />

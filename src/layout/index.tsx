@@ -11,7 +11,7 @@ import { Navigation, Content } from './components'
 import { ThemeContext } from 'theme'
 
 const Layout: React.FC<LayoutProps> = ({
-  title = 'Hiukky',
+  title = 'Romullo',
   favicon = '/favicon.ico',
   children,
 }) => {

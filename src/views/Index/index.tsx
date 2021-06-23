@@ -8,6 +8,36 @@ import { Tag } from 'components'
 
 import Layout from 'layout'
 
+const NETWORK: Record<'icon' | 'url' | 'color', string>[] = [
+  {
+    icon: 'telegram',
+    url: 'https://t.me/hiukky',
+    color: '#36AEE2',
+  },
+  {
+    icon: 'github',
+    url: 'https://github.com/hiukky',
+    color: '#ffffff',
+  },
+
+  {
+    icon: 'linkedin',
+    url: 'https://www.linkedin.com/in/hiukky',
+    color: '#0077B5',
+  },
+
+  {
+    icon: 'instagram',
+    url: 'https://www.instagram.com/hiukky',
+    color: '#D34350',
+  },
+  {
+    icon: 'twitter',
+    url: 'https://twitter.com/hiukky',
+    color: '#1C93DD',
+  },
+]
+
 const Home: React.FC = () => (
   <Layout title="Romullo (@hiukky)">
     <Wrapper sm={{ item: 1, order: 2 }} lg={{ item: 1, order: 2 }}>
@@ -20,39 +50,11 @@ const Home: React.FC = () => (
           </Body.Title>
           <Body.Subtitle>
             <Tag tag="p" />
-            <p>Fullstack Developer</p>
+            <p>Software Engineer</p>
             <Tag tag="p" />
           </Body.Subtitle>
           <Social.Container>
-            {[
-              {
-                icon: 'telegram',
-                url: 'https://t.me/hiukky',
-                color: '#36AEE2',
-              },
-              {
-                icon: 'github',
-                url: 'https://github.com/hiukky',
-                color: '#ffffff',
-              },
-
-              {
-                icon: 'linkedin',
-                url: 'https://www.linkedin.com/in/hiukky',
-                color: '#0077B5',
-              },
-
-              {
-                icon: 'instagram',
-                url: 'https://www.instagram.com/hiukky',
-                color: '#D34350',
-              },
-              {
-                icon: 'twitter',
-                url: 'https://twitter.com/hiukky',
-                color: '#1C93DD',
-              },
-            ].map((btn, key) => (
+            {NETWORK.map((btn, key) => (
               <Social.Button
                 key={key}
                 color={btn.color}

@@ -22,32 +22,30 @@ const About: React.FC = () => (
           <Tag tag="p" />
           <Body.Content>
             <P>
-              Hello! My name is <s>Romullo</s>, I'm 24 years old, I'm Brazilian,
-              Christian, a lover of technology and the open-source world.
-            </P>
-            <P>
-              I have a degree in <s> Systems Analysis and Development </s> from
-              Unopar and currently work as a <s> fullstack </s> developer at
-              <s> Rhaimes</s>, a technology solutions company here at my city.
-            </P>
-            <P>
-              Today my <s> hobby </s> is programming! most of the time when I'm
-              not involved with work, I'm in front of my computer
-              <s> studying </s> some new technology or working on some of my
-              projects that you can check out on my
-              <a href="https://github.com/hiukky" target="_blank">
-                <s> Github </s>
-              </a>
-              .
+              Hello, I'm <s>Romullo</s>, 24 years old, Brazilian, Christian,
+              lover of technology and the open-source world. I graduated in{' '}
+              <s>Systems Analysis and Development</s> and currently work as a{' '}
+              <s>Software Engineer</s> at <s>RL</s> Soluções em Tecnologia.
             </P>
 
             <P>
-              To watch
+              Today with the constant updating in the technology world, I{' '}
+              <s>dedicate</s> most of my time <s>studying</s> and keeping up to
+              date with the best languages, tools and practices for the
+              development of quality software.
+            </P>
+
+            <P>
+              My main <s>hobby</s> is programming! I spend a lot of time
+              contributing to <s>open-source</s> projects on{' '}
+              <a href="https://github.com/hiukky" target="_blank">
+                <s> Github </s>
+              </a>{' '}
+              and in my spare time I like watching{' '}
               <a href="https://myanimelist.net/profile/hiukky" target="_blank">
                 <s> animes </s>
               </a>
-              and <s> series </s> or enjoying a <s> lo-fi </s> are also some of
-              the my diversions.
+              , <s>series</s> or listening to <s>lo-fi</s>.
             </P>
           </Body.Content>
           <Tag tag="p" />

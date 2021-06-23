@@ -14,15 +14,14 @@ const Wrapper = styled.div<SpinnerProps>`
   animation: ${p => (p.loading ? Animations.fadeIn : Animations.fadeOut)} 200ms
     steps(90) forwards;
   * {
-    animation: ${p =>
-      p.loading ? Animations.fadeIn : Animations.fadeOut} 200ms
-      steps(90) forwards;
+    animation: ${p => (p.loading ? Animations.fadeIn : Animations.fadeOut)}
+      200ms steps(90) forwards;
   }
 `
 
 const Loader = styled.span`
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   position: relative;
   border: 4px solid #fff;
   animation: loader 2s infinite ease;
