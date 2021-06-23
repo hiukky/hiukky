@@ -25,7 +25,7 @@ const About: React.FC = () => (
               Hello, I'm <s>Romullo</s>, 24 years old, Brazilian, Christian,
               lover of technology and the open-source world. I graduated in{' '}
               <s>Systems Analysis and Development</s> and currently work as a{' '}
-              <s>Software Engineer</s> at <s>RL</s> Soluções em Tecnologia.
+              <s>Software Engineer</s> at <s>RL</s> Technology Solutions.
             </P>
 
             <P>

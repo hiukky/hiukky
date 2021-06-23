@@ -1,3 +1,3 @@
 <div align="center">
-  <img src="./public/assets/personal/banner.svg"/>
+  <img src="./public/assets/personal/banner.png"/>
 </div>
