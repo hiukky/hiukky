@@ -50,7 +50,7 @@ const Home: React.FC = () => (
           </Body.Title>
           <Body.Subtitle>
             <Tag tag="p" />
-            <p>Software Engineer</p>
+            <p>Software Developer</p>
             <Tag tag="p" />
           </Body.Subtitle>
           <Social.Container>
