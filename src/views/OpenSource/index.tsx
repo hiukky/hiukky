@@ -4,8 +4,8 @@ import { Icon } from '@minily/components'
 
 import { TProps, TRepository } from './types'
 
-import { Wrapper, Item, Body, P } from '../styles'
-import { Card } from './styles'
+import { Wrapper, Item, Body, P } from '../styled'
+import { Card } from './styled'
 
 import { Tag } from 'components'
 import { useFetch } from 'hooks'

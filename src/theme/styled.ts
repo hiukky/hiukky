@@ -1,3 +1,5 @@
+import 'remixicon/fonts/remixicon.css'
+
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`

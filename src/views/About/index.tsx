@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Wrapper, Item, P, Body, Brand } from '../styles'
+import { Wrapper, Item, P, Body, Brand } from '../styled'
 
 import { Tag } from 'components'
 
@@ -22,10 +22,11 @@ const About: React.FC = () => (
           <Tag tag="p" />
           <Body.Content>
             <P>
-              Hello, I'm <s>Romullo</s>, 24 years old, Brazilian, Christian,
-              lover of technology and the open-source world. I graduated in{' '}
-              <s>Systems Analysis and Development</s> and currently work as a{' '}
-              <s>Software Engineer</s> at <s>RL</s> Technology Solutions.
+              Hello, I'm <s>Romullo</s>, {new Date().getFullYear() - 1997} years
+              old, brazilian, christian, lover of technology and the open-source
+              world. I graduated in <s>Systems Analysis and Development</s> and
+              currently work as a <s>Software Engineer</s> at <s>RL</s>{' '}
+              Technology Solutions.
             </P>
 
             <P>

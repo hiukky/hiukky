@@ -1,8 +1,8 @@
 import React from 'react'
 import { Icon } from '@minily/components'
 
-import { Wrapper, Item, Body, Brand } from '../styles'
-import { Copyright, Social } from './styles'
+import { Wrapper, Item, Body, Brand } from '../styled'
+import { Copyright, Social } from './styled'
 
 import { Tag } from 'components'
 
@@ -68,10 +68,10 @@ const Home: React.FC = () => (
         </Body.Container>
       </Item>
       <Item>
-        <Brand src="/assets/personal/lol.svg" alt="Hiukky" />
+        <Brand src="/assets/personal/lol.svg" alt="hiukky" />
       </Item>
     </Wrapper>
-    <Copyright>© 2021 hiukky</Copyright>
+    <Copyright>© {new Date().getFullYear()} hiukky</Copyright>
   </Layout>
 )
 

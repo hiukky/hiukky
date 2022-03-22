@@ -13,8 +13,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "incremental": true
   },
   "exclude": ["node_modules"],
-  "include": ["typings", "**/*.ts", "**/*.tsx"]
+  "include": ["types", "**/*.ts", "**/*.tsx"]
 }

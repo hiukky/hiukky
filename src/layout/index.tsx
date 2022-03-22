@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import { LayoutProps } from './types'
 
-import { Wrapper } from './styles'
+import { Wrapper } from './styled'
 
 import { Spinner } from 'components'
 import { Navigation, Content } from './components'

@@ -6,7 +6,7 @@ const Copyright = styled.div`
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
-  font-family: ${p => p.theme.fonts.numans};
+  font-family: Arial, Helvetica, sans-serif;
   color: ${p => Utils.lightenColor(p.theme.colors.light, -50)};
   font-size: 0.6rem;
 

@@ -24,4 +24,4 @@ const ThemeProvider: React.FC = ({ children }) => (
 )
 
 export { ThemeContext, ThemeProvider }
-export * from './styles'
+export * from './styled'

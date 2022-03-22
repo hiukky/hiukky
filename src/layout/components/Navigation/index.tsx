@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 import { NavigationProps } from './types'
 
-import { Wrapper, Button } from './styles'
+import { Wrapper, Button } from './styled'
 
 const Navigation: React.FC<NavigationProps> = ({ buttons }) => {
   const router = useRouter()

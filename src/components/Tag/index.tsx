@@ -2,7 +2,7 @@ import React from 'react'
 
 import { TagProps } from './types'
 
-import { Wrapper } from './styles'
+import { Wrapper } from './styled'
 
 const Tag: React.FC<TagProps> = ({ tag, reverse = false }) => (
   <Wrapper.Container {...{ tag, reverse }}>

@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/hiukky
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://hiukky.com
+  * I am hiukky (https://keybase.io/hiukky) on keybase.
+  * I have a public key ASATTnS3qWNvZesEZdG7Gi2lvSfZkF_jYkpSGNtPOl-EPgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120134e74b7a9636f65eb0465d1bb1a2da5bd27d9905fe3624a5218db4f3a5f843e0a",
+      "host": "keybase.io",
+      "kid": "0120134e74b7a9636f65eb0465d1bb1a2da5bd27d9905fe3624a5218db4f3a5f843e0a",
+      "uid": "265b53b582d4dd91804aac77791ca519",
+      "username": "hiukky"
+    },
+    "merkle_root": {
+      "ctime": 1647258060,
+      "hash": "f411052bbbe176bd7cdbf95572f6534e6d3dabf2bfa11d063f0ac4318bed595ea83513223e4c68e0f36f641eeb7c00f9d64a4c8af25d84c89a071545e11efc7f",
+      "hash_meta": "6e8f6b8f602be199a51a0ca56570aed97d45519854f49c7710e5364793ca2f2c",
+      "seqno": 22076870
+    },
+    "service": {
+      "entropy": "eOHrDPpwYumz3io1q6n9e4Z/",
+      "hostname": "hiukky.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.9.0"
+  },
+  "ctime": 1647258103,
+  "expire_in": 504576000,
+  "prev": "1e0ec64ef726a40629f1d5792c688e0404e266ce2ad1e55feb5675b644a66eb9",
+  "seqno": 18,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgE050t6ljb2XrBGXRuxotpb0n2ZBf42JKUhjbTzpfhD4Kp3BheWxvYWTESpcCEsQgHg7GTvcmpAYp8dV5LGiOBATiZs4q0eVf61Z1tkSmbrnEIB+N9hVFCVBxSsK2gaAUi85Jz2r0AZ2ZvYdzI9eOhI5JAgHCo3NpZ8RAy/RG9tm9iKDP9kWb+05D06POcCcXrJ4cgP71a1RIcX4yH2BhY7QIt0iqSGcQ5t+aN3EioVQ5ZxjHtoXfuVMiDahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIPzfZH1MQXIHU2k2IGYmzq0v6JfERDRUreKKlOyxcE2Yo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/hiukky
+
+==================================================================

@@ -1,13 +1,13 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 
-import { Wrapper, Item, P, Body } from '../styles'
+import { Wrapper, Item, P, Body } from '../styled'
 
 import { Tag } from 'components'
 
 import Layout from 'layout'
 
-const Orb = dynamic(() => import('components/Orb'))
+const Orb = dynamic(() => import('components/Orb'), { ssr: false })
 
 const SKILLS: string[] = [
   'SQL',
@@ -28,11 +28,12 @@ const SKILLS: string[] = [
   'Vagrant',
   'Java',
   'AdonisJs',
-  'JSON',
+  'GraphQL',
+  'Prisma',
   'RxJS',
   'Linux',
+  'TypeORM',
   'Electron',
-  'Python',
   'NextJs',
   'Jest',
   'Ava',

@@ -5,6 +5,7 @@ import NextDocument, {
   NextScript,
   DocumentContext,
 } from 'next/document'
+import Script from 'next/script'
 import { ServerStyleSheet } from 'styled-components'
 
 export default class Document extends NextDocument {
@@ -38,12 +39,13 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          <script
+          <Script
+            id="tagmanager"
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-171626134-1"
           />
-          <script async src="js/gtag.js" />
-          <script async src="js/analitic.js" />
+          <Script id="gtag" async src="js/gtag.js" />
+          <Script id="analytics" async src="js/analitic.js" />
           <link
             href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Marck+Script&family=Numans&display=swap"
             rel="stylesheet"
@@ -66,7 +68,7 @@ export default class Document extends NextDocument {
           </noscript>
           <Main />
           <NextScript />
-          <script src="js/orb.js" />
+          <script id="orb" src="js/orb.js" />
         </body>
       </Html>
     )

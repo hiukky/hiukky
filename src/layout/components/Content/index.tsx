@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Wrapper } from './styles'
+import { Wrapper } from './styled'
 
 import { Tag } from 'components'
 

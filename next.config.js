@@ -5,6 +5,6 @@ module.exports = {
     autoPrerender: false,
   },
   env: {
-    GITHUB_BASE_URL: process.env.GITHUB_BASE_URL,
+    GITHUB_BASE_URL: 'https://api.github.com',
   },
 }

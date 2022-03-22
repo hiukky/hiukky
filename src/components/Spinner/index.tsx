@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 
 import { SpinnerProps } from './types'
 
-import { Wrapper, Loader } from './styles'
+import { Wrapper, Loader } from './styled'
 
 const Spinner: React.FC<SpinnerProps> = ({ loading, ...rest }) => {
   const spinnerRef = useRef<HTMLDivElement | null>(null)
