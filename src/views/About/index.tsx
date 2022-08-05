@@ -24,9 +24,11 @@ const About: React.FC = () => (
             <P>
               Hello, I'm <s>Romullo</s>, {new Date().getFullYear() - 1997} years
               old, brazilian, christian, lover of technology and the open-source
-              world. I graduated in <s>Systems Analysis and Development</s> and
-              currently work as a <s>Software Engineer</s> at <s>RL</s>{' '}
-              Technology Solutions.
+              world. I <s>graduated</s> in Systems Analysis and Development and
+              currently work as a <s>Software Developer</s> at{' '}
+              <a href="https://www.softplan.com.br/" target="_blank">
+                <s>Softplan</s>
+              </a>
             </P>
 
             <P>
@@ -46,7 +48,7 @@ const About: React.FC = () => (
               <a href="https://myanimelist.net/profile/hiukky" target="_blank">
                 <s> animes </s>
               </a>
-              , <s>series</s> or listening to <s>lo-fi</s>.
+              , <s>series</s> or listening <s>lo-fi</s>.
             </P>
           </Body.Content>
           <Tag tag="p" />
