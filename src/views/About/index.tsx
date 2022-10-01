@@ -29,6 +29,7 @@ const About: React.FC = () => (
               <a href="https://www.softplan.com.br/" target="_blank">
                 <s>Softplan</s>
               </a>
+              .
             </P>
 
             <P>
