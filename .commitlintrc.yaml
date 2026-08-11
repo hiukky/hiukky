@@ -1,0 +1,25 @@
+extends:
+  - "@commitlint/config-conventional"
+rules:
+  scope-enum:
+    - 2
+    - always
+    - - app
+      - components
+      - lib
+      - i18n
+      - messages
+      - theme
+      - motion
+      - styles
+      - config
+      - deps
+      - openspec
+  header-max-length:
+    - 2
+    - always
+    - 100
+  subject-case:
+    - 2
+    - always
+    - lower-case
