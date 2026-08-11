@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "description": "Fullstack developer, technology enthusiast and lover of the open-source world."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "openSource": "Open Source"
+  },
+  "home": {
+    "pageTitle": "Romullo (@hiukky)",
+    "name": "Romullo Sousa",
+    "subtitle": "Software Developer"
+  },
+  "about": {
+    "pageTitle": "About me",
+    "heading": "About Me",
+    "paragraph1": "Hello, I'm Romullo, {age} years old, brazilian, christian, lover of technology and the open-source world. I graduated in Systems Analysis and Development and currently work as a Software Developer at <softplan>Softplan</softplan>.",
+    "paragraph2": "Today with the constant updating in the technology world, I dedicate most of my time studying and keeping up to date with the best languages, tools and practices for the development of quality software.",
+    "paragraph3": "My main hobby is programming! I spend a lot of time contributing to open-source projects on <github>Github</github> and in my spare time I like watching <animes>animes</animes>, series or listening lo-fi."
+  },
+  "skills": {
+    "pageTitle": "Skills",
+    "heading": "Skills",
+    "paragraph1": "In these 5 years of walking as a developer and with my curiosity to unravel things, I was able to get a lot experience in various technologies in the Android world, Linux, Desktop and Web.",
+    "paragraph2": "Currently, most of the time, I'm working on Web development with Typescript, Nodejs, ReactJs, NestJs and studying DevOps and some tools like Docker, Ansible, Vagrant and Terraform.",
+    "list": [
+      "SQL",
+      "JavaScript",
+      "CSS 3",
+      "HTML 5",
+      "Git",
+      "Ansible",
+      "Docker",
+      "MongoDB",
+      "ReactJs",
+      "PostgreSQL",
+      "NodeJs",
+      "TypeScript",
+      "Figma",
+      "Shell",
+      "SASS",
+      "Vagrant",
+      "Java",
+      "AdonisJs",
+      "GraphQL",
+      "Prisma",
+      "RxJS",
+      "Linux",
+      "TypeORM",
+      "Electron",
+      "NextJs",
+      "Jest",
+      "Ava",
+      "NestJs",
+      "MySQL",
+      "AWS"
+    ]
+  },
+  "openSource": {
+    "pageTitle": "Open Source",
+    "heading": "Open Source",
+    "paragraph1": "The open-source world is a wonderful thing! it's a place where we makes it possible to develop our skills, share knowledge and evolve together with the community.",
+    "noDescription": "No description provided."
+  }
+}
