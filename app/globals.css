@@ -7,6 +7,7 @@
 @theme inline {
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
+  --font-brand: var(--font-brand);
   --color-bg: var(--bg);
   --color-fg: var(--fg);
   --color-muted: var(--muted);

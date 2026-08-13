@@ -34,7 +34,7 @@ export function Navigation() {
     <nav className="fixed inset-x-0 top-0 z-50 flex items-center justify-between gap-4 px-5.5 py-6.5 sm:px-16">
       <a
         href="#top"
-        className="font-medium text-[17px] tracking-[-0.01em] no-underline"
+        className="font-brand font-semibold text-lg tracking-tighter no-underline"
       >
         hiukky
       </a>

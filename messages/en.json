@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Romullo Sousa — Software Engineer",
+    "title": "Romullo Sousa · Software Engineer",
     "description": "Software Engineer full stack, com foco em Front-end e interesse crescente por aplicações com IA."
   },
   "nav": {
@@ -26,20 +26,20 @@
   },
   "about": {
     "eyebrow": "Sobre",
-    "paragraph1": "Minha experiência vai da <hl>construção de produtos do zero</hl> em startups até <hl>aplicações críticas</hl> em ambientes corporativos de grande escala. Passei por todo o ciclo: descoberta, arquitetura, implementação, deploy e suporte à produção — o que me deu leitura de trade-offs e cuidado com o que fica de pé depois da entrega.",
+    "paragraph1": "Minha experiência vai da <hl>construção de produtos do zero</hl> em startups até <hl>aplicações críticas</hl> em ambientes corporativos de grande escala. Passei por todo o ciclo: descoberta, arquitetura, implementação, deploy e suporte à produção. Isso me deu leitura de trade-offs e cuidado com o que fica de pé depois da entrega.",
     "paragraph2": "Gosto de sistemas simples, código legível e decisões bem justificadas. Tenho perfil exploratório e interesse por <hl>developer tooling</hl>, <hl>Open Source</hl>, <hl>DX</hl> e <hl>UI/UX</hl>. Atualmente venho expandindo minha atuação para aplicações com IA, envolvendo <hl>LLMs</hl>, <hl>RAG</hl>, <hl>Agents</hl>, <hl>MCP</hl> e processamento documental."
   },
   "experience": {
     "eyebrow": "Experiência",
     "items": [
       {
-        "period": "2022 — Atual",
+        "period": "2022–Atual",
         "role": "Senior Software Engineer",
         "company": "Softplan",
         "description": "Modernização de aplicações judiciais de grande escala no ecossistema SAJ/e-SAJ: arquitetura Front-end, performance de renderização documental, expansão internacional do produto e soluções com IA generativa."
       },
       {
-        "period": "2018 — 2022",
+        "period": "2018–2022",
         "role": "Full Stack Developer",
         "company": "Orul Tech",
         "description": "Desenvolvimento de uma plataforma de fidelização usada por centenas de clientes em 12 estados, do Front-end e Back-end a banco de dados, infraestrutura na AWS, deploy e suporte à produção."
@@ -139,7 +139,7 @@
       }
     ],
     "terminal": {
-      "title": "hiukky@stack — zsh",
+      "title": "hiukky@stack: zsh",
       "whoami": "Software Engineer · 8+ anos · Full Stack com foco em Front-end",
       "placeholder": "digite help",
       "inputLabel": "Comando do terminal",

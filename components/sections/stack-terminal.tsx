@@ -186,7 +186,7 @@ export function StackTerminal() {
     } else {
       out.push(
         textLine(
-          `zsh: ${t("commandNotFound")}: ${verb} — ${t("tryHelp")}`,
+          `zsh: ${t("commandNotFound")}: ${verb} (${t("tryHelp")})`,
           "var(--muted)",
         ),
       );

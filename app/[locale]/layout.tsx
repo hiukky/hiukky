@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@wrksz/themes/next";
 import type { Metadata } from "next";
-import { JetBrains_Mono, Sora } from "next/font/google";
+import { JetBrains_Mono, Sora, Syne } from "next/font/google";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
@@ -22,6 +22,13 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
   weight: ["400", "500"],
+  display: "swap",
+});
+
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-brand",
+  weight: ["600"],
   display: "swap",
 });
 
@@ -84,7 +91,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${sora.variable} ${jetbrainsMono.variable}`}
+      className={`${sora.variable} ${jetbrainsMono.variable} ${syne.variable}`}
       suppressHydrationWarning
     >
       <body className="min-h-dvh overflow-x-hidden antialiased">
