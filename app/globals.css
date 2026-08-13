@@ -227,10 +227,12 @@
   border-color: var(--line-strong);
 }
 
-.term-body {
+.term-body,
+.term-suggestions {
   scrollbar-width: none;
 }
-.term-body::-webkit-scrollbar {
+.term-body::-webkit-scrollbar,
+.term-suggestions::-webkit-scrollbar {
   display: none;
 }
 

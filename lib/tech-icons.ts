@@ -1,10 +1,13 @@
 import {
   siBun,
+  siCloudflare,
+  siDart,
   siDocker,
   siElastic,
   siElasticsearch,
   siExpress,
   siFigma,
+  siFlutter,
   siFramer,
   siGit,
   siGithubactions,
@@ -22,13 +25,17 @@ import {
   siNextdotjs,
   siNginx,
   siNodedotjs,
+  siOllama,
   siPostgresql,
   siPrisma,
   siPython,
+  siRadixui,
   siReact,
   siRedis,
   siRedux,
+  siRust,
   siSass,
+  siShadcnui,
   siStorybook,
   siSupabase,
   siTailwindcss,
@@ -38,6 +45,7 @@ import {
   siTypeorm,
   siTypescript,
   siVite,
+  siVitest,
   siVuedotjs,
   siZod,
 } from "simple-icons";
@@ -49,12 +57,13 @@ import {
  */
 const BRAND_ICON_PATHS: Record<string, string> = {
   React: siReact.path,
+  "React Native": siReact.path,
   TypeScript: siTypescript.path,
   "Next.js": siNextdotjs.path,
   "Tailwind CSS": siTailwindcss.path,
   "Framer Motion": siFramer.path,
   Redux: siRedux.path,
-  "TanStack Query": siTanstack.path,
+  TanStack: siTanstack.path,
   Vite: siVite.path,
   Storybook: siStorybook.path,
   Vue: siVuedotjs.path,
@@ -88,7 +97,15 @@ const BRAND_ICON_PATHS: Record<string, string> = {
   Linux: siLinux.path,
   Turborepo: siTurborepo.path,
   Jest: siJest.path,
+  Vitest: siVitest.path,
   Zod: siZod.path,
+  "shadcn/ui": siShadcnui.path,
+  "Radix UI": siRadixui.path,
+  Rust: siRust.path,
+  Cloudflare: siCloudflare.path,
+  Ollama: siOllama.path,
+  Dart: siDart.path,
+  Flutter: siFlutter.path,
 };
 
 /**
@@ -111,6 +128,7 @@ const CONCEPT_ICON_KEYS: Record<string, string> = {
   OCR: "TextAa",
   Docling: "FileText",
   Embeddings: "ChartScatter",
+  OpenAI: "Sparkle",
 };
 
 export type TechIcon =

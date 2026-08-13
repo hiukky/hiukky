@@ -27,7 +27,6 @@ const SOCIAL_ICONS: Record<(typeof SOCIAL_LINKS)[number]["name"], string> = {
 export function Navigation() {
   const t = useTranslations("nav");
   const tSocial = useTranslations("social");
-  const tLanguage = useTranslations("language");
   const [open, setOpen] = useState(false);
 
   return (
@@ -99,12 +98,7 @@ export function Navigation() {
               <ThemeToggle />
             </div>
             <div className="flex items-center justify-between gap-2">
-              <span className="eyebrow">
-                {t("language")}{" "}
-                <span className="text-[var(--faintest)] normal-case tracking-normal">
-                  ({tLanguage("comingSoon")})
-                </span>
-              </span>
+              <span className="eyebrow">{t("language")}</span>
               <LanguageSwitcher />
             </div>
           </div>

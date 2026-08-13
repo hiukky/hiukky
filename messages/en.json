@@ -1,16 +1,16 @@
 {
   "meta": {
     "title": "Romullo Sousa · Software Engineer",
-    "description": "Software Engineer full stack, com foco em Front-end e interesse crescente por aplicações com IA."
+    "description": "Full stack Software Engineer, focused on Front-end with a growing interest in AI-powered applications."
   },
   "nav": {
-    "about": "Sobre",
-    "experience": "Experiência",
+    "about": "About",
+    "experience": "Experience",
     "stack": "Stack",
-    "writing": "Escrita",
-    "more": "Mais",
-    "theme": "Tema",
-    "language": "Idioma"
+    "writing": "Writing",
+    "more": "More",
+    "theme": "Theme",
+    "language": "Language"
   },
   "social": {
     "github": "Github",
@@ -18,35 +18,35 @@
     "email": "Email"
   },
   "hero": {
-    "greeting": "Oi, sou o Romullo,",
+    "greeting": "Hi, I'm Romullo,",
     "role": "Software Engineer",
-    "bio1": "Há quase 10 anos construindo software para a web, resolvendo desafios complexos e explorando novas tecnologias pelo caminho.",
-    "bio2": "Gosto de entender como as coisas funcionam e, principalmente, <hl>transformar ideias em coisas que funcionam de verdade</hl>.",
-    "cta": "Entrar em contato",
-    "photoAlt": "Retrato em preto e branco de Romullo Sousa"
+    "bio1": "For almost 10 years I've been building software for the web, tackling complex challenges and exploring new technologies along the way.",
+    "bio2": "I like understanding how things work and, above all, <hl>turning ideas into things that actually work</hl>.",
+    "cta": "Get in touch",
+    "photoAlt": "Black and white portrait of Romullo Sousa"
   },
   "about": {
     "eyebrow": "About",
-    "paragraph1": "My story with development started before it became a career. I've always loved exploring technology, understanding how things work, and building my own projects. That curiosity is what led me into software development, and it's still a big part of what drives me today.",
-    "paragraph2": "I started out professionally building web applications and, over time, <hl>Front-end</hl> became my main area of expertise. But I never stayed locked into a single layer. Working across different products and teams naturally led me into <hl>Back-end</hl>, <hl>databases</hl>, <hl>cloud</hl>, <hl>infrastructure</hl>, and other parts of the development cycle.",
-    "paragraph3": "Outside of work, I'm still that dev who likes to experiment. <hl>Open Source</hl>, <hl>Linux</hl>, <hl>mobile</hl>, <hl>WebAssembly</hl>, <hl>CLIs</hl>, and <hl>developer tooling</hl> have all been part of those projects. I also have a soft spot for <hl>UI/UX and DX</hl>, always trying to balance good experiences with <hl>quality, security, and simplicity</hl> in what I build.",
-    "paragraph4": "More recently, that same curiosity has led me toward <hl>AI applied to software</hl>, exploring <hl>LLMs</hl>, <hl>agents</hl>, <hl>RAG</hl>, <hl>MCP</hl>, and <hl>local models</hl>, both within products and in the development process itself.",
-    "paragraph5": "In the end, I like technology, but I like <hl>building things, learning along the way, and solving problems that make me think</hl> even more."
+    "paragraph1": "My story with development started before it became a career. I've always liked exploring technology, understanding how things work, and building my own projects. That curiosity is what led me to software development and is still a big part of what drives me today.",
+    "paragraph2": "I started professionally working on web applications and, over time, <hl>Front-end</hl> became my main area of expertise. But I was never stuck to a single layer. Working across different products and teams naturally led me to <hl>Back-end</hl>, <hl>databases</hl>, <hl>cloud</hl>, <hl>infrastructure</hl>, and other parts of the development cycle.",
+    "paragraph3": "Outside of work, I'm still that dev who likes to experiment. <hl>Open Source</hl>, <hl>Linux</hl>, <hl>mobile</hl>, <hl>WebAssembly</hl>, <hl>CLIs</hl>, and <hl>developer tooling</hl> have all been part of those projects. I also have a special fondness for <hl>UI/UX and DX</hl>, always trying to balance great experiences with <hl>quality, security, and simplicity</hl> in what I build.",
+    "paragraph4": "More recently, that curiosity led me into <hl>AI applied to software</hl>, exploring <hl>LLMs</hl>, <hl>agents</hl>, <hl>RAG</hl>, <hl>MCP</hl>, and <hl>local models</hl>, both within products and in the development process itself.",
+    "paragraph5": "In the end, I like technology, but I like even more <hl>building things, learning along the way, and solving problems that make me think</hl>."
   },
   "experience": {
-    "eyebrow": "Experiência",
+    "eyebrow": "Experience",
     "items": [
       {
-        "period": "2022–Atual",
+        "period": "2022–Present",
         "role": "Senior Software Engineer",
         "company": "Softplan",
-        "description": "Construção e evolução de produtos para o ecossistema de Justiça, com foco em aplicações web. Trabalhei na modernização de sistemas legados, desafios de performance, expansão internacional e, mais recentemente, em iniciativas envolvendo IA generativa, OCR e processamento de documentos."
+        "description": "Building and evolving products for the Justice ecosystem, focused on web applications. I worked on modernizing legacy systems, performance challenges, international expansion, and, more recently, initiatives involving generative AI, OCR, and document processing."
       },
       {
         "period": "2018–2022",
         "role": "Full Stack Developer",
         "company": "Orul Tech",
-        "description": "Desenvolvimento de produtos SaaS do Front-end à produção, passando por Back-end, bancos de dados, AWS e deploy. Entre eles, uma plataforma de fidelização construída do zero que chegou a mais de 500 clientes em 12 estados."
+        "description": "Development of SaaS products from Front-end to production, covering Back-end, databases, AWS, and deployment. Among them, a loyalty platform built from scratch that reached more than 500 customers across 12 states."
       }
     ]
   },
@@ -64,12 +64,19 @@
           "Framer Motion",
           "Zustand",
           "Redux",
-          "TanStack Query",
+          "TanStack",
           "Vite",
           "Storybook",
           "Vue",
-          "Sass"
+          "Sass",
+          "shadcn/ui",
+          "Radix UI"
         ]
+      },
+      {
+        "key": "mobile",
+        "label": "Mobile",
+        "items": ["React Native", "Dart", "Flutter"]
       },
       {
         "key": "back-end",
@@ -82,12 +89,13 @@
           "REST",
           "Bun",
           "Python",
-          "gRPC"
+          "gRPC",
+          "Rust"
         ]
       },
       {
         "key": "dados",
-        "label": "Dados",
+        "label": "Data",
         "items": [
           "PostgreSQL",
           "MongoDB",
@@ -104,6 +112,7 @@
         "label": "Cloud",
         "items": [
           "AWS",
+          "Cloudflare",
           "Docker",
           "Kubernetes",
           "GitLab CI/CD",
@@ -115,7 +124,7 @@
       },
       {
         "key": "ia",
-        "label": "IA",
+        "label": "AI",
         "items": [
           "LLMs",
           "RAG",
@@ -124,12 +133,14 @@
           "OCR",
           "Docling",
           "LangChain",
-          "Embeddings"
+          "Embeddings",
+          "Ollama",
+          "OpenAI"
         ]
       },
       {
-        "key": "ferramentas",
-        "label": "Ferramentas",
+        "key": "tools",
+        "label": "Tools",
         "items": [
           "Git",
           "Neovim",
@@ -137,6 +148,7 @@
           "Linux",
           "Turborepo",
           "Jest",
+          "Vitest",
           "Playwright",
           "Zod"
         ]
@@ -144,47 +156,44 @@
     ],
     "terminal": {
       "title": "hiukky@stack: zsh",
-      "whoami": "Software Engineer · 8+ anos · Full Stack com foco em Front-end",
-      "placeholder": "digite help",
-      "inputLabel": "Comando do terminal",
-      "helpIntro": "comandos disponíveis:",
-      "helpLs": "lista os diretórios",
-      "helpLsArg": "tecnologias do diretório",
-      "helpAll": "mostra tudo",
-      "helpClear": "limpa o terminal",
-      "notFound": "diretório não encontrado",
+      "whoami": "Software Engineer · 8+ years · Full Stack focused on Front-end",
+      "placeholder": "type help",
+      "inputLabel": "Terminal command",
+      "helpIntro": "available commands:",
+      "helpLs": "lists directories",
+      "helpLsArg": "technologies in the directory",
+      "helpAll": "shows everything",
+      "helpClear": "clears the terminal",
+      "notFound": "directory not found",
       "commandNotFound": "command not found",
-      "tryHelp": "tente help"
+      "tryHelp": "try help"
     }
   },
   "writing": {
-    "eyebrow": "Escrita",
-    "comingSoon": "em breve",
+    "eyebrow": "Writing",
+    "comingSoon": "coming soon",
     "posts": [
       {
-        "title": "Renderizando documentos de mil páginas no navegador sem travar a UI",
-        "meta": "Engenharia · 8 min",
+        "title": "Rendering thousand-page documents in the browser without blocking the UI",
+        "meta": "Engineering · 8 min",
         "href": "#"
       },
       {
-        "title": "MCP na prática: conectando um agente a sistemas legados",
-        "meta": "Em breve · 6 min",
+        "title": "MCP in practice: connecting an agent to legacy systems",
+        "meta": "Coming soon · 6 min",
         "href": "#"
       },
       {
-        "title": "Design system em monorepo: o que compensa versionar",
-        "meta": "Em breve · 7 min",
+        "title": "Design system in a monorepo: what's worth versioning",
+        "meta": "Coming soon · 7 min",
         "href": "#"
       }
     ]
   },
   "theme": {
-    "dark": "Escuro",
-    "system": "Sistema",
-    "light": "Claro"
-  },
-  "language": {
-    "comingSoon": "em breve"
+    "dark": "Dark",
+    "system": "System",
+    "light": "Light"
   },
   "footer": {
     "copyright": "© 2019–{year} Romullo Sousa"

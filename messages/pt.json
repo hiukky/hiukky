@@ -64,12 +64,19 @@
           "Framer Motion",
           "Zustand",
           "Redux",
-          "TanStack Query",
+          "TanStack",
           "Vite",
           "Storybook",
           "Vue",
-          "Sass"
+          "Sass",
+          "shadcn/ui",
+          "Radix UI"
         ]
+      },
+      {
+        "key": "mobile",
+        "label": "Mobile",
+        "items": ["React Native", "Dart", "Flutter"]
       },
       {
         "key": "back-end",
@@ -82,7 +89,8 @@
           "REST",
           "Bun",
           "Python",
-          "gRPC"
+          "gRPC",
+          "Rust"
         ]
       },
       {
@@ -104,6 +112,7 @@
         "label": "Cloud",
         "items": [
           "AWS",
+          "Cloudflare",
           "Docker",
           "Kubernetes",
           "GitLab CI/CD",
@@ -124,12 +133,14 @@
           "OCR",
           "Docling",
           "LangChain",
-          "Embeddings"
+          "Embeddings",
+          "Ollama",
+          "OpenAI"
         ]
       },
       {
-        "key": "ferramentas",
-        "label": "Ferramentas",
+        "key": "tools",
+        "label": "Tools",
         "items": [
           "Git",
           "Neovim",
@@ -137,6 +148,7 @@
           "Linux",
           "Turborepo",
           "Jest",
+          "Vitest",
           "Playwright",
           "Zod"
         ]
@@ -182,9 +194,6 @@
     "dark": "Escuro",
     "system": "Sistema",
     "light": "Claro"
-  },
-  "language": {
-    "comingSoon": "em breve"
   },
   "footer": {
     "copyright": "© 2019–{year} Romullo Sousa"

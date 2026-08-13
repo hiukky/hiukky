@@ -6,7 +6,7 @@ import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 
-const ENABLED_LOCALES: (typeof routing.locales)[number][] = ["pt"];
+const ENABLED_LOCALES: (typeof routing.locales)[number][] = ["en", "pt"];
 
 export function LanguageSwitcher() {
   const locale = useLocale();

@@ -8,6 +8,7 @@ import { CursorGlow } from "@/components/motion/cursor-glow";
 import { Reveal } from "@/components/motion/reveal";
 import { SectionFade } from "@/components/motion/section-fade";
 import { StackTerminal } from "@/components/sections/stack-terminal";
+import { COMPANY_LINKS } from "@/lib/company-links";
 import { SITE_URL } from "@/lib/site-config";
 import { SOCIAL_LINKS } from "@/lib/social-links";
 
@@ -206,7 +207,7 @@ export default async function HomePage({
           <div className="row-list flex flex-col">
             {experienceItems.map((item, i) => (
               <Reveal key={item.company} delay={i * 0.05}>
-                <div className="row-link exp-grid grid grid-cols-[150px_1fr] gap-6 border-t border-[var(--line)] py-6.5 max-[720px]:grid-cols-1 max-[720px]:gap-1.5">
+                <div className="exp-grid grid grid-cols-[150px_1fr] gap-6 border-t border-[var(--line)] py-6.5 max-[720px]:grid-cols-1 max-[720px]:gap-1.5">
                   <span
                     className="pt-0.75 font-mono text-[12.5px]"
                     style={{ color: "var(--faint)" }}
@@ -215,12 +216,30 @@ export default async function HomePage({
                   </span>
                   <div className="flex flex-col gap-2">
                     <span className="font-medium text-[17px]">{item.role}</span>
-                    <span
-                      className="text-[13.5px]"
-                      style={{ color: "var(--muted2)" }}
-                    >
-                      {item.company}
-                    </span>
+                    {COMPANY_LINKS[item.company] ? (
+                      <a
+                        href={COMPANY_LINKS[item.company]}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="row-link inline-flex w-fit items-center gap-1.5 text-[13.5px] no-underline"
+                        style={{ color: "var(--muted2)" }}
+                      >
+                        {item.company}
+                        <span
+                          className="row-arrow flex-none text-[11px] transition-transform"
+                          style={{ color: "var(--faint)", opacity: 0.7 }}
+                        >
+                          ↗
+                        </span>
+                      </a>
+                    ) : (
+                      <span
+                        className="text-[13.5px]"
+                        style={{ color: "var(--muted2)" }}
+                      >
+                        {item.company}
+                      </span>
+                    )}
                     <span
                       className="mt-0.5 max-w-130 text-[14.5px] leading-[1.75]"
                       style={{ color: "var(--muted2)" }}

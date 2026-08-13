@@ -11,6 +11,7 @@ import {
   PackageIcon,
   type Icon as PhosphorIcon,
   RobotIcon,
+  SparkleIcon,
   TestTubeIcon,
   TextAaIcon,
 } from "@phosphor-icons/react";
@@ -28,6 +29,7 @@ const CONCEPT_ICON_COMPONENTS: Record<string, PhosphorIcon> = {
   MagnifyingGlass: MagnifyingGlassIcon,
   Package: PackageIcon,
   Robot: RobotIcon,
+  Sparkle: SparkleIcon,
   TestTube: TestTubeIcon,
   TextAa: TextAaIcon,
 };
@@ -198,7 +200,6 @@ export function StackTerminal() {
 
   const suggestions = [
     { hint: "?", label: "help", cmd: "help" },
-    { hint: "l", label: "ls", cmd: "ls" },
     { hint: "a", label: "all", cmd: "all" },
     ...categories.map((category, i) => ({
       hint: String(i + 1),
@@ -294,7 +295,7 @@ export function StackTerminal() {
       </div>
 
       <div
-        className="flex flex-wrap items-center gap-x-4.5 gap-y-1 border-t px-4 py-2.5 font-mono text-[11.5px]"
+        className="term-suggestions flex flex-nowrap items-center gap-x-4.5 overflow-x-auto border-t px-4 py-2.5 font-mono text-[11.5px]"
         style={{ borderColor: "var(--line)" }}
       >
         {suggestions.map((s) => (
@@ -302,7 +303,7 @@ export function StackTerminal() {
             key={s.cmd}
             type="button"
             onClick={() => runCommand(s.cmd)}
-            className="tui-key flex items-center gap-1.5 border-none bg-transparent p-0 font-mono text-[11.5px]"
+            className="tui-key flex shrink-0 items-center gap-1.5 border-none bg-transparent p-0 font-mono text-[11.5px]"
           >
             <span className="text-[var(--faintest)]">{s.hint}</span>
             <span className="tui-cmd">{s.label}</span>
