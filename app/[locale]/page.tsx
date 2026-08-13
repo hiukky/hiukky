@@ -24,19 +24,6 @@ function hl(chunks: ReactNode) {
   return <span className="hl">{chunks}</span>;
 }
 
-function underline(chunks: ReactNode) {
-  return (
-    <span
-      style={{
-        color: "var(--fg)",
-        borderBottom: "1px solid var(--line-strong)",
-      }}
-    >
-      {chunks}
-    </span>
-  );
-}
-
 export async function generateMetadata({
   params,
 }: {
@@ -103,10 +90,18 @@ export default async function HomePage({
             </Reveal>
             <Reveal delay={0.05}>
               <p
-                className="mt-5.5 text-[15.5px] leading-[1.8]"
+                className="m-0 mt-5.5 mb-4.5 text-[15.5px] leading-[1.8]"
                 style={{ color: "var(--muted)" }}
               >
-                {tHero.rich("bio", { hl, u: underline })}
+                {tHero("bio1")}
+              </p>
+            </Reveal>
+            <Reveal delay={0.075}>
+              <p
+                className="m-0 text-[15.5px] leading-[1.8]"
+                style={{ color: "var(--muted)" }}
+              >
+                {tHero.rich("bio2", { hl })}
               </p>
             </Reveal>
             <Reveal delay={0.1}>
@@ -169,10 +164,34 @@ export default async function HomePage({
           </Reveal>
           <Reveal delay={0.1}>
             <p
-              className="m-0 max-w-[65ch] text-base leading-[1.9]"
+              className="m-0 mb-4.5 max-w-[65ch] text-base leading-[1.9]"
               style={{ color: "var(--muted)" }}
             >
               {tAbout.rich("paragraph2", { hl })}
+            </p>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p
+              className="m-0 mb-4.5 max-w-[65ch] text-base leading-[1.9]"
+              style={{ color: "var(--muted)" }}
+            >
+              {tAbout.rich("paragraph3", { hl })}
+            </p>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p
+              className="m-0 mb-4.5 max-w-[65ch] text-base leading-[1.9]"
+              style={{ color: "var(--muted)" }}
+            >
+              {tAbout.rich("paragraph4", { hl })}
+            </p>
+          </Reveal>
+          <Reveal delay={0.25}>
+            <p
+              className="m-0 max-w-[65ch] text-base leading-[1.9]"
+              style={{ color: "var(--muted)" }}
+            >
+              {tAbout.rich("paragraph5", { hl })}
             </p>
           </Reveal>
         </SectionFade>

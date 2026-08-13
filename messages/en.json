@@ -20,14 +20,18 @@
   "hero": {
     "greeting": "Oi, sou o Romullo,",
     "role": "Software Engineer",
-    "bio": "Há mais de 8 anos construindo produtos para a web, do primeiro commit à operação em escala. <hl>Full Stack</hl> por formação, com especialização prática em <u>Front-end</u> e interesse crescente por aplicações com <hl>IA</hl>.",
+    "bio1": "Há quase 10 anos construindo software para a web, resolvendo desafios complexos e explorando novas tecnologias pelo caminho.",
+    "bio2": "Gosto de entender como as coisas funcionam e, principalmente, <hl>transformar ideias em coisas que funcionam de verdade</hl>.",
     "cta": "Entrar em contato",
     "photoAlt": "Retrato em preto e branco de Romullo Sousa"
   },
   "about": {
-    "eyebrow": "Sobre",
-    "paragraph1": "Minha experiência vai da <hl>construção de produtos do zero</hl> em startups até <hl>aplicações críticas</hl> em ambientes corporativos de grande escala. Passei por todo o ciclo: descoberta, arquitetura, implementação, deploy e suporte à produção. Isso me deu leitura de trade-offs e cuidado com o que fica de pé depois da entrega.",
-    "paragraph2": "Gosto de sistemas simples, código legível e decisões bem justificadas. Tenho perfil exploratório e interesse por <hl>developer tooling</hl>, <hl>Open Source</hl>, <hl>DX</hl> e <hl>UI/UX</hl>. Atualmente venho expandindo minha atuação para aplicações com IA, envolvendo <hl>LLMs</hl>, <hl>RAG</hl>, <hl>Agents</hl>, <hl>MCP</hl> e processamento documental."
+    "eyebrow": "About",
+    "paragraph1": "My story with development started before it became a career. I've always loved exploring technology, understanding how things work, and building my own projects. That curiosity is what led me into software development, and it's still a big part of what drives me today.",
+    "paragraph2": "I started out professionally building web applications and, over time, <hl>Front-end</hl> became my main area of expertise. But I never stayed locked into a single layer. Working across different products and teams naturally led me into <hl>Back-end</hl>, <hl>databases</hl>, <hl>cloud</hl>, <hl>infrastructure</hl>, and other parts of the development cycle.",
+    "paragraph3": "Outside of work, I'm still that dev who likes to experiment. <hl>Open Source</hl>, <hl>Linux</hl>, <hl>mobile</hl>, <hl>WebAssembly</hl>, <hl>CLIs</hl>, and <hl>developer tooling</hl> have all been part of those projects. I also have a soft spot for <hl>UI/UX and DX</hl>, always trying to balance good experiences with <hl>quality, security, and simplicity</hl> in what I build.",
+    "paragraph4": "More recently, that same curiosity has led me toward <hl>AI applied to software</hl>, exploring <hl>LLMs</hl>, <hl>agents</hl>, <hl>RAG</hl>, <hl>MCP</hl>, and <hl>local models</hl>, both within products and in the development process itself.",
+    "paragraph5": "In the end, I like technology, but I like <hl>building things, learning along the way, and solving problems that make me think</hl> even more."
   },
   "experience": {
     "eyebrow": "Experiência",
@@ -36,13 +40,13 @@
         "period": "2022–Atual",
         "role": "Senior Software Engineer",
         "company": "Softplan",
-        "description": "Modernização de aplicações judiciais de grande escala no ecossistema SAJ/e-SAJ: arquitetura Front-end, performance de renderização documental, expansão internacional do produto e soluções com IA generativa."
+        "description": "Construção e evolução de produtos para o ecossistema de Justiça, com foco em aplicações web. Trabalhei na modernização de sistemas legados, desafios de performance, expansão internacional e, mais recentemente, em iniciativas envolvendo IA generativa, OCR e processamento de documentos."
       },
       {
         "period": "2018–2022",
         "role": "Full Stack Developer",
         "company": "Orul Tech",
-        "description": "Desenvolvimento de uma plataforma de fidelização usada por centenas de clientes em 12 estados, do Front-end e Back-end a banco de dados, infraestrutura na AWS, deploy e suporte à produção."
+        "description": "Desenvolvimento de produtos SaaS do Front-end à produção, passando por Back-end, bancos de dados, AWS e deploy. Entre eles, uma plataforma de fidelização construída do zero que chegou a mais de 500 clientes em 12 estados."
       }
     ]
   },
