@@ -7,6 +7,8 @@ import { CursorGlow } from "@/components/motion/cursor-glow";
 import { Reveal } from "@/components/motion/reveal";
 import { SectionFade } from "@/components/motion/section-fade";
 import { StackTerminal } from "@/components/sections/stack-terminal";
+import { SITE_URL } from "@/lib/site-config";
+import { SOCIAL_LINKS } from "@/lib/social-links";
 
 type ExperienceItem = {
   period: string;
@@ -53,6 +55,7 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const tMeta = await getTranslations("meta");
   const tHero = await getTranslations("hero");
   const tAbout = await getTranslations("about");
   const tExperience = await getTranslations("experience");
@@ -62,18 +65,34 @@ export default async function HomePage({
   const experienceItems = tExperience.raw("items") as ExperienceItem[];
   const posts = tWriting.raw("posts") as Post[];
 
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Romullo Sousa",
+    alternateName: "hiukky",
+    jobTitle: tHero("role"),
+    description: tMeta("description"),
+    url: `${SITE_URL}/${locale}`,
+    image: `${SITE_URL}/assets/personal/romullo.png`,
+    sameAs: SOCIAL_LINKS.filter((link) => link.name !== "email").map(
+      (link) => link.url,
+    ),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: static server-generated JSON-LD, no user input
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       <CursorGlow />
 
       <section
         id="top"
         className="relative z-[1] flex min-h-dvh items-center py-0"
       >
-        <div
-          className="hero-grid mx-auto grid w-full max-w-[960px] items-center gap-8 px-[22px] sm:gap-16 sm:px-10"
-          style={{ gridTemplateColumns: "1fr 0.6fr" }}
-        >
+        <div className="hero-grid mx-auto grid w-full max-w-[1040px] grid-cols-[1fr_0.6fr] items-center gap-16 px-10 max-[720px]:grid-cols-1 max-[720px]:gap-8 max-[720px]:px-[22px]">
           <div className="hero-text relative z-[2]">
             <Reveal>
               <h1 className="m-0 font-normal text-[clamp(30px,3.6vw,42px)] leading-[1.24] tracking-[-0.025em]">
@@ -116,11 +135,11 @@ export default async function HomePage({
 
           <Reveal
             delay={0.15}
-            className="hero-photo relative aspect-[3/4] overflow-hidden"
+            className="hero-photo relative aspect-[3/4] overflow-hidden max-[720px]:order-first max-[720px]:max-w-[240px]"
           >
             <Image
               src="/assets/personal/romullo.png"
-              alt={tHero("role")}
+              alt={tHero("photoAlt")}
               fill
               priority
               sizes="(min-width: 640px) 320px, 240px"
@@ -144,14 +163,17 @@ export default async function HomePage({
         </div>
       </section>
 
-      <div className="wrap relative z-[1] mx-auto max-w-[700px] px-[22px] sm:px-10">
-        <SectionFade id="about" style={{ padding: "170px 0 0" }}>
+      <div className="wrap relative z-[1] mx-auto max-w-[800px] px-10 max-[720px]:px-[22px]">
+        <SectionFade
+          id="about"
+          className="pt-[170px] pb-0 max-[720px]:pt-[90px] max-[720px]:pb-[90px]"
+        >
           <Reveal>
-            <div className="eyebrow mb-7">{tAbout("eyebrow")}</div>
+            <h2 className="eyebrow m-0 mb-7">{tAbout("eyebrow")}</h2>
           </Reveal>
           <Reveal delay={0.05}>
             <p
-              className="m-0 mb-[18px] text-[16px] leading-[1.9]"
+              className="m-0 mb-[18px] max-w-[65ch] text-[16px] leading-[1.9]"
               style={{ color: "var(--muted)" }}
             >
               {tAbout.rich("paragraph1", { hl })}
@@ -159,7 +181,7 @@ export default async function HomePage({
           </Reveal>
           <Reveal delay={0.1}>
             <p
-              className="m-0 text-[16px] leading-[1.9]"
+              className="m-0 max-w-[65ch] text-[16px] leading-[1.9]"
               style={{ color: "var(--muted)" }}
             >
               {tAbout.rich("paragraph2", { hl })}
@@ -167,20 +189,17 @@ export default async function HomePage({
           </Reveal>
         </SectionFade>
 
-        <SectionFade id="experience" style={{ padding: "170px 0 160px" }}>
+        <SectionFade
+          id="experience"
+          className="pt-[170px] pb-[160px] max-[720px]:pt-[90px] max-[720px]:pb-[90px]"
+        >
           <Reveal>
-            <div className="eyebrow mb-5">{tExperience("eyebrow")}</div>
+            <h2 className="eyebrow m-0 mb-5">{tExperience("eyebrow")}</h2>
           </Reveal>
           <div className="row-list flex flex-col">
             {experienceItems.map((item, i) => (
               <Reveal key={item.company} delay={i * 0.05}>
-                <div
-                  className="row-link exp-grid grid gap-6 border-t py-[26px]"
-                  style={{
-                    gridTemplateColumns: "150px 1fr",
-                    borderColor: "var(--line)",
-                  }}
-                >
+                <div className="row-link exp-grid grid grid-cols-[150px_1fr] gap-6 border-t border-[var(--line)] py-[26px] max-[720px]:grid-cols-1 max-[720px]:gap-1.5">
                   <span
                     className="pt-[3px] font-mono text-[12.5px]"
                     style={{ color: "var(--faint)" }}
@@ -208,19 +227,25 @@ export default async function HomePage({
           </div>
         </SectionFade>
 
-        <SectionFade id="stack" style={{ padding: "0 0 160px" }}>
+        <SectionFade
+          id="stack"
+          className="pt-0 pb-[160px] max-[720px]:pt-[90px] max-[720px]:pb-[90px]"
+        >
           <Reveal>
-            <div className="eyebrow mb-[22px]">{tStack("eyebrow")}</div>
+            <h2 className="eyebrow m-0 mb-[22px]">{tStack("eyebrow")}</h2>
           </Reveal>
           <Reveal delay={0.05}>
             <StackTerminal />
           </Reveal>
         </SectionFade>
 
-        <SectionFade id="writing" style={{ padding: "0 0 160px" }}>
+        <SectionFade
+          id="writing"
+          className="pt-0 pb-[160px] max-[720px]:pt-[90px] max-[720px]:pb-[90px]"
+        >
           <Reveal>
             <div className="mb-5 flex items-baseline justify-between gap-4">
-              <span className="eyebrow">{tWriting("eyebrow")}</span>
+              <h2 className="eyebrow m-0">{tWriting("eyebrow")}</h2>
               <span
                 className="font-mono text-[11px]"
                 style={{ color: "var(--faintest)" }}

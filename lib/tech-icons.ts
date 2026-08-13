@@ -14,6 +14,7 @@ import {
   siKubernetes,
   siLangchain,
   siLinux,
+  siModelcontextprotocol,
   siMongodb,
   siMysql,
   siNeovim,
@@ -43,12 +44,10 @@ import {
 
 /**
  * Maps skill names (as they appear in messages/*.json stack.categories) to
- * their simple-icons brand glyph. Entries without a reliable brand mark in
- * the catalog (protocols like REST/gRPC, trademark-pulled brands like AWS
- * and Playwright, small libraries like Zustand, or AI concepts like RAG)
- * are left out and fall back to the generic terminal glyph.
+ * their simple-icons brand glyph, for skills with a real brand mark in the
+ * catalog.
  */
-const TECH_ICON_PATHS: Record<string, string> = {
+const BRAND_ICON_PATHS: Record<string, string> = {
   React: siReact.path,
   TypeScript: siTypescript.path,
   "Next.js": siNextdotjs.path,
@@ -82,6 +81,7 @@ const TECH_ICON_PATHS: Record<string, string> = {
   Nginx: siNginx.path,
   "Elastic APM": siElastic.path,
   LangChain: siLangchain.path,
+  MCP: siModelcontextprotocol.path,
   Git: siGit.path,
   Neovim: siNeovim.path,
   Figma: siFigma.path,
@@ -91,6 +91,38 @@ const TECH_ICON_PATHS: Record<string, string> = {
   Zod: siZod.path,
 };
 
-export function getTechIconPath(name: string): string | null {
-  return TECH_ICON_PATHS[name] ?? null;
+/**
+ * Skills without a real brand mark in simple-icons — either genuinely
+ * conceptual (protocols, AI concepts with no single canonical logo) or a
+ * real product whose mark simple-icons has pulled for trademark reasons
+ * (AWS, Playwright). These get a generic Phosphor glyph that fits the
+ * concept instead of impersonating a mark that isn't theirs to show.
+ * Rendered by components/sections/stack-terminal.tsx via this key.
+ */
+const CONCEPT_ICON_KEYS: Record<string, string> = {
+  REST: "ArrowsLeftRight",
+  gRPC: "Broadcast",
+  AWS: "Cloud",
+  Playwright: "TestTube",
+  Zustand: "Package",
+  LLMs: "Brain",
+  RAG: "MagnifyingGlass",
+  Agents: "Robot",
+  OCR: "TextAa",
+  Docling: "FileText",
+  Embeddings: "ChartScatter",
+};
+
+export type TechIcon =
+  | { kind: "brand"; path: string }
+  | { kind: "concept"; key: string };
+
+export function getTechIcon(name: string): TechIcon | null {
+  const brandPath = BRAND_ICON_PATHS[name];
+  if (brandPath) return { kind: "brand", path: brandPath };
+
+  const conceptKey = CONCEPT_ICON_KEYS[name];
+  if (conceptKey) return { kind: "concept", key: conceptKey };
+
+  return null;
 }

@@ -10,7 +10,8 @@
     "writing": "Escrita",
     "more": "Mais",
     "theme": "Tema",
-    "language": "Idioma"
+    "language": "Idioma",
+    "skipToContent": "Pular para o conteúdo"
   },
   "social": {
     "github": "Github",
@@ -21,7 +22,8 @@
     "greeting": "Oi, sou o Romullo,",
     "role": "Software Engineer",
     "bio": "Há mais de 8 anos construindo produtos para a web, do primeiro commit à operação em escala. <hl>Full Stack</hl> por formação, com especialização prática em <u>Front-end</u> e interesse crescente por aplicações com <hl>IA</hl>.",
-    "cta": "Entrar em contato"
+    "cta": "Entrar em contato",
+    "photoAlt": "Retrato em preto e branco de Romullo Sousa"
   },
   "about": {
     "eyebrow": "Sobre",
@@ -141,6 +143,7 @@
       "title": "hiukky@stack — zsh",
       "whoami": "Software Engineer · 8+ anos · Full Stack com foco em Front-end",
       "placeholder": "digite help",
+      "inputLabel": "Comando do terminal",
       "helpIntro": "comandos disponíveis:",
       "helpLs": "lista os diretórios",
       "helpLsArg": "tecnologias do diretório",

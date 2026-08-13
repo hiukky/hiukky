@@ -63,10 +63,7 @@ export function Navigation() {
           style={{ background: "var(--panel)", borderColor: "var(--line)" }}
         >
           <div className="flex flex-col p-2">
-            <div
-              className="mobile-links mb-2 flex-col gap-0 border-b pb-2"
-              style={{ borderColor: "var(--line)" }}
-            >
+            <div className="mb-2 hidden flex-col gap-0 border-b border-[var(--line)] pb-2 max-[720px]:flex">
               {SECTIONS.map(({ href, key }) => (
                 <a
                   key={href}

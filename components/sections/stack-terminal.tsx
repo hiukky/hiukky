@@ -1,8 +1,77 @@
 "use client";
 
+import {
+  ArrowsLeftRight,
+  Brain,
+  Broadcast,
+  ChartScatter,
+  Cloud,
+  FileText,
+  MagnifyingGlass,
+  Package,
+  type Icon as PhosphorIcon,
+  Robot,
+  TestTube,
+  TextAa,
+} from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 import { useRef, useState } from "react";
-import { getTechIconPath } from "@/lib/tech-icons";
+import { getTechIcon, type TechIcon } from "@/lib/tech-icons";
+
+const CONCEPT_ICON_COMPONENTS: Record<string, PhosphorIcon> = {
+  ArrowsLeftRight,
+  Brain,
+  Broadcast,
+  ChartScatter,
+  Cloud,
+  FileText,
+  MagnifyingGlass,
+  Package,
+  Robot,
+  TestTube,
+  TextAa,
+};
+
+function TechGlyph({
+  techIcon,
+  fallback,
+  fallbackColor,
+}: {
+  techIcon?: TechIcon | null;
+  fallback: string;
+  fallbackColor: string;
+}) {
+  if (techIcon?.kind === "brand") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        width={11}
+        height={11}
+        fill="currentColor"
+        role="img"
+        aria-hidden="true"
+        className="shrink-0"
+      >
+        <path d={techIcon.path} />
+      </svg>
+    );
+  }
+
+  if (techIcon?.kind === "concept") {
+    const ConceptIcon = CONCEPT_ICON_COMPONENTS[techIcon.key];
+    if (ConceptIcon) {
+      return (
+        <ConceptIcon size={11} weight="bold" aria-hidden className="shrink-0" />
+      );
+    }
+  }
+
+  return (
+    <span className="text-[11px]" style={{ color: fallbackColor }}>
+      {fallback}
+    </span>
+  );
+}
 
 type SkillCategory = { key: string; label: string; items: string[] };
 
@@ -11,7 +80,7 @@ type GridItem = {
   color: string;
   iconColor: string;
   icon: string;
-  iconPath?: string | null;
+  techIcon?: TechIcon | null;
 };
 
 type Line =
@@ -61,7 +130,7 @@ export function StackTerminal() {
         icon: "▱",
         iconColor: "var(--faint)",
         color: "var(--bright)",
-        iconPath: getTechIconPath(name),
+        techIcon: getTechIcon(name),
       })),
     );
 
@@ -140,7 +209,8 @@ export function StackTerminal() {
   ];
 
   return (
-    <div
+    <section
+      aria-label={t("title")}
       className="overflow-hidden rounded-xl border"
       style={{ background: "var(--term-bg)", borderColor: "var(--line)" }}
     >
@@ -149,14 +219,17 @@ export function StackTerminal() {
         style={{ borderColor: "var(--line)" }}
       >
         <span
+          aria-hidden="true"
           className="size-2.5 rounded-full"
           style={{ background: "var(--line-strong)" }}
         />
         <span
+          aria-hidden="true"
           className="size-2.5 rounded-full"
           style={{ background: "var(--line-strong)" }}
         />
         <span
+          aria-hidden="true"
           className="size-2.5 rounded-full"
           style={{ background: "var(--line-strong)" }}
         />
@@ -167,6 +240,7 @@ export function StackTerminal() {
 
       <div
         ref={termRef}
+        aria-live="polite"
         className="term-body h-[290px] overflow-x-hidden overflow-y-auto px-4 py-[18px] font-mono text-[13px] text-[var(--bright)] leading-[1.85]"
       >
         {lines.map((entry) =>
@@ -184,26 +258,11 @@ export function StackTerminal() {
                   className="flex items-center gap-2 whitespace-nowrap"
                   style={{ color: item.color }}
                 >
-                  {item.iconPath ? (
-                    <svg
-                      viewBox="0 0 24 24"
-                      width={11}
-                      height={11}
-                      fill="currentColor"
-                      role="img"
-                      aria-hidden="true"
-                      className="shrink-0"
-                    >
-                      <path d={item.iconPath} />
-                    </svg>
-                  ) : (
-                    <span
-                      className="text-[11px]"
-                      style={{ color: item.iconColor }}
-                    >
-                      {item.icon}
-                    </span>
-                  )}
+                  <TechGlyph
+                    techIcon={item.techIcon}
+                    fallback={item.icon}
+                    fallbackColor={item.iconColor}
+                  />
                   {item.name}
                 </span>
               ))}
@@ -227,6 +286,7 @@ export function StackTerminal() {
               if (event.key === "Enter") runCommand(input);
             }}
             placeholder={t("placeholder")}
+            aria-label={t("inputLabel")}
             spellCheck={false}
             className="flex-1 border-none bg-transparent font-mono text-[13px] text-[var(--fg)] outline-none"
           />
@@ -249,6 +309,6 @@ export function StackTerminal() {
           </button>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

@@ -7,6 +7,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Navigation } from "@/components/layout/navigation";
 import { routing } from "@/i18n/routing";
+import { SITE_URL } from "@/lib/site-config";
 
 import "../globals.css";
 
@@ -39,8 +40,29 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "meta" });
 
   return {
+    metadataBase: new URL(SITE_URL),
     description: t("description"),
     robots: "index, follow",
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        pt: "/pt",
+        en: "/en",
+      },
+    },
+    openGraph: {
+      type: "profile",
+      locale: locale === "pt" ? "pt_BR" : "en_US",
+      url: `/${locale}`,
+      siteName: t("title"),
+      title: t("title"),
+      description: t("description"),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+    },
   };
 }
 
@@ -58,6 +80,8 @@ export default async function LocaleLayout({
   }
 
   setRequestLocale(locale);
+
+  const t = await getTranslations({ locale, namespace: "nav" });
 
   return (
     <html
@@ -87,8 +111,19 @@ export default async function LocaleLayout({
         >
           <NextIntlClientProvider>
             <div className="relative min-h-dvh">
+              <a
+                href="#main-content"
+                className="-translate-y-full fixed top-4 left-4 z-[100] rounded-full border px-4 py-2 text-sm no-underline transition-transform focus:translate-y-0"
+                style={{
+                  background: "var(--panel-solid)",
+                  borderColor: "var(--line)",
+                  color: "var(--fg)",
+                }}
+              >
+                {t("skipToContent")}
+              </a>
               <Navigation />
-              <main>{children}</main>
+              <main id="main-content">{children}</main>
             </div>
           </NextIntlClientProvider>
         </ThemeProvider>
