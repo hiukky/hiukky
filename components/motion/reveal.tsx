@@ -1,10 +1,10 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
-import type { ReactNode } from "react";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { type ReactNode, useEffect, useState } from "react";
 
 const defaultVariants: Variants = {
-  hidden: { opacity: 0, y: 16 },
+  hidden: { opacity: 0, y: 22 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -16,8 +16,12 @@ type RevealProps = {
 };
 
 /**
- * Base scroll-reveal primitive. The redesign change composes on top of this
- * (and Framer Motion directly) for the actual parallax/motion design.
+ * Fade-up-on-view primitive, matching the design prototype's [data-reveal]
+ * treatment. Starts static/fully-visible on server and first client paint
+ * (avoids a hydration mismatch, since framer-motion's useReducedMotion can
+ * already read the real value on the client's first render while SSR
+ * cannot) and only upgrades to the animated version after mount, when
+ * motion isn't reduced.
  */
 export function Reveal({
   children,
@@ -25,12 +29,23 @@ export function Reveal({
   variants = defaultVariants,
   className,
 }: RevealProps) {
+  const shouldReduceMotion = useReducedMotion();
+  const [animated, setAnimated] = useState(false);
+
+  useEffect(() => {
+    if (!shouldReduceMotion) setAnimated(true);
+  }, [shouldReduceMotion]);
+
+  if (!animated) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.5, delay, ease: "easeOut" }}
+      transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
       variants={variants}
       className={className}
     >

@@ -1,67 +1,186 @@
 {
   "meta": {
-    "description": "[PT] Fullstack developer, technology enthusiast and lover of the open-source world."
+    "title": "Romullo Sousa — Software Engineer",
+    "description": "Software Engineer full stack, com foco em Front-end e interesse crescente por aplicações com IA."
   },
   "nav": {
-    "home": "[PT] Home",
-    "about": "[PT] About",
-    "skills": "[PT] Skills",
-    "openSource": "[PT] Open Source"
+    "about": "Sobre",
+    "experience": "Experiência",
+    "stack": "Stack",
+    "writing": "Escrita",
+    "more": "Mais",
+    "theme": "Tema",
+    "language": "Idioma"
   },
-  "home": {
-    "pageTitle": "[PT] Romullo (@hiukky)",
-    "name": "[PT] Romullo Sousa",
-    "subtitle": "[PT] Software Developer"
+  "social": {
+    "github": "Github",
+    "linkedin": "Linkedin",
+    "email": "Email"
+  },
+  "hero": {
+    "greeting": "Oi, sou o Romullo,",
+    "role": "Software Engineer",
+    "bio": "Há mais de 8 anos construindo produtos para a web, do primeiro commit à operação em escala. <hl>Full Stack</hl> por formação, com especialização prática em <u>Front-end</u> e interesse crescente por aplicações com <hl>IA</hl>.",
+    "cta": "Entrar em contato"
   },
   "about": {
-    "pageTitle": "[PT] About me",
-    "heading": "[PT] About Me",
-    "paragraph1": "[PT] Hello, I'm Romullo, {age} years old, brazilian, christian, lover of technology and the open-source world. I graduated in Systems Analysis and Development and currently work as a Software Developer at <softplan>Softplan</softplan>.",
-    "paragraph2": "[PT] Today with the constant updating in the technology world, I dedicate most of my time studying and keeping up to date with the best languages, tools and practices for the development of quality software.",
-    "paragraph3": "[PT] My main hobby is programming! I spend a lot of time contributing to open-source projects on <github>Github</github> and in my spare time I like watching <animes>animes</animes>, series or listening lo-fi."
+    "eyebrow": "Sobre",
+    "paragraph1": "Minha experiência vai da <hl>construção de produtos do zero</hl> em startups até <hl>aplicações críticas</hl> em ambientes corporativos de grande escala. Passei por todo o ciclo: descoberta, arquitetura, implementação, deploy e suporte à produção — o que me deu leitura de trade-offs e cuidado com o que fica de pé depois da entrega.",
+    "paragraph2": "Gosto de sistemas simples, código legível e decisões bem justificadas. Tenho perfil exploratório e interesse por <hl>developer tooling</hl>, <hl>Open Source</hl>, <hl>DX</hl> e <hl>UI/UX</hl>. Atualmente venho expandindo minha atuação para aplicações com IA, envolvendo <hl>LLMs</hl>, <hl>RAG</hl>, <hl>Agents</hl>, <hl>MCP</hl> e processamento documental."
   },
-  "skills": {
-    "pageTitle": "[PT] Skills",
-    "heading": "[PT] Skills",
-    "paragraph1": "[PT] In these 5 years of walking as a developer and with my curiosity to unravel things, I was able to get a lot experience in various technologies in the Android world, Linux, Desktop and Web.",
-    "paragraph2": "[PT] Currently, most of the time, I'm working on Web development with Typescript, Nodejs, ReactJs, NestJs and studying DevOps and some tools like Docker, Ansible, Vagrant and Terraform.",
-    "list": [
-      "SQL",
-      "JavaScript",
-      "CSS 3",
-      "HTML 5",
-      "Git",
-      "Ansible",
-      "Docker",
-      "MongoDB",
-      "ReactJs",
-      "PostgreSQL",
-      "NodeJs",
-      "TypeScript",
-      "Figma",
-      "Shell",
-      "SASS",
-      "Vagrant",
-      "Java",
-      "AdonisJs",
-      "GraphQL",
-      "Prisma",
-      "RxJS",
-      "Linux",
-      "TypeORM",
-      "Electron",
-      "NextJs",
-      "Jest",
-      "Ava",
-      "NestJs",
-      "MySQL",
-      "AWS"
+  "experience": {
+    "eyebrow": "Experiência",
+    "items": [
+      {
+        "period": "2022 — Atual",
+        "role": "Senior Software Engineer",
+        "company": "Softplan",
+        "description": "Modernização de aplicações judiciais de grande escala no ecossistema SAJ/e-SAJ: arquitetura Front-end, performance de renderização documental, expansão internacional do produto e soluções com IA generativa."
+      },
+      {
+        "period": "2018 — 2022",
+        "role": "Full Stack Developer",
+        "company": "Orul Tech",
+        "description": "Desenvolvimento de uma plataforma de fidelização usada por centenas de clientes em 12 estados, do Front-end e Back-end a banco de dados, infraestrutura na AWS, deploy e suporte à produção."
+      }
     ]
   },
-  "openSource": {
-    "pageTitle": "[PT] Open Source",
-    "heading": "[PT] Open Source",
-    "paragraph1": "[PT] The open-source world is a wonderful thing! it's a place where we makes it possible to develop our skills, share knowledge and evolve together with the community.",
-    "noDescription": "[PT] No description provided."
+  "stack": {
+    "eyebrow": "Stack",
+    "categories": [
+      {
+        "key": "front-end",
+        "label": "Front-end",
+        "items": [
+          "React",
+          "TypeScript",
+          "Next.js",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Zustand",
+          "Redux",
+          "TanStack Query",
+          "Vite",
+          "Storybook",
+          "Vue",
+          "Sass"
+        ]
+      },
+      {
+        "key": "back-end",
+        "label": "Back-end",
+        "items": [
+          "Node.js",
+          "NestJS",
+          "Express",
+          "GraphQL",
+          "REST",
+          "Bun",
+          "Python",
+          "gRPC"
+        ]
+      },
+      {
+        "key": "dados",
+        "label": "Dados",
+        "items": [
+          "PostgreSQL",
+          "MongoDB",
+          "MySQL",
+          "Redis",
+          "Prisma",
+          "TypeORM",
+          "Supabase",
+          "Elasticsearch"
+        ]
+      },
+      {
+        "key": "cloud",
+        "label": "Cloud",
+        "items": [
+          "AWS",
+          "Docker",
+          "Kubernetes",
+          "GitLab CI/CD",
+          "GitHub Actions",
+          "Terraform",
+          "Nginx",
+          "Elastic APM"
+        ]
+      },
+      {
+        "key": "ia",
+        "label": "IA",
+        "items": [
+          "LLMs",
+          "RAG",
+          "Agents",
+          "MCP",
+          "OCR",
+          "Docling",
+          "LangChain",
+          "Embeddings"
+        ]
+      },
+      {
+        "key": "ferramentas",
+        "label": "Ferramentas",
+        "items": [
+          "Git",
+          "Neovim",
+          "Figma",
+          "Linux",
+          "Turborepo",
+          "Jest",
+          "Playwright",
+          "Zod"
+        ]
+      }
+    ],
+    "terminal": {
+      "title": "hiukky@stack — zsh",
+      "whoami": "Software Engineer · 8+ anos · Full Stack com foco em Front-end",
+      "placeholder": "digite help",
+      "helpIntro": "comandos disponíveis:",
+      "helpLs": "lista os diretórios",
+      "helpLsArg": "tecnologias do diretório",
+      "helpAll": "mostra tudo",
+      "helpClear": "limpa o terminal",
+      "notFound": "diretório não encontrado",
+      "commandNotFound": "command not found",
+      "tryHelp": "tente help"
+    }
+  },
+  "writing": {
+    "eyebrow": "Escrita",
+    "comingSoon": "em breve",
+    "posts": [
+      {
+        "title": "Renderizando documentos de mil páginas no navegador sem travar a UI",
+        "meta": "Engenharia · 8 min",
+        "href": "#"
+      },
+      {
+        "title": "MCP na prática: conectando um agente a sistemas legados",
+        "meta": "Em breve · 6 min",
+        "href": "#"
+      },
+      {
+        "title": "Design system em monorepo: o que compensa versionar",
+        "meta": "Em breve · 7 min",
+        "href": "#"
+      }
+    ]
+  },
+  "theme": {
+    "dark": "Escuro",
+    "system": "Sistema",
+    "light": "Claro"
+  },
+  "language": {
+    "comingSoon": "em breve"
+  },
+  "footer": {
+    "copyright": "© 2019–{year} Romullo Sousa"
   }
 }

@@ -1,35 +1,33 @@
 "use client";
 
-import { Moon, Sun } from "@phosphor-icons/react";
 import { useTheme } from "@wrksz/themes/client";
-import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
+
+const OPTIONS = [
+  { key: "dark" as const, icon: "☾" },
+  { key: "system" as const, icon: "▢" },
+  { key: "light" as const, icon: "☀" },
+];
 
 export function ThemeToggle() {
-  const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return <div className="size-9" aria-hidden />;
-  }
-
-  const isDark = resolvedTheme === "dark";
+  const t = useTranslations("theme");
+  const { theme, setTheme } = useTheme();
 
   return (
-    <button
-      type="button"
-      onClick={() => setTheme(isDark ? "light" : "dark")}
-      aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
-      className="flex size-9 items-center justify-center rounded-full text-foreground/70 transition-colors hover:bg-accent hover:text-foreground"
-    >
-      {isDark ? (
-        <Sun className="size-4" weight="duotone" />
-      ) : (
-        <Moon className="size-4" weight="duotone" />
-      )}
-    </button>
+    <div className="flex items-center gap-[3px] rounded-full bg-[var(--hover)] p-[3px]">
+      {OPTIONS.map(({ key, icon }) => (
+        <button
+          key={key}
+          type="button"
+          aria-label={t(key)}
+          onClick={() => setTheme(key)}
+          className={`seg flex h-6 w-[26px] items-center justify-center rounded-full border-none bg-transparent text-xs ${
+            theme === key ? "active" : ""
+          }`}
+        >
+          {icon}
+        </button>
+      ))}
+    </div>
   );
 }

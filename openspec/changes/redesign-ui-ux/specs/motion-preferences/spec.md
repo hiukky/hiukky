@@ -1,16 +1,16 @@
 ## Purpose
 
-Keeps the site's scroll-driven motion from harming visitors who have asked their system to minimize animation, so the redesign's parallax and reveal effects don't come at the cost of accessibility.
+Keeps the site's motion — scroll-driven and pointer-driven — from harming visitors who have asked their system to minimize animation, so the redesign's parallax, scroll-reveal, per-section fade, and ambient cursor glow don't come at the cost of accessibility.
 
 ## ADDED Requirements
 
 ### Requirement: Motion respects reduced-motion preference
-The system SHALL disable or substantially reduce scroll-driven motion effects (parallax, scroll-reveal animations) for visitors whose system has `prefers-reduced-motion: reduce` set, while still showing all content.
+The system SHALL disable or substantially reduce motion effects — scroll-driven (parallax, scroll-reveal, per-section fade/translate) and pointer-driven (the ambient cursor-follow glow) — for visitors whose system has `prefers-reduced-motion: reduce` set, while still showing all content.
 
 #### Scenario: Visitor with reduced motion enabled
-- **WHEN** a visitor with `prefers-reduced-motion: reduce` set loads a page with scroll-driven motion
-- **THEN** the page's content is fully visible without relying on the motion effect to reveal it, and no parallax movement is applied
+- **WHEN** a visitor with `prefers-reduced-motion: reduce` set loads a page with scroll-driven and pointer-driven motion
+- **THEN** the page's content is fully visible without relying on any motion effect to reveal it, no parallax or per-section fade movement is applied, and the ambient cursor-follow glow is not attached
 
 #### Scenario: Visitor without reduced motion set
-- **WHEN** a visitor with no reduced-motion preference loads a page with scroll-driven motion
-- **THEN** the page's parallax and scroll-reveal effects play normally
+- **WHEN** a visitor with no reduced-motion preference loads a page with scroll-driven and pointer-driven motion
+- **THEN** the page's parallax, scroll-reveal, per-section fade, and ambient cursor glow all play normally

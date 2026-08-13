@@ -1,17 +1,28 @@
 import { ThemeProvider } from "@wrksz/themes/next";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { JetBrains_Mono, Sora } from "next/font/google";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Footer } from "@/components/layout/footer";
 import { Navigation } from "@/components/layout/navigation";
 import { routing } from "@/i18n/routing";
 
 import "../globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const sora = Sora({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  weight: ["400", "500"],
+  display: "swap",
+});
 
 const GTM_ID = "GTM-PXZ9TTQ";
 
@@ -49,8 +60,12 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={inter.variable} suppressHydrationWarning>
-      <body className="min-h-dvh antialiased">
+    <html
+      lang={locale}
+      className={`${sora.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="min-h-dvh overflow-x-hidden antialiased">
         <Script id="gtm" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`}
         </Script>
@@ -65,16 +80,15 @@ export default async function LocaleLayout({
         </noscript>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
           storage="localStorage"
         >
           <NextIntlClientProvider>
-            <div className="flex min-h-dvh flex-col">
+            <div className="relative min-h-dvh">
               <Navigation />
-              <main className="flex-1">{children}</main>
-              <Footer />
+              <main>{children}</main>
             </div>
           </NextIntlClientProvider>
         </ThemeProvider>

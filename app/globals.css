@@ -5,21 +5,16 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-heading: var(--font-sans);
   --font-sans: var(--font-sans);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
+  --font-mono: var(--font-mono);
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-muted-2: var(--muted2);
+  --color-faint: var(--faint);
+  --color-faintest: var(--faintest);
+  --color-bright: var(--bright);
+  --color-accent-dir: var(--accent-dir);
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -27,7 +22,6 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
@@ -38,92 +32,266 @@
   --color-card: var(--card);
   --color-foreground: var(--foreground);
   --color-background: var(--background);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/* Palette ported from the "Portfolio v3" design prototype.
+   Our convention keeps :root as light defaults and .dark as overrides
+   (the prototype does the inverse — dark-default, .light override —
+   for the same values), so it stays wired to the existing ThemeProvider. */
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --bg: #f6f6f3;
+  --fg: #141419;
+  --muted: #5a5a63;
+  --muted2: #6a6a73;
+  --faint: #8b8b92;
+  --faintest: #a1a1a8;
+  --bright: #3a3a42;
+  --line: rgba(0, 0, 0, 0.1);
+  --line-strong: rgba(0, 0, 0, 0.22);
+  --panel: rgba(255, 255, 255, 0.88);
+  --panel-solid: #e8e8e4;
+  --hover: rgba(0, 0, 0, 0.05);
+  --hover-strong: rgba(0, 0, 0, 0.09);
+  --glow: rgba(0, 0, 0, 0.035);
+  --accent-dir: #2f6fd0;
+  --term-bg: #efefea;
+
+  --background: var(--bg);
+  --foreground: var(--fg);
+  --card: var(--panel-solid);
+  --card-foreground: var(--fg);
+  --popover: var(--panel-solid);
+  --popover-foreground: var(--fg);
+  --primary: var(--fg);
+  --primary-foreground: var(--bg);
+  --secondary: var(--hover);
+  --secondary-foreground: var(--fg);
+  --muted-foreground: var(--muted2);
+  --accent: var(--hover-strong);
+  --accent-foreground: var(--fg);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
+  --border: var(--line);
+  --input: var(--line);
+  --ring: var(--line-strong);
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --bg: #0b0b0c;
+  --fg: #f4f4f2;
+  --muted: #9b9ba1;
+  --muted2: #8b8b92;
+  --faint: #5e5e66;
+  --faintest: #4d4d55;
+  --bright: #c3c3c8;
+  --line: rgba(255, 255, 255, 0.07);
+  --line-strong: rgba(255, 255, 255, 0.2);
+  --panel: rgba(24, 24, 27, 0.9);
+  --panel-solid: #16161a;
+  --hover: rgba(255, 255, 255, 0.06);
+  --hover-strong: rgba(255, 255, 255, 0.12);
+  --glow: rgba(255, 255, 255, 0.045);
+  --accent-dir: #7aa2f7;
+  --term-bg: #0e0e11;
+
+  --background: var(--bg);
+  --foreground: var(--fg);
+  --card: var(--panel-solid);
+  --card-foreground: var(--fg);
+  --popover: var(--panel-solid);
+  --popover-foreground: var(--fg);
+  --primary: var(--fg);
+  --primary-foreground: var(--bg);
+  --secondary: var(--hover);
+  --secondary-foreground: var(--fg);
+  --muted-foreground: var(--muted2);
+  --accent: var(--hover-strong);
+  --accent-foreground: var(--fg);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --border: var(--line);
+  --input: var(--line);
+  --ring: var(--line-strong);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans), sans-serif;
   }
-  html {
-    @apply font-sans;
+  ::selection {
+    background: var(--hover-strong);
+    color: var(--fg);
   }
+}
+
+/* Eyebrow / section label — recurring signature across sections */
+.eyebrow {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.hl {
+  color: var(--fg);
+  font-weight: 500;
+}
+
+.wrap section {
+  padding: 150px 0;
+}
+.wrap section:first-of-type {
+  padding-top: 170px;
+}
+
+.nav-pill a {
+  color: var(--muted2);
+  text-decoration: none;
+  padding: 7px 13px;
+  border-radius: 100px;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+.nav-pill a:hover {
+  color: var(--fg);
+  background: var(--hover);
+}
+
+.row-link {
+  transition: opacity 0.25s ease;
+}
+.row-link:hover {
+  opacity: 1;
+}
+.row-list:hover .row-link {
+  opacity: 0.45;
+}
+.row-link:hover .row-arrow {
+  transform: translate(3px, -3px);
+  opacity: 1;
+}
+
+.ghost-btn:hover {
+  background: var(--line);
+  border-color: var(--line-strong);
+}
+
+.nav-dots:hover,
+.nav-dots.open {
+  color: var(--fg);
+  background: var(--hover-strong);
+}
+
+.menu-item:hover {
+  background: var(--hover);
+  color: var(--fg);
+}
+
+.seg:hover {
+  color: var(--fg);
+}
+.seg.active {
+  color: var(--fg);
+  background: var(--hover-strong);
+}
+.seg.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.seg.disabled:hover {
+  color: var(--muted2);
+}
+
+.hero-photo {
+  border-radius: 10px;
+}
+.dark .hero-photo {
+  box-shadow: none;
+}
+:root:not(.dark) .hero-photo {
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.18),
+    0 2px 8px rgba(0, 0, 0, 0.08);
+}
+:root:not(.dark) .photo-fade {
+  display: none;
+}
+
+.cmd-chip {
+  white-space: nowrap;
+}
+.cmd-chip:hover {
+  color: var(--fg);
+  border-color: var(--line-strong);
+}
+
+.term-body {
+  scrollbar-width: none;
+}
+.term-body::-webkit-scrollbar {
+  display: none;
+}
+
+.tui-key {
+  cursor: pointer;
+  color: var(--muted2);
+  transition: color 0.18s ease;
+}
+.tui-key:hover {
+  color: var(--fg);
+}
+.tui-key:hover .tui-cmd {
+  color: var(--accent-dir);
+}
+
+.mobile-links {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .wrap section {
+    padding: 90px 0 !important;
+    min-height: auto !important;
+  }
+  .nav-bar {
+    padding: 20px 22px !important;
+  }
+  .nav-pill a {
+    display: none !important;
+  }
+  .wrap {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+  .exp-grid {
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-photo {
+    order: -1 !important;
+    max-width: 240px !important;
+  }
+  .hero-text {
+    padding: 0 !important;
+  }
+  .mobile-links {
+    display: flex !important;
+  }
+}
+
+/* subtle scrollbar for the page itself */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
 }
