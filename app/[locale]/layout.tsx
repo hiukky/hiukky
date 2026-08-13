@@ -81,8 +81,6 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
-  const t = await getTranslations({ locale, namespace: "nav" });
-
   return (
     <html
       lang={locale}
@@ -104,26 +102,15 @@ export default async function LocaleLayout({
         </noscript>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
           storage="localStorage"
         >
           <NextIntlClientProvider>
             <div className="relative min-h-dvh">
-              <a
-                href="#main-content"
-                className="-translate-y-full fixed top-4 left-4 z-[100] rounded-full border px-4 py-2 text-sm no-underline transition-transform focus:translate-y-0"
-                style={{
-                  background: "var(--panel-solid)",
-                  borderColor: "var(--line)",
-                  color: "var(--fg)",
-                }}
-              >
-                {t("skipToContent")}
-              </a>
               <Navigation />
-              <main id="main-content">{children}</main>
+              <main>{children}</main>
             </div>
           </NextIntlClientProvider>
         </ThemeProvider>

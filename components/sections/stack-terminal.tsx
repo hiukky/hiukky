@@ -1,35 +1,35 @@
 "use client";
 
 import {
-  ArrowsLeftRight,
-  Brain,
-  Broadcast,
-  ChartScatter,
-  Cloud,
-  FileText,
-  MagnifyingGlass,
-  Package,
+  ArrowsLeftRightIcon,
+  BrainIcon,
+  BroadcastIcon,
+  ChartScatterIcon,
+  CloudIcon,
+  FileTextIcon,
+  MagnifyingGlassIcon,
+  PackageIcon,
   type Icon as PhosphorIcon,
-  Robot,
-  TestTube,
-  TextAa,
+  RobotIcon,
+  TestTubeIcon,
+  TextAaIcon,
 } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import { getTechIcon, type TechIcon } from "@/lib/tech-icons";
 
 const CONCEPT_ICON_COMPONENTS: Record<string, PhosphorIcon> = {
-  ArrowsLeftRight,
-  Brain,
-  Broadcast,
-  ChartScatter,
-  Cloud,
-  FileText,
-  MagnifyingGlass,
-  Package,
-  Robot,
-  TestTube,
-  TextAa,
+  ArrowsLeftRight: ArrowsLeftRightIcon,
+  Brain: BrainIcon,
+  Broadcast: BroadcastIcon,
+  ChartScatter: ChartScatterIcon,
+  Cloud: CloudIcon,
+  FileText: FileTextIcon,
+  MagnifyingGlass: MagnifyingGlassIcon,
+  Package: PackageIcon,
+  Robot: RobotIcon,
+  TestTube: TestTubeIcon,
+  TextAa: TextAaIcon,
 };
 
 function TechGlyph({
@@ -247,7 +247,7 @@ export function StackTerminal() {
           entry.kind === "grid" ? (
             <div
               key={entry.id}
-              className="mt-1 mb-2.5 grid gap-x-[18px] gap-y-0.5"
+              className="mt-1 mb-2.5 grid gap-x-4.5 gap-y-0.5"
               style={{
                 gridTemplateColumns: "repeat(auto-fill, minmax(148px, 1fr))",
               }}
@@ -294,7 +294,7 @@ export function StackTerminal() {
       </div>
 
       <div
-        className="flex flex-wrap items-center gap-x-[18px] gap-y-1 border-t px-4 py-2.5 font-mono text-[11.5px]"
+        className="flex flex-wrap items-center gap-x-4.5 gap-y-1 border-t px-4 py-2.5 font-mono text-[11.5px]"
         style={{ borderColor: "var(--line)" }}
       >
         {suggestions.map((s) => (

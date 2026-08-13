@@ -14,14 +14,14 @@ export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className="flex items-center gap-[3px] rounded-full bg-[var(--hover)] p-[3px]">
+    <div className="flex items-center gap-0.75 rounded-full bg-[var(--hover)] p-0.75">
       {OPTIONS.map(({ key, icon }) => (
         <button
           key={key}
           type="button"
           aria-label={t(key)}
           onClick={() => setTheme(key)}
-          className={`seg flex h-6 w-[26px] items-center justify-center rounded-full border-none bg-transparent text-xs ${
+          className={`seg flex h-6 w-6.5 items-center justify-center rounded-full border-none bg-transparent text-xs ${
             theme === key ? "active" : ""
           }`}
         >

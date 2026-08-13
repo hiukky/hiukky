@@ -31,7 +31,7 @@ export function Navigation() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 flex items-center justify-between gap-4 px-[22px] py-[26px] sm:px-16">
+    <nav className="fixed inset-x-0 top-0 z-50 flex items-center justify-between gap-4 px-5.5 py-6.5 sm:px-16">
       <a
         href="#top"
         className="font-medium text-[17px] tracking-[-0.01em] no-underline"
@@ -40,7 +40,7 @@ export function Navigation() {
       </a>
       <Popover open={open} onOpenChange={setOpen}>
         <div
-          className="nav-pill flex items-center gap-0.5 rounded-full border p-[5px] text-[13.5px] backdrop-blur-md"
+          className="nav-pill flex items-center gap-0.5 rounded-full border p-1.25 text-[13.5px] backdrop-blur-md"
           style={{ background: "var(--panel)", borderColor: "var(--line)" }}
         >
           {SECTIONS.map(({ href, key }) => (
@@ -50,7 +50,7 @@ export function Navigation() {
           ))}
           <PopoverTrigger
             aria-label={t("more")}
-            className={`nav-dots ml-0.5 flex size-[30px] items-center justify-center rounded-full border-none bg-[var(--hover)] text-[13px] text-[var(--muted2)] ${open ? "open" : ""}`}
+            className={`nav-dots ml-0.5 flex size-7.5 items-center justify-center rounded-full border-none bg-[var(--hover)] text-[13px] text-[var(--muted2)] ${open ? "open" : ""}`}
           >
             •••
           </PopoverTrigger>
@@ -58,8 +58,8 @@ export function Navigation() {
 
         <PopoverContent
           align="end"
-          sideOffset={10}
-          className="w-[196px] gap-0 overflow-hidden rounded-2xl border p-0 text-inherit shadow-[0_20px_40px_rgba(0,0,0,0.5)] backdrop-blur-lg"
+          sideOffset={16}
+          className="w-49 gap-0 overflow-hidden rounded-2xl border p-0 text-inherit shadow-[0_20px_40px_rgba(0,0,0,0.5)] backdrop-blur-lg"
           style={{ background: "var(--panel)", borderColor: "var(--line)" }}
         >
           <div className="flex flex-col p-2">
@@ -69,7 +69,7 @@ export function Navigation() {
                   key={href}
                   href={href}
                   onClick={() => setOpen(false)}
-                  className="menu-item rounded-[9px] px-[11px] py-[9px] text-[13.5px] no-underline"
+                  className="menu-item rounded-[9px] px-2.75 py-2.25 text-[13.5px] no-underline"
                   style={{ color: "var(--bright)" }}
                 >
                   {t(key)}
@@ -82,7 +82,7 @@ export function Navigation() {
                 href={url}
                 target={name === "email" ? undefined : "_blank"}
                 rel={name === "email" ? undefined : "noreferrer"}
-                className="menu-item flex items-center gap-[11px] rounded-[9px] px-[11px] py-[9px] text-[13.5px] no-underline"
+                className="menu-item flex items-center gap-2.75 rounded-[9px] px-2.75 py-2.25 text-[13.5px] no-underline"
                 style={{ color: "var(--bright)" }}
               >
                 <span className="w-4 font-mono text-[11px] text-[var(--faint)]">

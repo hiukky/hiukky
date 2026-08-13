@@ -1,3 +1,4 @@
+import { EnvelopeSimpleIcon } from "@phosphor-icons/react/dist/ssr";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -90,19 +91,19 @@ export default async function HomePage({
 
       <section
         id="top"
-        className="relative z-[1] flex min-h-dvh items-center py-0"
+        className="relative z-1 flex min-h-dvh items-center py-0"
       >
-        <div className="hero-grid mx-auto grid w-full max-w-[1040px] grid-cols-[1fr_0.6fr] items-center gap-16 px-10 max-[720px]:grid-cols-1 max-[720px]:gap-8 max-[720px]:px-[22px]">
-          <div className="hero-text relative z-[2]">
+        <div className="hero-grid mx-auto grid w-full max-w-260 grid-cols-[1fr_0.6fr] items-center gap-16 px-10 max-[720px]:grid-cols-1 max-[720px]:gap-8 max-[720px]:px-5.5">
+          <div className="hero-text relative z-2">
             <Reveal>
-              <h1 className="m-0 font-normal text-[clamp(30px,3.6vw,42px)] leading-[1.24] tracking-[-0.025em]">
+              <h1 className="m-0 font-normal text-[clamp(30px,3.6vw,42px)] leading-[1.24] tracking-tight">
                 {tHero("greeting")}{" "}
                 <span style={{ color: "var(--muted)" }}>{tHero("role")}</span>
               </h1>
             </Reveal>
             <Reveal delay={0.05}>
               <p
-                className="mt-[22px] text-[15.5px] leading-[1.8]"
+                className="mt-5.5 text-[15.5px] leading-[1.8]"
                 style={{ color: "var(--muted)" }}
               >
                 {tHero.rich("bio", { hl, u: underline })}
@@ -111,31 +112,18 @@ export default async function HomePage({
             <Reveal delay={0.1}>
               <a
                 href="mailto:developermarsh@gmail.com"
-                className="ghost-btn mt-8 inline-flex items-center gap-2.5 rounded-full border px-5 py-[11px] text-sm no-underline transition-colors"
-                style={{
-                  borderColor: "var(--line-strong)",
-                  color: "var(--fg)",
-                }}
+                className="mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3 font-medium text-sm no-underline transition-opacity hover:opacity-85"
+                style={{ background: "var(--fg)", color: "var(--bg)" }}
               >
                 {tHero("cta")}
-                <svg
-                  width="15"
-                  height="15"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  aria-hidden="true"
-                >
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                </svg>
+                <EnvelopeSimpleIcon size={16} weight="bold" aria-hidden />
               </a>
             </Reveal>
           </div>
 
           <Reveal
             delay={0.15}
-            className="hero-photo relative aspect-[3/4] overflow-hidden max-[720px]:order-first max-[720px]:max-w-[240px]"
+            className="hero-photo relative aspect-3/4 overflow-hidden max-[720px]:order-first max-[720px]:max-w-60"
           >
             <Image
               src="/assets/personal/romullo.png"
@@ -163,17 +151,17 @@ export default async function HomePage({
         </div>
       </section>
 
-      <div className="wrap relative z-[1] mx-auto max-w-[800px] px-10 max-[720px]:px-[22px]">
+      <div className="wrap relative z-1 mx-auto max-w-200 px-10 max-[720px]:px-5.5">
         <SectionFade
           id="about"
-          className="pt-[170px] pb-0 max-[720px]:pt-[90px] max-[720px]:pb-[90px]"
+          className="pt-42.5 pb-0 max-[720px]:pt-22.5 max-[720px]:pb-22.5"
         >
           <Reveal>
             <h2 className="eyebrow m-0 mb-7">{tAbout("eyebrow")}</h2>
           </Reveal>
           <Reveal delay={0.05}>
             <p
-              className="m-0 mb-[18px] max-w-[65ch] text-[16px] leading-[1.9]"
+              className="m-0 mb-4.5 max-w-[65ch] text-base leading-[1.9]"
               style={{ color: "var(--muted)" }}
             >
               {tAbout.rich("paragraph1", { hl })}
@@ -181,7 +169,7 @@ export default async function HomePage({
           </Reveal>
           <Reveal delay={0.1}>
             <p
-              className="m-0 max-w-[65ch] text-[16px] leading-[1.9]"
+              className="m-0 max-w-[65ch] text-base leading-[1.9]"
               style={{ color: "var(--muted)" }}
             >
               {tAbout.rich("paragraph2", { hl })}
@@ -191,7 +179,7 @@ export default async function HomePage({
 
         <SectionFade
           id="experience"
-          className="pt-[170px] pb-[160px] max-[720px]:pt-[90px] max-[720px]:pb-[90px]"
+          className="pt-42.5 pb-40 max-[720px]:pt-22.5 max-[720px]:pb-22.5"
         >
           <Reveal>
             <h2 className="eyebrow m-0 mb-5">{tExperience("eyebrow")}</h2>
@@ -199,9 +187,9 @@ export default async function HomePage({
           <div className="row-list flex flex-col">
             {experienceItems.map((item, i) => (
               <Reveal key={item.company} delay={i * 0.05}>
-                <div className="row-link exp-grid grid grid-cols-[150px_1fr] gap-6 border-t border-[var(--line)] py-[26px] max-[720px]:grid-cols-1 max-[720px]:gap-1.5">
+                <div className="row-link exp-grid grid grid-cols-[150px_1fr] gap-6 border-t border-[var(--line)] py-6.5 max-[720px]:grid-cols-1 max-[720px]:gap-1.5">
                   <span
-                    className="pt-[3px] font-mono text-[12.5px]"
+                    className="pt-0.75 font-mono text-[12.5px]"
                     style={{ color: "var(--faint)" }}
                   >
                     {item.period}
@@ -215,7 +203,7 @@ export default async function HomePage({
                       {item.company}
                     </span>
                     <span
-                      className="mt-0.5 max-w-[520px] text-[14.5px] leading-[1.75]"
+                      className="mt-0.5 max-w-130 text-[14.5px] leading-[1.75]"
                       style={{ color: "var(--muted2)" }}
                     >
                       {item.description}
@@ -229,10 +217,10 @@ export default async function HomePage({
 
         <SectionFade
           id="stack"
-          className="pt-0 pb-[160px] max-[720px]:pt-[90px] max-[720px]:pb-[90px]"
+          className="pt-0 pb-40 max-[720px]:pt-22.5 max-[720px]:pb-22.5"
         >
           <Reveal>
-            <h2 className="eyebrow m-0 mb-[22px]">{tStack("eyebrow")}</h2>
+            <h2 className="eyebrow m-0 mb-5.5">{tStack("eyebrow")}</h2>
           </Reveal>
           <Reveal delay={0.05}>
             <StackTerminal />
@@ -241,7 +229,7 @@ export default async function HomePage({
 
         <SectionFade
           id="writing"
-          className="pt-0 pb-[160px] max-[720px]:pt-[90px] max-[720px]:pb-[90px]"
+          className="pt-0 pb-40 max-[720px]:pt-22.5 max-[720px]:pb-22.5"
         >
           <Reveal>
             <div className="mb-5 flex items-baseline justify-between gap-4">
@@ -259,7 +247,7 @@ export default async function HomePage({
               <Reveal key={post.title} delay={i * 0.05}>
                 <a
                   href={post.href}
-                  className="row-link flex items-center justify-between gap-6 border-t py-[22px] no-underline"
+                  className="row-link flex items-center justify-between gap-6 border-t py-5.5 no-underline"
                   style={{ borderColor: "var(--line)", color: "var(--fg)" }}
                 >
                   <div className="flex flex-col gap-1.5">
@@ -274,7 +262,7 @@ export default async function HomePage({
                     </span>
                   </div>
                   <span
-                    className="row-arrow flex-none text-[14px] transition-transform"
+                    className="row-arrow flex-none text-sm transition-transform"
                     style={{ color: "var(--faint)", opacity: 0.7 }}
                   >
                     ↗

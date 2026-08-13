@@ -15,7 +15,7 @@ export function LanguageSwitcher() {
   const router = useRouter();
 
   return (
-    <div className="flex items-center gap-[3px] rounded-full bg-[var(--hover)] p-[3px]">
+    <div className="flex items-center gap-0.75 rounded-full bg-[var(--hover)] p-0.75">
       {routing.locales.map((loc) => {
         const enabled = ENABLED_LOCALES.includes(loc);
         return (
@@ -32,7 +32,7 @@ export function LanguageSwitcher() {
               )
             }
             aria-label={`Switch language to ${loc.toUpperCase()}`}
-            className={`seg rounded-full border-none bg-transparent px-[9px] py-1 font-mono text-[11px] ${
+            className={`seg rounded-full border-none bg-transparent px-2.25 py-1 font-mono text-[11px] ${
               loc === locale ? "active" : ""
             } ${!enabled ? "disabled" : ""}`}
           >
