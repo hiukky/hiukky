@@ -6,7 +6,7 @@ export async function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-[var(--line)] pb-20">
+    <footer className="border-t border-[var(--line)] pb-20 max-[720px]:pb-36">
       <div className="flex flex-wrap items-center justify-between gap-5 pt-8">
         <span className="font-mono text-[0.71875rem] text-[var(--faintest)]">
           {t("copyright", { year })}

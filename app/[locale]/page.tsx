@@ -79,16 +79,16 @@ export default async function HomePage({
 
       <section
         id="top"
-        className="relative z-1 flex min-h-dvh items-center py-0"
+        className="relative z-1 flex min-h-dvh items-center py-0 max-[720px]:pt-16"
       >
-        <div className="hero-grid mx-auto grid w-full max-w-260 grid-cols-[1fr_0.6fr] items-center gap-16 px-10 max-[720px]:grid-cols-1 max-[720px]:gap-4 max-[720px]:px-5.5">
-          <a
-            href="#top"
-            className="hidden font-brand font-semibold text-lg tracking-tighter no-underline max-[720px]:order-first max-[720px]:block"
-          >
-            hiukky
-          </a>
-          <div className="hero-text relative z-2">
+        <a
+          href="#top"
+          className="absolute top-6.5 left-5.5 hidden font-brand font-semibold text-lg tracking-tighter no-underline max-[720px]:block"
+        >
+          hiukky
+        </a>
+        <div className="hero-grid mx-auto grid w-full max-w-260 grid-cols-[1fr_0.6fr] items-center gap-16 px-10 max-[720px]:grid-cols-1 max-[720px]:gap-0 max-[720px]:px-5.5">
+          <div className="hero-text relative z-2 max-[720px]:mt-5 max-[720px]:text-center">
             <Reveal>
               <h1 className="m-0 font-normal text-[clamp(1.875rem,3.6vw,2.625rem)] leading-[1.24] tracking-tight">
                 {tHero("greeting")} <TypingName alias="hiukky" name="Romullo" />
@@ -121,7 +121,7 @@ export default async function HomePage({
             <Reveal delay={0.1}>
               <a
                 href="mailto:developermarsh@gmail.com"
-                className="cta-btn mt-8 inline-flex items-center gap-2.5 rounded-full px-6 py-3 font-medium text-sm no-underline transition-opacity hover:opacity-85 max-[720px]:mt-4.5"
+                className="cta-btn mt-8 inline-flex items-center gap-2.5 rounded-full px-6 py-3 font-medium text-sm no-underline transition-opacity hover:opacity-85 max-[720px]:mt-5"
                 style={{ background: "var(--fg)", color: "var(--bg)" }}
               >
                 <span
@@ -139,14 +139,15 @@ export default async function HomePage({
 
           <Reveal
             delay={0.15}
-            className="hero-photo relative aspect-3/4 overflow-hidden max-[720px]:order-first max-[720px]:w-38"
+            className="hero-photo relative aspect-3/4 overflow-hidden max-[720px]:order-first max-[720px]:mx-auto max-[720px]:w-38"
           >
             <Image
               src="/assets/personal/romullo.png"
               alt={tHero("photoAlt")}
               fill
               priority
-              sizes="(min-width: 640px) 320px, 240px"
+              quality={95}
+              sizes="(min-width: 640px) 360px, 200px"
               className="object-cover object-[center_18%] grayscale contrast-[1.08]"
             />
             <div
