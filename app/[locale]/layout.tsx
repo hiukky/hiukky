@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "@wrksz/themes/next";
 import type { Metadata } from "next";
 import { JetBrains_Mono, Sora, Syne } from "next/font/google";
@@ -107,6 +108,7 @@ export default async function LocaleLayout({
             title="gtm"
           />
         </noscript>
+        <Analytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
