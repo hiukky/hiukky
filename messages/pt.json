@@ -18,7 +18,7 @@
     "email": "Email"
   },
   "hero": {
-    "greeting": "Oi, sou o Romullo,",
+    "greeting": "Oi, sou o",
     "role": "Software Engineer",
     "bio1": "Há quase 10 anos construindo software para a web, resolvendo desafios complexos e explorando novas tecnologias pelo caminho.",
     "bio2": "Gosto de entender como as coisas funcionam e, principalmente, <hl>transformar ideias em coisas que funcionam de verdade</hl>.",

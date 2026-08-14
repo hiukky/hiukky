@@ -18,7 +18,7 @@
     "email": "Email"
   },
   "hero": {
-    "greeting": "Hi, I'm Romullo,",
+    "greeting": "Hi, I'm",
     "role": "Software Engineer",
     "bio1": "For almost 10 years I've been building software for the web, tackling complex challenges and exploring new technologies along the way.",
     "bio2": "I like understanding how things work and, above all, <hl>turning ideas into things that actually work</hl>.",

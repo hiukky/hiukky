@@ -32,7 +32,7 @@ export function LanguageSwitcher() {
               )
             }
             aria-label={`Switch language to ${loc.toUpperCase()}`}
-            className={`seg rounded-full border-none bg-transparent px-2.25 py-1 font-mono text-[11px] ${
+            className={`seg rounded-full border-none bg-transparent px-2.25 py-1 font-mono text-[0.6875rem] ${
               loc === locale ? "active" : ""
             } ${!enabled ? "disabled" : ""}`}
           >

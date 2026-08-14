@@ -124,6 +124,8 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-sans), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   ::selection {
     background: var(--hover-strong);
@@ -134,10 +136,16 @@
 /* Eyebrow / section label — recurring signature across sections */
 .eyebrow {
   font-family: var(--font-mono), monospace;
-  font-size: 11px;
+  font-size: 0.6875rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--faint);
+}
+/* Section h2s reuse .eyebrow's type but read as titles, not the small
+   popover labels (Tema/Idioma) that also share the class — size them up. */
+h2.eyebrow {
+  font-size: 0.8125rem;
+  letter-spacing: 0.13em;
 }
 
 .hl {
@@ -184,6 +192,18 @@
   background: var(--hover-strong);
 }
 
+.dock-item {
+  color: var(--muted2);
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+.dock-item:hover,
+.dock-item.open {
+  color: var(--fg);
+  background: var(--hover);
+}
+
 .menu-item:hover {
   background: var(--hover);
   color: var(--fg);
@@ -202,6 +222,46 @@
 }
 .seg.disabled:hover {
   color: var(--muted2);
+}
+
+.cta-cursor {
+  width: 2px;
+  height: 13px;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+.cta-btn:hover .cta-cursor {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .cta-btn:hover .cta-cursor {
+    animation: cta-blink 1s steps(1) infinite;
+  }
+}
+@keyframes cta-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.8em;
+  margin-left: 6px;
+  vertical-align: -0.1em;
+  background: var(--muted);
+  animation: cta-blink 1s steps(1) infinite;
+}
+
+.hero-text:has(.cta-btn:hover) .typing-cursor {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .typing-cursor {
+    animation: none;
+  }
 }
 
 .hero-photo {
@@ -246,12 +306,6 @@
 }
 .tui-key:hover .tui-cmd {
   color: var(--accent-dir);
-}
-
-@media (max-width: 720px) {
-  .nav-pill a {
-    display: none;
-  }
 }
 
 /* subtle scrollbar for the page itself */

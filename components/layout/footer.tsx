@@ -8,10 +8,10 @@ export async function Footer() {
   return (
     <footer className="border-t border-[var(--line)] pb-20">
       <div className="flex flex-wrap items-center justify-between gap-5 pt-8">
-        <span className="font-mono text-[11.5px] text-[var(--faintest)]">
+        <span className="font-mono text-[0.71875rem] text-[var(--faintest)]">
           {t("copyright", { year })}
         </span>
-        <div className="flex gap-5 text-[13.5px]">
+        <div className="flex gap-5 text-[0.84375rem]">
           <a
             href="https://github.com/hiukky"
             className="text-[var(--muted2)] no-underline transition-colors hover:text-[var(--fg)]"

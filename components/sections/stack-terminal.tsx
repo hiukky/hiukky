@@ -69,7 +69,7 @@ function TechGlyph({
   }
 
   return (
-    <span className="text-[11px]" style={{ color: fallbackColor }}>
+    <span className="text-[0.6875rem]" style={{ color: fallbackColor }}>
       {fallback}
     </span>
   );
@@ -234,7 +234,7 @@ export function StackTerminal() {
           className="size-2.5 rounded-full"
           style={{ background: "var(--line-strong)" }}
         />
-        <span className="ml-2 font-mono text-[11px] text-[var(--faint)]">
+        <span className="ml-2 font-mono text-[0.6875rem] text-[var(--faint)]">
           {t("title")}
         </span>
       </div>
@@ -242,7 +242,7 @@ export function StackTerminal() {
       <div
         ref={termRef}
         aria-live="polite"
-        className="term-body h-[290px] overflow-x-hidden overflow-y-auto px-4 py-[18px] font-mono text-[13px] text-[var(--bright)] leading-[1.85]"
+        className="term-body h-72.5 overflow-x-hidden overflow-y-auto px-4 py-[18px] font-mono text-[0.8125rem] text-[var(--bright)] leading-[1.85] max-[720px]:h-80"
       >
         {lines.map((entry) =>
           entry.kind === "grid" ? (
@@ -289,13 +289,13 @@ export function StackTerminal() {
             placeholder={t("placeholder")}
             aria-label={t("inputLabel")}
             spellCheck={false}
-            className="flex-1 border-none bg-transparent font-mono text-[13px] text-[var(--fg)] outline-none"
+            className="flex-1 border-none bg-transparent font-mono text-[0.8125rem] text-[var(--fg)] outline-none"
           />
         </div>
       </div>
 
       <div
-        className="term-suggestions flex flex-nowrap items-center gap-x-4.5 overflow-x-auto border-t px-4 py-2.5 font-mono text-[11.5px]"
+        className="term-suggestions flex flex-nowrap items-center gap-x-4.5 gap-y-1 overflow-x-auto border-t px-4 py-2.5 font-mono text-[0.71875rem] max-[720px]:flex-wrap max-[720px]:overflow-x-visible"
         style={{ borderColor: "var(--line)" }}
       >
         {suggestions.map((s) => (
@@ -303,7 +303,7 @@ export function StackTerminal() {
             key={s.cmd}
             type="button"
             onClick={() => runCommand(s.cmd)}
-            className="tui-key flex shrink-0 items-center gap-1.5 border-none bg-transparent p-0 font-mono text-[11.5px]"
+            className="tui-key flex shrink-0 items-center gap-1.5 border-none bg-transparent p-0 font-mono text-[0.71875rem]"
           >
             <span className="text-[var(--faintest)]">{s.hint}</span>
             <span className="tui-cmd">{s.label}</span>
