@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/setup.sh",
+      "destination": "https://raw.githubusercontent.com/hiukky/dotfiles/main/setup.sh"
+    },
+    {
+      "source": "/setup.ps1",
+      "destination": "https://raw.githubusercontent.com/hiukky/dotfiles/main/setup.ps1"
+    }
+  ]
+}
