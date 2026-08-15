@@ -1,0 +1,315 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-brand: var(--font-brand);
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-muted-2: var(--muted2);
+  --color-faint: var(--faint);
+  --color-faintest: var(--faintest);
+  --color-bright: var(--bright);
+  --color-accent-dir: var(--accent-dir);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+}
+
+/* Palette ported from the "Portfolio v3" design prototype.
+   Our convention keeps :root as light defaults and .dark as overrides
+   (the prototype does the inverse — dark-default, .light override —
+   for the same values), so it stays wired to the existing ThemeProvider. */
+:root {
+  --bg: #f6f6f3;
+  --fg: #141419;
+  --muted: #5a5a63;
+  --muted2: #6a6a73;
+  --faint: #6d6d6d;
+  --faintest: #707070;
+  --bright: #3a3a42;
+  --line: rgba(0, 0, 0, 0.1);
+  --line-strong: rgba(0, 0, 0, 0.22);
+  --panel: rgba(255, 255, 255, 0.88);
+  --panel-solid: #e8e8e4;
+  --hover: rgba(0, 0, 0, 0.05);
+  --hover-strong: rgba(0, 0, 0, 0.09);
+  --glow: rgba(0, 0, 0, 0.035);
+  --accent-dir: #2f6fd0;
+  --term-bg: #efefea;
+
+  --background: var(--bg);
+  --foreground: var(--fg);
+  --card: var(--panel-solid);
+  --card-foreground: var(--fg);
+  --popover: var(--panel-solid);
+  --popover-foreground: var(--fg);
+  --primary: var(--fg);
+  --primary-foreground: var(--bg);
+  --secondary: var(--hover);
+  --secondary-foreground: var(--fg);
+  --muted-foreground: var(--muted2);
+  --accent: var(--hover-strong);
+  --accent-foreground: var(--fg);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: var(--line);
+  --input: var(--line);
+  --ring: var(--accent-dir);
+  --radius: 0.625rem;
+}
+
+.dark {
+  --bg: #0b0b0c;
+  --fg: #f4f4f2;
+  --muted: #9b9ba1;
+  --muted2: #8b8b92;
+  --faint: #828282;
+  --faintest: #7d7d7d;
+  --bright: #c3c3c8;
+  --line: rgba(255, 255, 255, 0.07);
+  --line-strong: rgba(255, 255, 255, 0.2);
+  --panel: rgba(24, 24, 27, 0.9);
+  --panel-solid: #16161a;
+  --hover: rgba(255, 255, 255, 0.06);
+  --hover-strong: rgba(255, 255, 255, 0.12);
+  --glow: rgba(255, 255, 255, 0.045);
+  --accent-dir: #7aa2f7;
+  --term-bg: #0e0e11;
+
+  --background: var(--bg);
+  --foreground: var(--fg);
+  --card: var(--panel-solid);
+  --card-foreground: var(--fg);
+  --popover: var(--panel-solid);
+  --popover-foreground: var(--fg);
+  --primary: var(--fg);
+  --primary-foreground: var(--bg);
+  --secondary: var(--hover);
+  --secondary-foreground: var(--fg);
+  --muted-foreground: var(--muted2);
+  --accent: var(--hover-strong);
+  --accent-foreground: var(--fg);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: var(--line);
+  --input: var(--line);
+  --ring: var(--accent-dir);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring outline-offset-2;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection {
+    background: var(--hover-strong);
+    color: var(--fg);
+  }
+}
+
+/* Eyebrow / section label — recurring signature across sections */
+.eyebrow {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+/* Section h2s reuse .eyebrow's type but read as titles, not the small
+   popover labels (Tema/Idioma) that also share the class — size them up. */
+h2.eyebrow {
+  font-size: 0.8125rem;
+  letter-spacing: 0.13em;
+}
+
+.hl {
+  color: var(--fg);
+  font-weight: 500;
+}
+
+.nav-pill a {
+  color: var(--muted2);
+  text-decoration: none;
+  padding: 7px 13px;
+  border-radius: 100px;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+.nav-pill a:hover {
+  color: var(--fg);
+  background: var(--hover);
+}
+
+.row-link {
+  transition: opacity 0.25s ease;
+}
+.row-link:hover {
+  opacity: 1;
+}
+.row-list:hover .row-link {
+  opacity: 0.45;
+}
+.row-link:hover .row-arrow {
+  transform: translate(3px, -3px);
+  opacity: 1;
+}
+
+.ghost-btn:hover {
+  background: var(--line);
+  border-color: var(--line-strong);
+}
+
+.nav-dots:hover,
+.nav-dots.open {
+  color: var(--fg);
+  background: var(--hover-strong);
+}
+
+.dock-item {
+  color: var(--muted2);
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+.dock-item:hover,
+.dock-item.open {
+  color: var(--fg);
+  background: var(--hover);
+}
+
+.menu-item:hover {
+  background: var(--hover);
+  color: var(--fg);
+}
+
+.seg:hover {
+  color: var(--fg);
+}
+.seg.active {
+  color: var(--fg);
+  background: var(--hover-strong);
+}
+.seg.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.seg.disabled:hover {
+  color: var(--muted2);
+}
+
+.cta-cursor {
+  width: 2px;
+  height: 13px;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+.cta-btn:hover .cta-cursor {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .cta-btn:hover .cta-cursor {
+    animation: cta-blink 1s steps(1) infinite;
+  }
+}
+@keyframes cta-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.8em;
+  margin-left: 6px;
+  vertical-align: -0.1em;
+  background: var(--muted);
+  animation: cta-blink 1s steps(1) infinite;
+}
+
+.hero-text:has(.cta-btn:hover) .typing-cursor {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .typing-cursor {
+    animation: none;
+  }
+}
+
+.hero-photo {
+  border-radius: 10px;
+}
+.dark .hero-photo {
+  box-shadow: none;
+}
+:root:not(.dark) .hero-photo {
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.18),
+    0 2px 8px rgba(0, 0, 0, 0.08);
+}
+:root:not(.dark) .photo-fade {
+  display: none;
+}
+
+.cmd-chip {
+  white-space: nowrap;
+}
+.cmd-chip:hover {
+  color: var(--fg);
+  border-color: var(--line-strong);
+}
+
+.term-body,
+.term-suggestions {
+  scrollbar-width: none;
+}
+.term-body::-webkit-scrollbar,
+.term-suggestions::-webkit-scrollbar {
+  display: none;
+}
+
+.tui-key {
+  cursor: pointer;
+  color: var(--muted2);
+  transition: color 0.18s ease;
+}
+.tui-key:hover {
+  color: var(--fg);
+}
+.tui-key:hover .tui-cmd {
+  color: var(--accent-dir);
+}
+
+/* subtle scrollbar for the page itself */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}

@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "title": "Romullo Sousa · Software Engineer",
+    "description": "Software Engineer full stack, com foco em Front-end e interesse crescente por aplicações com IA."
+  },
+  "nav": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "stack": "Stack",
+    "writing": "Escrita",
+    "more": "Mais",
+    "theme": "Tema",
+    "language": "Idioma"
+  },
+  "social": {
+    "github": "Github",
+    "linkedin": "Linkedin",
+    "email": "Email"
+  },
+  "hero": {
+    "greeting": "Oi, sou o",
+    "role": "Software Engineer",
+    "bio1": "Há quase 10 anos construindo software para a web, resolvendo desafios complexos e explorando novas tecnologias pelo caminho.",
+    "bio2": "Gosto de entender como as coisas funcionam e, principalmente, <hl>transformar ideias em coisas que funcionam de verdade</hl>.",
+    "cta": "Entrar em contato",
+    "photoAlt": "Retrato em preto e branco de Romullo Sousa"
+  },
+  "about": {
+    "eyebrow": "Sobre",
+    "paragraph1": "Minha história com desenvolvimento começou antes de virar profissão. Sempre gostei de explorar tecnologia, entender como as coisas funcionam e criar meus próprios projetos. Foi essa curiosidade que me levou ao desenvolvimento de software e continua sendo boa parte do que me move até hoje.",
+    "paragraph2": "Comecei profissionalmente trabalhando com aplicações web e, com o tempo, o <hl>Front-end</hl> se tornou minha principal área de experiência. Mas nunca fiquei preso a uma única camada. Trabalhar em produtos e times diferentes me levou naturalmente para <hl>Back-end</hl>, <hl>bancos de dados</hl>, <hl>cloud</hl>, <hl>infraestrutura</hl> e outras partes do ciclo de desenvolvimento.",
+    "paragraph3": "Fora do trabalho, continuo sendo aquele dev que gosta de experimentar. <hl>Open Source</hl>, <hl>Linux</hl>, <hl>mobile</hl>, <hl>WebAssembly</hl>, <hl>CLIs</hl> e <hl>developer tooling</hl> já fizeram parte desses projetos. Também tenho um carinho especial por <hl>UI/UX e DX</hl>, sempre buscando equilibrar boas experiências com <hl>qualidade, segurança e simplicidade</hl> no que construo.",
+    "paragraph4": "Mais recentemente, essa curiosidade me levou para <hl>IA aplicada a software</hl>, explorando <hl>LLMs</hl>, <hl>agentes</hl>, <hl>RAG</hl>, <hl>MCP</hl> e <hl>modelos locais</hl>, tanto dentro de produtos quanto no próprio processo de desenvolvimento.",
+    "paragraph5": "No fim, gosto de tecnologia, mas gosto ainda mais de <hl>construir coisas, aprender no processo e resolver problemas que me façam pensar</hl>."
+  },
+  "experience": {
+    "eyebrow": "Experiência",
+    "items": [
+      {
+        "period": "2022–Atual",
+        "role": "Software Engineer",
+        "company": "Softplan",
+        "description": "Construção e evolução de produtos para o ecossistema de Justiça, com foco em aplicações web. Trabalhei na modernização de sistemas legados, desafios de performance, expansão internacional e, mais recentemente, em iniciativas envolvendo IA generativa, OCR e processamento de documentos."
+      },
+      {
+        "period": "2018–2022",
+        "role": "Full Stack Developer",
+        "company": "Orul Tech",
+        "description": "Desenvolvimento de produtos SaaS do Front-end à produção, passando por Back-end, bancos de dados, AWS e deploy. Entre eles, uma plataforma de fidelização construída do zero que chegou a mais de 500 clientes em 12 estados."
+      }
+    ]
+  },
+  "stack": {
+    "eyebrow": "Stack",
+    "categories": [
+      {
+        "key": "front-end",
+        "label": "Front-end",
+        "items": [
+          "React",
+          "TypeScript",
+          "Next.js",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Zustand",
+          "Redux",
+          "TanStack",
+          "Vite",
+          "Storybook",
+          "Vue",
+          "Sass",
+          "shadcn/ui",
+          "Radix UI"
+        ]
+      },
+      {
+        "key": "mobile",
+        "label": "Mobile",
+        "items": ["React Native", "Dart", "Flutter"]
+      },
+      {
+        "key": "back-end",
+        "label": "Back-end",
+        "items": [
+          "Node.js",
+          "NestJS",
+          "Express",
+          "GraphQL",
+          "REST",
+          "Bun",
+          "Python",
+          "gRPC",
+          "Rust"
+        ]
+      },
+      {
+        "key": "dados",
+        "label": "Dados",
+        "items": [
+          "PostgreSQL",
+          "MongoDB",
+          "MySQL",
+          "Redis",
+          "Prisma",
+          "TypeORM",
+          "Supabase",
+          "Elasticsearch"
+        ]
+      },
+      {
+        "key": "cloud",
+        "label": "Cloud",
+        "items": [
+          "AWS",
+          "Cloudflare",
+          "Docker",
+          "Kubernetes",
+          "GitLab CI/CD",
+          "GitHub Actions",
+          "Terraform",
+          "Nginx",
+          "Elastic APM"
+        ]
+      },
+      {
+        "key": "ia",
+        "label": "IA",
+        "items": [
+          "LLMs",
+          "RAG",
+          "Agents",
+          "MCP",
+          "OCR",
+          "Docling",
+          "LangChain",
+          "Embeddings",
+          "Ollama",
+          "OpenAI"
+        ]
+      },
+      {
+        "key": "tools",
+        "label": "Tools",
+        "items": [
+          "Git",
+          "Neovim",
+          "Figma",
+          "Linux",
+          "Turborepo",
+          "Jest",
+          "Vitest",
+          "Playwright",
+          "Zod"
+        ]
+      }
+    ],
+    "terminal": {
+      "title": "hiukky@stack: zsh",
+      "whoami": "Software Engineer · 8+ anos · Full Stack com foco em Front-end",
+      "placeholder": "digite help",
+      "inputLabel": "Comando do terminal",
+      "helpIntro": "comandos disponíveis:",
+      "helpLs": "lista os diretórios",
+      "helpLsArg": "tecnologias do diretório",
+      "helpAll": "mostra tudo",
+      "helpClear": "limpa o terminal",
+      "notFound": "diretório não encontrado",
+      "commandNotFound": "command not found",
+      "tryHelp": "tente help"
+    }
+  },
+  "writing": {
+    "eyebrow": "Escrita",
+    "comingSoon": "em breve",
+    "posts": [
+      {
+        "title": "Renderizando documentos de mil páginas no navegador sem travar a UI",
+        "meta": "Engenharia · 8 min",
+        "href": "#"
+      },
+      {
+        "title": "MCP na prática: conectando um agente a sistemas legados",
+        "meta": "Em breve · 6 min",
+        "href": "#"
+      },
+      {
+        "title": "Design system em monorepo: o que compensa versionar",
+        "meta": "Em breve · 7 min",
+        "href": "#"
+      }
+    ]
+  },
+  "theme": {
+    "dark": "Escuro",
+    "system": "Sistema",
+    "light": "Claro"
+  },
+  "footer": {
+    "copyright": "© 2019–{year} Romullo Sousa"
+  }
+}

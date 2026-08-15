@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# typescript
+*.tsbuildinfo
+
 # production
 /build
 
@@ -35,3 +38,6 @@ yarn-error.log*
 yalc.lock
 
 .vercel
+
+# playwright
+.playwright-mcp
