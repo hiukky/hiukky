@@ -7,6 +7,10 @@
     {
       "source": "/setup.ps1",
       "destination": "https://raw.githubusercontent.com/hiukky/dotfiles/main/setup.ps1"
+    },
+    {
+      "source": "/uze/install.sh",
+      "destination": "https://raw.githubusercontent.com/hiukky/uze/main/install.sh"
     }
   ]
 }
