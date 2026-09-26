@@ -1,0 +1,59 @@
+# This project's agent environment. UZE reads this file and writes
+# agents.lock from it — edit this one; the lock regenerates.
+#
+# Every key UZE understands is below. A commented line carries the default
+# already in force: uncomment it to make the choice the project's own.
+
+worktrees:
+  # handoff | merge | pr — what UZE does with an agent's finished branch.
+  # `handoff` leaves it for you to integrate.
+  completion: handoff
+
+  # The branch finished work targets. Undeclared, it is the branch the
+  # primary checkout is on when the task is created.
+  # target: main
+
+  # Ignored files a fresh checkout links from the primary one. Relative,
+  # inside the repository, and ignored by it — a symlink the agent writes
+  # through reaches the primary.
+  # link: [.env, .env.local]
+
+  # Prepares a fresh checkout, run in it after linking. Its failure warns
+  # and never blocks a launch.
+  # setup: pnpm install
+
+  # Run in the checkout on the rebased commits; the first non-zero exit
+  # refuses delivery and is named. One command, or a list run in order —
+  # a list is what makes a failure say which step failed.
+  # gate:
+  #   - pnpm test
+  #   - pnpm lint
+
+  # The most checkouts that may exist at once. Undeclared, peak
+  # concurrency is the only bound.
+  # slots: 3
+
+# The marketplaces this project draws from, and what it takes from each.
+# Exactly one source per marketplace — `git:` or `path:` — and a Git one may
+# be narrowed by `ref:` and `subdirectory:`. The `ref:` is also the pin: it
+# is what moves the plugins listed under it.
+#
+# UZE's own marketplace is not here. It is built into the binary, its
+# plugins are installed for every project, and neither is yours to declare
+# — `uze market` shows both, this file carries only what the project chose.
+#
+# `uze add` writes these entries and records what they resolved to in
+# agents.lock; `uze install` reproduces that lock on another machine.
+# marketplaces:
+#   ours:
+#     git: https://github.com/acme/plugins
+#     ref: main
+#     subdirectory: market
+#     plugins:
+#       - review
+#       - changelog
+#   local:
+#     path: ../marketplace
+#     plugins:
+#       - bench-runner
+
