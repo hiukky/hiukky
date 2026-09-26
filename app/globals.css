@@ -55,6 +55,7 @@
   --hover-strong: rgba(0, 0, 0, 0.09);
   --glow: rgba(0, 0, 0, 0.035);
   --accent-dir: #2f6fd0;
+  --accent-ai: #8a5d12;
   --term-bg: #efefea;
 
   --background: var(--bg);
@@ -93,6 +94,7 @@
   --hover-strong: rgba(255, 255, 255, 0.12);
   --glow: rgba(255, 255, 255, 0.045);
   --accent-dir: #7aa2f7;
+  --accent-ai: #e0b567;
   --term-bg: #0e0e11;
 
   --background: var(--bg);
@@ -204,6 +206,16 @@ h2.eyebrow {
   background: var(--hover);
 }
 
+.nav-pill a.nav-ai,
+.dock-item.nav-ai {
+  color: var(--accent-ai);
+}
+.nav-pill a.nav-ai:hover,
+.dock-item.nav-ai:hover {
+  color: var(--accent-ai);
+  background: color-mix(in srgb, var(--accent-ai) 12%, transparent);
+}
+
 .menu-item:hover {
   background: var(--hover);
   color: var(--fg);
@@ -312,4 +324,19 @@ h2.eyebrow {
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--line) transparent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ai-dot {
+    animation: ai-pulse 2s ease-in-out infinite;
+  }
+}
+@keyframes ai-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-ai) 60%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-ai) 0%, transparent);
+  }
 }

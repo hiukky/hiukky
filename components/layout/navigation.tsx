@@ -4,11 +4,13 @@ import {
   BriefcaseIcon,
   DotsThreeIcon,
   PenNibIcon,
+  SparkleIcon,
   StackIcon,
   UserIcon,
 } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import { AI_URL, AiDot } from "@/components/layout/ai-link";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
 import {
@@ -97,6 +99,17 @@ export function Navigation() {
                 {t(key)}
               </a>
             ))}
+            <span aria-hidden className="mx-1 h-4 w-px bg-[var(--line)]" />
+            <a
+              href={AI_URL}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="ai.hiukky.com"
+              className="nav-ai inline-flex items-center gap-2"
+            >
+              <AiDot />
+              AI
+            </a>
             <PopoverTrigger
               aria-label={t("more")}
               className={`nav-dots ml-0.5 flex size-7.5 items-center justify-center rounded-full border-none bg-[var(--hover)] text-[0.8125rem] text-[var(--muted2)] ${open ? "open" : ""}`}
@@ -133,6 +146,17 @@ export function Navigation() {
                 <Icon size={20} />
               </a>
             ))}
+            <span aria-hidden className="mx-0.5 h-5 w-px bg-[var(--line)]" />
+            <a
+              href={AI_URL}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="ai.hiukky.com"
+              className="dock-item nav-ai relative flex size-11 items-center justify-center rounded-full no-underline"
+            >
+              <SparkleIcon size={20} />
+              <AiDot className="absolute top-2.5 right-2.5" />
+            </a>
             <PopoverTrigger
               aria-label={t("more")}
               className={`dock-item flex size-11 items-center justify-center rounded-full border-none bg-transparent ${dockOpen ? "open" : ""}`}
