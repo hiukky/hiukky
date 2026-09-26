@@ -23,10 +23,8 @@ bunx tsc --noEmit  # typecheck
   not separate routes.
 - `app/[locale]/layout.tsx` — fonts (Sora + JetBrains Mono), theme
   provider, nav, skip link, SEO metadata.
-- `i18n/routing.ts` — locales are `pt` (default) and `en`. **PT is the only
-  real content right now** — `messages/en.json` is a literal copy of
-  `messages/pt.json` (see Gotchas), and the language switcher shows EN as
-  disabled/"em breve".
+- `i18n/routing.ts` — locales are `pt` (default) and `en`, both fully
+  translated in `messages/pt.json` / `messages/en.json`.
 - `components/motion/` — reduced-motion-safe Framer Motion primitives
   (`Reveal`, `SectionFade`, `CursorGlow`). See Gotchas before touching these.
 - `components/sections/stack-terminal.tsx` — the interactive terminal in
@@ -49,8 +47,9 @@ bunx tsc --noEmit  # typecheck
   gets unmounted and replaced (e.g. swapping between a plain `<section>`
   and a `<motion.section>`). Always render the same element type; toggle
   behavior via props/state instead.
-- **`messages/en.json` mirrors `messages/pt.json`** (`cp messages/pt.json
-  messages/en.json`) — EN content is intentionally deferred, not a bug.
+- **Copy changes go in both locales.** `messages/en.json` holds real
+  English translations — never `cp` `pt.json` over it; edit the matching
+  keys in each file.
 - **Tailwind v4 directives in `globals.css`** (`@theme`, `@apply`,
   `@custom-variant`) get flagged as "unknown at-rule" by VS Code's built-in
   CSS validator; `.vscode/settings.json` sets
