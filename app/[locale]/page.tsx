@@ -96,7 +96,7 @@ export default async function HomePage({
             </Reveal>
             <Reveal delay={0.05}>
               <p
-                className="m-0 mt-2 font-normal text-[clamp(1.625rem,3.2vw,2.25rem)] leading-[1.24] tracking-tight"
+                className="m-0 mt-2 font-normal text-[clamp(1.5rem,2.9vw,2rem)] leading-[1.24] tracking-tight"
                 style={{ color: "var(--muted)" }}
               >
                 {tHero("role")}
