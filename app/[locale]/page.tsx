@@ -120,7 +120,9 @@ export default async function HomePage({
             </Reveal>
             <Reveal delay={0.1}>
               <a
-                href="mailto:developermarsh@gmail.com"
+                href="https://www.linkedin.com/in/hiukky/"
+                target="_blank"
+                rel="noreferrer"
                 className="cta-btn mt-8 inline-flex items-center gap-2.5 rounded-full px-6 py-3 font-medium text-sm no-underline transition-opacity hover:opacity-85 max-[720px]:mt-5"
                 style={{ background: "var(--fg)", color: "var(--bg)" }}
               >
