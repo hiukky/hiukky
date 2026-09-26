@@ -174,18 +174,13 @@
     "comingSoon": "em breve",
     "posts": [
       {
-        "title": "Renderizando documentos de mil páginas no navegador sem travar a UI",
-        "meta": "Engenharia · 8 min",
+        "title": "Um runtime para agentes de código: contexto e plugins portáveis entre ferramentas",
+        "meta": "Em breve · 12 min",
         "href": "#"
       },
       {
-        "title": "MCP na prática: conectando um agente a sistemas legados",
-        "meta": "Em breve · 6 min",
-        "href": "#"
-      },
-      {
-        "title": "Design system em monorepo: o que compensa versionar",
-        "meta": "Em breve · 7 min",
+        "title": "Agentes em paralelo sem conflito: isolamento e entrega com git worktrees",
+        "meta": "Em breve · 9 min",
         "href": "#"
       }
     ]

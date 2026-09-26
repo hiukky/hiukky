@@ -174,18 +174,13 @@
     "comingSoon": "coming soon",
     "posts": [
       {
-        "title": "Rendering thousand-page documents in the browser without blocking the UI",
-        "meta": "Engineering · 8 min",
+        "title": "A runtime for coding agents: portable context and plugins across tools",
+        "meta": "Coming soon · 12 min",
         "href": "#"
       },
       {
-        "title": "MCP in practice: connecting an agent to legacy systems",
-        "meta": "Coming soon · 6 min",
-        "href": "#"
-      },
-      {
-        "title": "Design system in a monorepo: what's worth versioning",
-        "meta": "Coming soon · 7 min",
+        "title": "Parallel agents without conflicts: isolation and delivery with git worktrees",
+        "meta": "Coming soon · 9 min",
         "href": "#"
       }
     ]
